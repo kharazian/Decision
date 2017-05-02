@@ -8,7 +8,7 @@ using Decision.Common.Filters;
 using Decision.Common.Helpers;
 using Decision.DataLayer.Context;
 using Decision.ServiceLayer.Contracts.Common;
-using Decision.ServiceLayer.Contracts.ApplicantInfo;
+using Decision.ServiceLayer.Contracts.Employee;
 using Decision.ServiceLayer.Contracts.Users;
 using Decision.ViewModel.Applicant;
 using Decision.Web.Filters;

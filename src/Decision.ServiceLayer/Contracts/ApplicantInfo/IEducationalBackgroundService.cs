@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Decision.ViewModel.EducationalBackground;
 
-namespace Decision.ServiceLayer.Contracts.ApplicantInfo
+namespace Decision.ServiceLayer.Contracts.Employee
 {
     /// <summary>
     /// نشان دهنده الزامات ارائه دهنده سرویس سابقه تحصیلی

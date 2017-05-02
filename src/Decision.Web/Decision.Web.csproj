@@ -244,6 +244,7 @@
     <Compile Include="Controllers\CityController.cs" />
     <Compile Include="Controllers\EducationalBackgroundController.cs" />
     <Compile Include="Controllers\ElmahController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\EntireEvaluationController.cs" />
     <Compile Include="Controllers\InterviewController.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
@@ -321,6 +322,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_EducationalBackgroundItem.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee\Details.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Details.cshtml</DependentUpon>
     </Compile>
     <Compile Include="Views\EntireEvaluation\Edit.generated.cs">
       <AutoGen>True</AutoGen>
@@ -2703,6 +2709,11 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>_PresenterItem.generated.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Employee\Details.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Details.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\EmployeeController\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\ErrorLogs\" />

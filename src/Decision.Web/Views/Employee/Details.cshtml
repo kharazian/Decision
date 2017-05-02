@@ -1,0 +1,135 @@
+﻿@using Decision.Common.HtmlHelpers
+@using Decision.DomainClasses.Entities.Employee
+
+
+@model Decision.ViewModel.Employee.EmployeeDetailsViewModel
+@{
+    ViewBag.Title = "مشاهده جزئیات کارکنان";
+}
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">اطلاعات متقاضی</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center-block text-center">
+                            <figure>
+                                @Html.Image(Model.Photo, Model.Family+" "+Model.Name, "img-circle img-responsive img-thumbnail", 200)
+                                <figcaption>
+                                    <h5>
+                                        @Model.Name @Model.Family
+                                        <br>
+                                    </h5>
+                                    @if (Model.SexCod == "SEX01")//GenderType.Male)
+                                    {
+                                        <i class="fa fa-male" title="مرد"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-female" title="زن"></i>
+                                    }
+                                    <br />
+                                    <div class="col-md-12">
+                                        <label for="StopStat">وضعیت پرسنل:</label>
+                                        <small id="StopStat">@Html.DisplayFor(a => a.StopStat)</small>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <h3 class="line-status">
+                            <small class="text-muted">
+                                <i class="fa fa-user"></i>
+                                اطلاعات فردی
+                            </small>
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="LastFamily">نام خانوادگی قبلی:</label>
+                                <small id="LastFamily">@Model.LastFamily</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="IdNo">شماره شناسنامه:</label>
+                                <small id="IdNo">@Model.IdNo.GetPersianNumber()</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="IdNoContinued">شماره مسلسل شناسنامه:</label>
+                                <small id="IdNoContinued">@Model.IdNoContinued.GetPersianNumber()</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="BirthDate">تاریخ تولد:</label>
+                                <small id="BirthDate">@Model.BirthDate.GetPersianNumber()</small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="MelliCode">کد ملی:</label>
+                                <small id="MelliCode">@Model.MelliCode.GetPersianNumber()</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="BirthCityCod">محل تولد:</label>
+                                <small id="BirthCityCod">@Model.BirthCity</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="IssueCityCod">محل صدور:</label>
+                                <small id="IssueCityCod">@Model.IssueCity</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="ReligionCod">دین:</label>
+                                <small id="ReligionCod">@Model.Religion</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="    row">
+                    <div class="col-md-12 ">
+                        <h3 class="line-status">
+                            <small>
+                                <i class="fa fa-graduation-cap"></i>
+                                وضعیت شغلی تحصیلی
+                            </small>
+                        </h3>
+                        <div class="row">
+
+
+                        </div>
+                        <div class="row">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <h3 class="line-status">
+                            <small>
+                                <i class="fa fa-credit-card"></i>
+                                سایر مشخصات
+                            </small>
+                        </h3>
+                        <div class="row">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        @*@{Html.RenderPartial(MVC.Shared.Views._AuditLog, Model);}*@
+    </div>
+
+</div>
+
+@section Menu{
+    @*@{Html.RenderPartial(MVC.Applicant.Views._ApplicantRelatedLinksBuilder, Model.Id);}*@
+}

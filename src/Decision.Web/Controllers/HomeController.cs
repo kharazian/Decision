@@ -5,7 +5,7 @@ using System.Web.Routing;
 using Decision.Common.Controller;
 using Decision.Common.Filters;
 using Decision.ServiceLayer.Contracts.Evaluations;
-using Decision.ServiceLayer.Contracts.ApplicantInfo;
+using Decision.ServiceLayer.Contracts.Employee;
 using Decision.ServiceLayer.Contracts.PrivateMessage;
 using Decision.ServiceLayer.Contracts.Users;
 using Decision.Utility;

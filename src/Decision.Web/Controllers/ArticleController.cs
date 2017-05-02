@@ -9,7 +9,7 @@ using Decision.Common.Filters;
 using Decision.Common.HtmlCleaner;
 using Decision.Common.Json;
 using Decision.DataLayer.Context;
-using Decision.ServiceLayer.Contracts.ApplicantInfo;
+using Decision.ServiceLayer.Contracts.Employee;
 using Decision.ServiceLayer.Security;
 using Decision.ViewModel.Article;
 using Decision.Web.Extentions;

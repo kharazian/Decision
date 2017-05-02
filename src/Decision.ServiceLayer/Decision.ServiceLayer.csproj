@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="Contracts\ApplicantInfo\IAddressService.cs" />
     <Compile Include="Contracts\ApplicantInfo\IPresenterService.cs" />
+    <Compile Include="Contracts\Employee\IEmployeeService.cs" />
     <Compile Include="Contracts\Users\IActivityLogService.cs" />
     <Compile Include="Contracts\Common\ICityService.cs" />
     <Compile Include="Contracts\Evaluations\IAnswerOptionService.cs" />
@@ -120,6 +121,7 @@
     <Compile Include="CustomAspNetIdentity\CustomSecurityStampValidator.cs" />
     <Compile Include="EFServiecs\ApplicantInfo\AddressServices.cs" />
     <Compile Include="EFServiecs\ApplicantInfo\PresenterService.cs" />
+    <Compile Include="EFServiecs\Employee\EmployeeService.cs" />
     <Compile Include="EFServiecs\Users\ActivityLogService.cs" />
     <Compile Include="EFServiecs\Common\CityService.cs" />
     <Compile Include="EFServiecs\Common\StateService.cs" />

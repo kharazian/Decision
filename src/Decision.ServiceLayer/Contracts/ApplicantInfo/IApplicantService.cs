@@ -5,7 +5,7 @@ using Decision.DomainClasses.Entities.ApplicantInfo;
 using Decision.ViewModel.Home;
 using Decision.ViewModel.Applicant;
 
-namespace Decision.ServiceLayer.Contracts.ApplicantInfo
+namespace Decision.ServiceLayer.Contracts.Employee
 {
     /// <summary>
     /// نشان دهنده الزامات ارائه دهنده سرویس متقاضی

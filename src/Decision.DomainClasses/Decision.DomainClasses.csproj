@@ -23,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\Decision.DomainClasses.XML</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -46,6 +47,9 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
@@ -87,6 +91,125 @@
     <Compile Include="Entities\ApplicantInfo\AcademicDegrees.cs" />
     <Compile Include="Entities\ApplicantInfo\Address.cs" />
     <Compile Include="Entities\ApplicantInfo\AddressType.cs" />
+    <Compile Include="Entities\Employee\AccessPost.cs" />
+    <Compile Include="Entities\Employee\Activity.cs" />
+    <Compile Include="Entities\Employee\Bank.cs" />
+    <Compile Include="Entities\Employee\BankShahrDisk.cs" />
+    <Compile Include="Entities\Employee\BasePay.cs" />
+    <Compile Include="Entities\Employee\BonKargary.cs" />
+    <Compile Include="Entities\Employee\BranchBank.cs" />
+    <Compile Include="Entities\Employee\ChartRelPost.cs" />
+    <Compile Include="Entities\Employee\CodeFile.cs" />
+    <Compile Include="Entities\Employee\CodeFileMaster.cs" />
+    <Compile Include="Entities\Employee\CodeFileMasterTax.cs" />
+    <Compile Include="Entities\Employee\CodeFileTax.cs" />
+    <Compile Include="Entities\Employee\ContiDeduct.cs" />
+    <Compile Include="Entities\Employee\ContiPay.cs" />
+    <Compile Include="Entities\Employee\ControlInfo.cs" />
+    <Compile Include="Entities\Employee\Deduct.cs" />
+    <Compile Include="Entities\Employee\DegreeTashvigh.cs" />
+    <Compile Include="Entities\Employee\dtproperties.cs" />
+    <Compile Include="Entities\Employee\Eblagh.cs" />
+    <Compile Include="Entities\Employee\Eidy.cs" />
+    <Compile Include="Entities\Employee\EmpDegree.cs" />
+    <Compile Include="Entities\Employee\EmpForeignLang.cs" />
+    <Compile Include="Entities\Employee\EmpImage.cs" />
+    <Compile Include="Entities\Employee\Employee.cs" />
+    <Compile Include="Entities\Employee\EmpRelative.cs" />
+    <Compile Include="Entities\Employee\EmpWriting.cs" />
+    <Compile Include="Entities\Employee\Evaluation.cs" />
+    <Compile Include="Entities\Employee\ExePostNumber.cs" />
+    <Compile Include="Entities\Employee\Experience.cs" />
+    <Compile Include="Entities\Employee\FinClass.cs" />
+    <Compile Include="Entities\Employee\FinGrp.cs" />
+    <Compile Include="Entities\Employee\FinGrpAccess.cs" />
+    <Compile Include="Entities\Employee\FinGrpMem.cs" />
+    <Compile Include="Entities\Employee\Finobject.cs" />
+    <Compile Include="Entities\Employee\Finuser.cs" />
+    <Compile Include="Entities\Employee\FinUsrAccess.cs" />
+    <Compile Include="Entities\Employee\Gharardad.cs" />
+    <Compile Include="Entities\Employee\GharardadSaaty.cs" />
+    <Compile Include="Entities\Employee\HokmDirector.cs" />
+    <Compile Include="Entities\Employee\HokmKargary.cs" />
+    <Compile Include="Entities\Employee\HokmLaw.cs" />
+    <Compile Include="Entities\Employee\HokmNoHokmRel.cs" />
+    <Compile Include="Entities\Employee\HokmPayItemsLaw.cs" />
+    <Compile Include="Entities\Employee\HokmPaysGharardad.cs" />
+    <Compile Include="Entities\Employee\HokmPaysKargary.cs" />
+    <Compile Include="Entities\Employee\HokmPaysRasmy.cs" />
+    <Compile Include="Entities\Employee\HokmRasmy.cs" />
+    <Compile Include="Entities\Employee\HourMamoriat.cs" />
+    <Compile Include="Entities\Employee\HourMorakhasi.cs" />
+    <Compile Include="Entities\Employee\InfoMonKind.cs" />
+    <Compile Include="Entities\Employee\InsLaw.cs" />
+    <Compile Include="Entities\Employee\ItemsDsc.cs" />
+    <Compile Include="Entities\Employee\ItemsLaw.cs" />
+    <Compile Include="Entities\Employee\ItemTit.cs" />
+    <Compile Include="Entities\Employee\JobDsc.cs" />
+    <Compile Include="Entities\Employee\JobMajor.cs" />
+    <Compile Include="Entities\Employee\KaraSaving.cs" />
+    <Compile Include="Entities\Employee\Karkerd.cs" />
+    <Compile Include="Entities\Employee\Karkerd_Sherkaty.cs" />
+    <Compile Include="Entities\Employee\LevelChart.cs" />
+    <Compile Include="Entities\Employee\LimitKara.cs" />
+    <Compile Include="Entities\Employee\LimitNight.cs" />
+    <Compile Include="Entities\Employee\LimitSum.cs" />
+    <Compile Include="Entities\Employee\Loan.cs" />
+    <Compile Include="Entities\Employee\LoaSavRel.cs" />
+    <Compile Include="Entities\Employee\Major.cs" />
+    <Compile Include="Entities\Employee\Mamoriat.cs" />
+    <Compile Include="Entities\Employee\Mamorin.cs" />
+    <Compile Include="Entities\Employee\MamorPlace.cs" />
+    <Compile Include="Entities\Employee\Management.cs" />
+    <Compile Include="Entities\Employee\Messages.cs" />
+    <Compile Include="Entities\Employee\MilitaryService.cs" />
+    <Compile Include="Entities\Employee\MontlyDeductBoss.cs" />
+    <Compile Include="Entities\Employee\MontlyResult.cs" />
+    <Compile Include="Entities\Employee\Morakhasi.cs" />
+    <Compile Include="Entities\Employee\MorControl.cs" />
+    <Compile Include="Entities\Employee\MREM.cs" />
+    <Compile Include="Entities\Employee\NewInfo.cs" />
+    <Compile Include="Entities\Employee\NumberHokm.cs" />
+    <Compile Include="Entities\Employee\OperationCurrentDate.cs" />
+    <Compile Include="Entities\Employee\OrganPost.cs" />
+    <Compile Include="Entities\Employee\OrganUnit.cs" />
+    <Compile Include="Entities\Employee\OrganUnitParent.cs" />
+    <Compile Include="Entities\Employee\OtherBime.cs" />
+    <Compile Include="Entities\Employee\OtherBimePrice.cs" />
+    <Compile Include="Entities\Employee\Padash.cs" />
+    <Compile Include="Entities\Employee\Pay.cs" />
+    <Compile Include="Entities\Employee\Place.cs" />
+    <Compile Include="Entities\Employee\PlaceEmp.cs" />
+    <Compile Include="Entities\Employee\PostEnshaee.cs" />
+    <Compile Include="Entities\Employee\PostHokm.cs" />
+    <Compile Include="Entities\Employee\PostNumbers.cs" />
+    <Compile Include="Entities\Employee\PRFBackItems.cs" />
+    <Compile Include="Entities\Employee\PRFBackMaster.cs" />
+    <Compile Include="Entities\Employee\PRFItems.cs" />
+    <Compile Include="Entities\Employee\PRFMaster.cs" />
+    <Compile Include="Entities\Employee\Refahi.cs" />
+    <Compile Include="Entities\Employee\RefahiLaw.cs" />
+    <Compile Include="Entities\Employee\RefahiType.cs" />
+    <Compile Include="Entities\Employee\RfCodeFile.cs" />
+    <Compile Include="Entities\Employee\RfCodeFile0.cs" />
+    <Compile Include="Entities\Employee\Sal.cs" />
+    <Compile Include="Entities\Employee\SarJam_Maliati.cs" />
+    <Compile Include="Entities\Employee\Saving.cs" />
+    <Compile Include="Entities\Employee\ShahdarPay.cs" />
+    <Compile Include="Entities\Employee\SibaDisk.cs" />
+    <Compile Include="Entities\Employee\SpecialItem.cs" />
+    <Compile Include="Entities\Employee\SumPayDeduct.cs" />
+    <Compile Include="Entities\Employee\SumPayList.cs" />
+    <Compile Include="Entities\Employee\sysdiagrams.cs" />
+    <Compile Include="Entities\Employee\Tashvigh.cs" />
+    <Compile Include="Entities\Employee\TaxDisk.cs" />
+    <Compile Include="Entities\Employee\TaxLaw.cs" />
+    <Compile Include="Entities\Employee\TitleSumPayDeduct.cs" />
+    <Compile Include="Entities\Employee\Training.cs" />
+    <Compile Include="Entities\Employee\t_Log.cs" />
+    <Compile Include="Entities\Employee\t_LogStatus.cs" />
+    <Compile Include="Entities\Employee\University.cs" />
+    <Compile Include="Entities\Employee\Zone.cs" />
     <Compile Include="Entities\Evaluations\AnswerOption.cs" />
     <Compile Include="Entities\ApplicantInfo\EducationalExperience.cs" />
     <Compile Include="Entities\ApplicantInfo\EducationalBackground.cs" />
@@ -127,7 +250,9 @@
       <Name>Decision.Utility</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Configurations\EmployeeInfo\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

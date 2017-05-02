@@ -74,6 +74,7 @@
     <Compile Include="EducationalExperience\EducationalExperienceListViewModel.cs" />
     <Compile Include="EducationalExperience\EducationalExperienceSearchRequest.cs" />
     <Compile Include="EducationalExperience\EducationalExperienceViewModel.cs" />
+    <Compile Include="Employee\EmployeeDetailsViewModel.cs" />
     <Compile Include="EntireEvaluation\AddEnitreEvaluationViewModel.cs" />
     <Compile Include="EntireEvaluation\EditEnitreEvaluationViewModel.cs" />
     <Compile Include="EntireEvaluation\EnitreEvaluationListViewModel.cs" />

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Decision.ViewModel.Address;
 
-namespace Decision.ServiceLayer.Contracts.ApplicantInfo
+namespace Decision.ServiceLayer.Contracts.Employee
 {
     public interface IAddressService
     {

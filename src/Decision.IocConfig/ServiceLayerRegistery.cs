@@ -5,7 +5,7 @@ using Decision.Common.Controller;
 using StructureMap.Configuration.DSL;
 using System.Runtime.Serialization.Formatters.Binary;
 using Decision.ServiceLayer.Contracts.Common;
-using Decision.ServiceLayer.Contracts.ApplicantInfo;
+using Decision.ServiceLayer.Contracts.Employee;
 using Decision.ServiceLayer.EFServiecs.Users;
 using Decision.ServiceLayer.Contracts.Users;
 

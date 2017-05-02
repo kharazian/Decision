@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Decision.ViewModel.Article;
-namespace Decision.ServiceLayer.Contracts.ApplicantInfo
+namespace Decision.ServiceLayer.Contracts.Employee
 {
     /// <summary>
     /// نشان دهنده الزامات ارائه دهنده سرویس مقاله صادر شده توسط متقاضی

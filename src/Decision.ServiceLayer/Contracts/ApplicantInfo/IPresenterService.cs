@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Decision.ServiceLayer.Contracts.ApplicantInfo
+namespace Decision.ServiceLayer.Contracts.Employee
 {
     /// <summary>
     /// نشان دهنده قراداد هایی است که کلاس سرویس دهنده معرفان باید پیاده سازی کند

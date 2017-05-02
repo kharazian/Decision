@@ -4,7 +4,7 @@ using System.Web.Mvc;
 using System.Web.UI;
 using Decision.Common.Filters;
 using Decision.DataLayer.Context;
-using Decision.ServiceLayer.Contracts.ApplicantInfo;
+using Decision.ServiceLayer.Contracts.Employee;
 using Decision.ViewModel.Presenter;
 using Decision.Web.Filters;
 

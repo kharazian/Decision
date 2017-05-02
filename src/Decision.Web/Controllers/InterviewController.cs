@@ -11,7 +11,7 @@ using Decision.Common.Json;
 using Decision.DataLayer.Context;
 using Decision.Common.Extentions;
 using Decision.ServiceLayer.Contracts.Evaluations;
-using Decision.ServiceLayer.Contracts.ApplicantInfo;
+using Decision.ServiceLayer.Contracts.Employee;
 using Decision.ServiceLayer.Security;
 using Decision.ViewModel.Interview;
 using Decision.Web.Extentions;

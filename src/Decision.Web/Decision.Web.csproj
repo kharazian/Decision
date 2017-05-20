@@ -245,6 +245,7 @@
     <Compile Include="Controllers\EducationalBackgroundController.cs" />
     <Compile Include="Controllers\ElmahController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\EmpRelativeController.cs" />
     <Compile Include="Controllers\EntireEvaluationController.cs" />
     <Compile Include="Controllers\InterviewController.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
@@ -262,6 +263,12 @@
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="ElmahController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpRelativeController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="EntireEvaluationController.generated.cs">
@@ -327,6 +334,41 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Details.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee\List.generated.cs">
+      <DependentUpon>List.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Employee\_EmployeeItem.generated.cs">
+      <DependentUpon>_EmployeeItem.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Employee\_EmployeeRelatedLinksBuilder.generated.cs">
+      <DependentUpon>_EmployeeRelatedLinksBuilder.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Employee\_ListAjax.generated.cs">
+      <DependentUpon>_ListAjax.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\EmpRelative\List.generated.cs">
+      <DependentUpon>List.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\EmpRelative\_EmpRelativeItem.generated.cs">
+      <DependentUpon>_EmpRelativeItem.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\EmpRelative\_ListAjax.generated.cs">
+      <DependentUpon>_ListAjax.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Views\EntireEvaluation\Edit.generated.cs">
       <AutoGen>True</AutoGen>
@@ -2713,7 +2755,34 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Details.generated.cs</LastGenOutput>
     </Content>
-    <Content Include="Views\EmployeeController\Details.cshtml" />
+    <Content Include="Views\Employee\_EmployeeRelatedLinksBuilder.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_EmployeeRelatedLinksBuilder.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\EmpRelative\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\EmpRelative\_ListAjax.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ListAjax.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\EmpRelative\_EmpRelativeItem.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_EmpRelativeItem.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Employee\_EmployeeItem.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_EmployeeItem.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Employee\_ListAjax.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ListAjax.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Employee\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\ErrorLogs\" />

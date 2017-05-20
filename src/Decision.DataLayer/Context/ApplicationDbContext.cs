@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using EntityFramework.BulkInsert.Extensions;
-using EntityFramework.Filters;
+using EntityFramework.DynamicFilters;
 using RefactorThis.GraphDiff;
 
 namespace Decision.DataLayer.Context
@@ -12,10 +12,14 @@ namespace Decision.DataLayer.Context
     public class ApplicationDbContext : BaseDbContext,
        IUnitOfWork
     {
+        #region Field
+        private EmployeeDbContext _employeeDbContext;
+        #endregion
         #region Ctor
         public ApplicationDbContext()
             : base("DefaultConnection")
         {
+            _employeeDbContext = new EmployeeDbContext();
         }
 
         #endregion
@@ -28,6 +32,8 @@ namespace Decision.DataLayer.Context
         }
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
         {
+            if (_employeeDbContext.IsEntity(typeof(TEntity)))
+                return _employeeDbContext.Set<TEntity>();
             return base.Set<TEntity>();
         }
 
@@ -65,17 +71,18 @@ namespace Decision.DataLayer.Context
 
         public void EnableFiltering(string name)
         {
-            this.EnableFilter(name);
+            _employeeDbContext.EnableFilter(name);
         }
 
         public void EnableFiltering(string name, string parameter, object value)
         {
-            this.EnableFilter(name).SetParameter(parameter, value);
+            _employeeDbContext.EnableFilter(name);
+            _employeeDbContext.SetFilterScopedParameterValue(name, parameter, value);
         }
 
         public void DisableFiltering(string name)
         {
-            this.DisableFilter(name);
+            _employeeDbContext.DisableFilter(name);
         }
 
         public void BulkInsertData<T>(IEnumerable<T> data)

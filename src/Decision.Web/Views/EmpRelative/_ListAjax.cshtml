@@ -1,0 +1,8 @@
+﻿@* GeneratePrettyNames: true*@
+@model Decision.ViewModel.EmpRelative.EmpRelativeListViewModel
+@foreach (var e in Model.Relatives)
+{
+    @Html.Partial(MVC.EmpRelative.Views._EmpRelativeItem, e)
+}
+
+

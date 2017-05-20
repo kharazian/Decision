@@ -1,0 +1,180 @@
+﻿<error errorId="916aaa46-70bd-4a7b-a5f2-9ffcdd7bbaea" application="/LM/W3SVC/2/ROOT" host="EDAKHAVAN-0522" type="System.ArgumentNullException" message="Value cannot be null.&#xD;&#xA;Parameter name: source" source="System.Core" detail="StructureMap.Building.StructureMapBuildException: Error while building type Decision.ServiceLayer.EFServiecs.Users.RoleManager.  See the inner exception for details&#xD;&#xA;1.) new RoleManager(*Default of IMappingEngine*, *Default of IPermissionService*, *Default of IUnitOfWork*, *Default of IRoleStore&lt;Role, Guid&gt;*)&#xD;&#xA;2.) Decision.ServiceLayer.EFServiecs.Users.RoleManager&#xD;&#xA;3.) Instance of Decision.ServiceLayer.Contracts.Users.IApplicationRoleManager (Decision.ServiceLayer.EFServiecs.Users.RoleManager)&#xD;&#xA;4.) new ApplicationUserManager(*Default of IPermissionService*, *Default of IUserStore&lt;User, Guid&gt;*, *Default of IApplicationRoleManager*, *Default of IUnitOfWork*, *Default of IIdentity*, *Default of IMappingEngine*, *Default of IDataProtectionProvider*, Lifecycle resolution of Decision.ServiceLayer.EFServiecs.Common.SmsService, Lifecycle resolution of Decision.ServiceLayer.EFServiecs.Common.EmailService){&#xD;&#xA;    Set IIdentityMessageService EmailService = Lifecycle resolution of Decision.ServiceLayer.EFServiecs.Common.EmailService&#xD;&#xA;    Set IIdentityMessageService SmsService = Lifecycle resolution of Decision.ServiceLayer.EFServiecs.Common.SmsService&#xD;&#xA;}&#xD;&#xA;5.) Decision.ServiceLayer.EFServiecs.Users.ApplicationUserManager&#xD;&#xA;6.) Instance of Decision.ServiceLayer.Contracts.Users.IApplicationUserManager (Decision.ServiceLayer.EFServiecs.Users.ApplicationUserManager)&#xD;&#xA;7.) Lambda: Convert(IContext.GetInstance())&#xD;&#xA;8.) Instance of Decision.ServiceLayer.EFServiecs.Users.ApplicationUserManager&#xD;&#xA;9.) Container.GetInstance(Decision.ServiceLayer.EFServiecs.Users.ApplicationUserManager)&#xD;&#xA; ---&gt; System.ArgumentNullException: Value cannot be null.&#xD;&#xA;Parameter name: source&#xD;&#xA;   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)&#xD;&#xA;   at Decision.DataLayer.Context.EmployeeDbContext.IsEntity(Type entity) in C:\Users\Amir\Source\Repos\Decision\src\Decision.DataLayer\Context\EmployeeDbContext.cs:line 197&#xD;&#xA;   at Decision.DataLayer.Context.ApplicationDbContext.Set[TEntity]() in C:\Users\Amir\Source\Repos\Decision\src\Decision.DataLayer\Context\ApplicationDbContext.cs:line 38&#xD;&#xA;   at Decision.ServiceLayer.EFServiecs.Users.RoleManager..ctor(IMappingEngine mappingEngine, IPermissionService permissionService, IUnitOfWork unitOfWork, IRoleStore`2 roleStore) in C:\Users\Amir\Source\Repos\Decision\src\Decision.ServiceLayer\EFServiecs\Users\ApplicationRoleManager.cs:line 38&#xD;&#xA;   at lambda_method(Closure , IBuildSession , IContext )&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at lambda_method(Closure , IBuildSession , IContext )&#xD;&#xA;   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context) in c:\BuildAgent\work\a395dbde6b793293\src\StructureMap\Building\BuildPlan.cs:line 151&#xD;&#xA;   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance) in c:\BuildAgent\work\a395dbde6b793293\src\StructureMap\BuildSession.cs:line 114&#xD;&#xA;   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance) in c:\BuildAgent\work\a395dbde6b793293\src\StructureMap\BuildSession.cs:line 119&#xD;&#xA;   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session) in c:\BuildAgent\work\a395dbde6b793293\src\StructureMap\Pipeline\LifecycleObjectCache.cs:line 92&#xD;&#xA;   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session) in c:\BuildAgent\work\a395dbde6b793293\src\StructureMap\Pipeline\LifecycleObjectCache.cs:line 71&#xD;&#xA;   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance) in c:\BuildAgent\work\a395dbde6b793293\src\StructureMap\BuildSession.cs:line 103&#xD;&#xA;   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle) in c:\BuildAgent\work\a395dbde6b793293\src\StructureMap\SessionCache.cs:line 93&#xD;&#xA;   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph) in c:\BuildAgent\work\a395dbde6b793293\src\StructureMap\SessionCache.cs:line 68&#xD;&#xA;   at StructureMap.Container.GetInstance(Type pluginType) in c:\BuildAgent\work\a395dbde6b793293\src\StructureMap\Container.cs:line 337&#xD;&#xA;   at StructureMap.Container.GetInstance[T]() in c:\BuildAgent\work\a395dbde6b793293\src\StructureMap\Container.cs:line 202&#xD;&#xA;   at Decision.Web.Startup.&lt;&gt;c.&lt;ConfigureAuth&gt;b__1_1() in C:\Users\Amir\Source\Repos\Decision\src\Decision.Web\App_Start\Startup.cs:line 32&#xD;&#xA;   at Owin.AppBuilderExtensions.&lt;&gt;c__DisplayClass1`1.&lt;CreatePerOwinContext&gt;b__0(IdentityFactoryOptions`1 options, IOwinContext context)&#xD;&#xA;   at Microsoft.AspNet.Identity.Owin.IdentityFactoryProvider`1.Create(IdentityFactoryOptions`1 options, IOwinContext context)&#xD;&#xA;   at Microsoft.AspNet.Identity.Owin.IdentityFactoryMiddleware`2.&lt;Invoke&gt;d__0.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContextStage.&lt;RunApp&gt;d__5.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContext.&lt;DoFinalWork&gt;d__2.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.StageAsyncResult.End(IAsyncResult ar)&#xD;&#xA;   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContext.EndFinalWork(IAsyncResult ar)&#xD;&#xA;   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" time="2017-05-07T04:45:10.7807676Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, sdch, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.8,fa;q=0.6&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=YKhRYbVSJfL3_TI-HhvcbtU6WozW-VvoDs8KcdhpnxFdDBZNCjmizfw3AVcWdWfTX7UkIw0T22-ZuwSszynK8aJBpqCTZIH7Zce-93cCudE1; .AspNetCore.Antiforgery.UYMXLyu-uvc=CfDJ8Ly4IbJLtENNhu9pyQhW1mqjRMDYGlGruIZCnLGPgu6jBNhzg_rF5Nja9okbIX5xTWHMgp14P4Kai90polR45INBa4twpX-PmBSUW7wa3d7sDBDzqzQA6_QCQ_tWR7IhhPcJ_SiRrqqP4caQ65J2v1A; .AspNetCore.Antiforgery.VWF0gocGWtE=CfDJ8Ly4IbJLtENNhu9pyQhW1mr4DCWU42MOffojaeefZIyJD6w22ToiPMq-BYjW-n2agM1B6d2qDP2c_cQMOvCTwsGJbEwMi6ZtnRTV_1bEPd1WiEPRPdwS9mcpEE-RG5x1-ZRVmBQKkPQTsJVqukH67DE; .WebAuthentication=CfDJ8Ly4IbJLtENNhu9pyQhW1mohJwD8EVCbQs_awUccynKg5EgBx2lK7rJjNW3dza3Da1RJuiJhMq0CIVyyVCNPOvruxOzhXOx0UFxR-aPRLnovYqCo725wxGYh6tyLfcqzvrNOmzYrDt4S2avVDkJHy9QQYPtRTIQ5a8un10CIPewgcwuWfmVTpw_VWXcBOHaGsaBDEkU5PZuSCvU3puMJ-T5nJQpg6KMqd4W6ei3gHvjL9Kj3TxU40bMnMwJmczJVcYQpb80LIThP65P8mssORA2dY23PrYQoyLx21mleXQEu; .AspNetCore.Session=CfDJ8Ly4IbJLtENNhu9pyQhW1mq6ya2pFZRD6lb%2FHwxQudGAtUKi6f53%2F7koQmNLLpZDd%2B%2F7whYb4YeU6GPh1GrXOADEUfeDdeByFWJMyTFVbKrBGAfhB3eYrySIR6cDaPcYDeEqsmssrUy%2BI94VjrgSLRZWEnNEva%2FnIgnV%2F6ejcws8; ; __ControllerTempData=AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL; decision=7-VLXRDbi3OJgt16rsMPcXlStDUmtsu6GbL8U-cak1nhAxRFE0ugOTmft5mDUC45vTWYJwvvjoZ4gSCsgI6wyA_7T1IPkT9w8eOylQwNuorsC_y_lZjAtMK6m-uWTg5KOseCUw-3KVQHdDZjRsk9kfW9-em-Efrk-Dvq6cTcnf1wBQbPqBn0k1SZKdDEgV7l0Tm2nmRJ74ixx-1o-xowKFpNfKNNdPAux0Hr2AWGgSZ89oXyHobeKuOPVXUMlxIitAH7oOGFebFe0npsbU05zLIqDygHqC7qfBx5Rxr_UIf86Yix1LHJ9RN7dcix_09rKBvAl6qcJ5QSmOPnB0CXy1bCiYPakzVMWnfx6akWDR3qgylWpR_0zZcfNsji31DEV5XwVniH2M8eoKyHR9y0j0h1JOyJTPUudhCNnJZfGTb7LNlkhSMA745eT_Ku4dZ_fXZnndImrSQR4epLZRrc8zLatRb__A9jyfeA_vMXMWaoNrn8v0HRsACz_QlNo2z2XOpuyRHci3Wd0sx_W7yYTq4wMRfro2K0Fp13laNmx1Nzj5OB6NZ5N-pk4mR8b6hhm62vlonfS1I4XO4i6kc3S5vMRl1_teOWGkkI7gurDDOOVcKlZNrLUFkqtXSoHmGxslJpzB1vUobf2OMRnQFBRhjDKW7ocZ2LAsSxrqc9t6C7ekp7TqN-KtM2KZt7ZgT9n4NiGphGd5rBnkULe_OzdjD6kupVRB-_lC0jqMN325kuJ1H0IKBsACG3VZpJh_ZdOrctUMd_0lxc1TIQvpWE4B42TIAwnAk3gn_zFC3K6Lstrw0MH7l2sxQ33S69cktuHXG7U5zNeD-unHJxWqGNjp0uCEtG88sftkKp_G1DsXUfbghZUcg79yrYUagYrvvmKycorrx1jsK3UbN5Fiz8B7U6tTltY9_qMsRdjdHwJZt82BttMyxNZRtVVoY3KXpE4nvsnwrqYjGK4Et4HmcsFyhJLbviD_xVvevE0ejJUrVlcI0QFlXvMECT10iLMpQpFVAKJKlGtX2e2g2ZHOplJQ&#xD;&#xA;HTTP_HOST:localhost:25890&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, sdch, br&#xD;&#xA;Accept-Language: en-US,en;q=0.8,fa;q=0.6&#xD;&#xA;Cookie: __RequestVerificationToken=YKhRYbVSJfL3_TI-HhvcbtU6WozW-VvoDs8KcdhpnxFdDBZNCjmizfw3AVcWdWfTX7UkIw0T22-ZuwSszynK8aJBpqCTZIH7Zce-93cCudE1; .AspNetCore.Antiforgery.UYMXLyu-uvc=CfDJ8Ly4IbJLtENNhu9pyQhW1mqjRMDYGlGruIZCnLGPgu6jBNhzg_rF5Nja9okbIX5xTWHMgp14P4Kai90polR45INBa4twpX-PmBSUW7wa3d7sDBDzqzQA6_QCQ_tWR7IhhPcJ_SiRrqqP4caQ65J2v1A; .AspNetCore.Antiforgery.VWF0gocGWtE=CfDJ8Ly4IbJLtENNhu9pyQhW1mr4DCWU42MOffojaeefZIyJD6w22ToiPMq-BYjW-n2agM1B6d2qDP2c_cQMOvCTwsGJbEwMi6ZtnRTV_1bEPd1WiEPRPdwS9mcpEE-RG5x1-ZRVmBQKkPQTsJVqukH67DE; .WebAuthentication=CfDJ8Ly4IbJLtENNhu9pyQhW1mohJwD8EVCbQs_awUccynKg5EgBx2lK7rJjNW3dza3Da1RJuiJhMq0CIVyyVCNPOvruxOzhXOx0UFxR-aPRLnovYqCo725wxGYh6tyLfcqzvrNOmzYrDt4S2avVDkJHy9QQYPtRTIQ5a8un10CIPewgcwuWfmVTpw_VWXcBOHaGsaBDEkU5PZuSCvU3puMJ-T5nJQpg6KMqd4W6ei3gHvjL9Kj3TxU40bMnMwJmczJVcYQpb80LIThP65P8mssORA2dY23PrYQoyLx21mleXQEu; .AspNetCore.Session=CfDJ8Ly4IbJLtENNhu9pyQhW1mq6ya2pFZRD6lb%2FHwxQudGAtUKi6f53%2F7koQmNLLpZDd%2B%2F7whYb4YeU6GPh1GrXOADEUfeDdeByFWJMyTFVbKrBGAfhB3eYrySIR6cDaPcYDeEqsmssrUy%2BI94VjrgSLRZWEnNEva%2FnIgnV%2F6ejcws8; ; __ControllerTempData=AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL; decision=7-VLXRDbi3OJgt16rsMPcXlStDUmtsu6GbL8U-cak1nhAxRFE0ugOTmft5mDUC45vTWYJwvvjoZ4gSCsgI6wyA_7T1IPkT9w8eOylQwNuorsC_y_lZjAtMK6m-uWTg5KOseCUw-3KVQHdDZjRsk9kfW9-em-Efrk-Dvq6cTcnf1wBQbPqBn0k1SZKdDEgV7l0Tm2nmRJ74ixx-1o-xowKFpNfKNNdPAux0Hr2AWGgSZ89oXyHobeKuOPVXUMlxIitAH7oOGFebFe0npsbU05zLIqDygHqC7qfBx5Rxr_UIf86Yix1LHJ9RN7dcix_09rKBvAl6qcJ5QSmOPnB0CXy1bCiYPakzVMWnfx6akWDR3qgylWpR_0zZcfNsji31DEV5XwVniH2M8eoKyHR9y0j0h1JOyJTPUudhCNnJZfGTb7LNlkhSMA745eT_Ku4dZ_fXZnndImrSQR4epLZRrc8zLatRb__A9jyfeA_vMXMWaoNrn8v0HRsACz_QlNo2z2XOpuyRHci3Wd0sx_W7yYTq4wMRfro2K0Fp13laNmx1Nzj5OB6NZ5N-pk4mR8b6hhm62vlonfS1I4XO4i6kc3S5vMRl1_teOWGkkI7gurDDOOVcKlZNrLUFkqtXSoHmGxslJpzB1vUobf2OMRnQFBRhjDKW7ocZ2LAsSxrqc9t6C7ekp7TqN-KtM2KZt7ZgT9n4NiGphGd5rBnkULe_OzdjD6kupVRB-_lC0jqMN325kuJ1H0IKBsACG3VZpJh_ZdOrctUMd_0lxc1TIQvpWE4B42TIAwnAk3gn_zFC3K6Lstrw0MH7l2sxQ33S69cktuHXG7U5zNeD-unHJxWqGNjp0uCEtG88sftkKp_G1DsXUfbghZUcg79yrYUagYrvvmKycorrx1jsK3UbN5Fiz8B7U6tTltY9_qMsRdjdHwJZt82BttMyxNZRtVVoY3KXpE4nvsnwrqYjGK4Et4HmcsFyhJLbviD_xVvevE0ejJUrVlcI0QFlXvMECT10iLMpQpFVAKJKlGtX2e2g2ZHOplJQ&#xD;&#xA;Host: localhost:25890&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\Amir\Source\Repos\Decision\src\Decision.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\Amir\Source\Repos\Decision\src\Decision.Web" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="63952" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="25890" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, sdch, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.8,fa;q=0.6" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=YKhRYbVSJfL3_TI-HhvcbtU6WozW-VvoDs8KcdhpnxFdDBZNCjmizfw3AVcWdWfTX7UkIw0T22-ZuwSszynK8aJBpqCTZIH7Zce-93cCudE1; .AspNetCore.Antiforgery.UYMXLyu-uvc=CfDJ8Ly4IbJLtENNhu9pyQhW1mqjRMDYGlGruIZCnLGPgu6jBNhzg_rF5Nja9okbIX5xTWHMgp14P4Kai90polR45INBa4twpX-PmBSUW7wa3d7sDBDzqzQA6_QCQ_tWR7IhhPcJ_SiRrqqP4caQ65J2v1A; .AspNetCore.Antiforgery.VWF0gocGWtE=CfDJ8Ly4IbJLtENNhu9pyQhW1mr4DCWU42MOffojaeefZIyJD6w22ToiPMq-BYjW-n2agM1B6d2qDP2c_cQMOvCTwsGJbEwMi6ZtnRTV_1bEPd1WiEPRPdwS9mcpEE-RG5x1-ZRVmBQKkPQTsJVqukH67DE; .WebAuthentication=CfDJ8Ly4IbJLtENNhu9pyQhW1mohJwD8EVCbQs_awUccynKg5EgBx2lK7rJjNW3dza3Da1RJuiJhMq0CIVyyVCNPOvruxOzhXOx0UFxR-aPRLnovYqCo725wxGYh6tyLfcqzvrNOmzYrDt4S2avVDkJHy9QQYPtRTIQ5a8un10CIPewgcwuWfmVTpw_VWXcBOHaGsaBDEkU5PZuSCvU3puMJ-T5nJQpg6KMqd4W6ei3gHvjL9Kj3TxU40bMnMwJmczJVcYQpb80LIThP65P8mssORA2dY23PrYQoyLx21mleXQEu; .AspNetCore.Session=CfDJ8Ly4IbJLtENNhu9pyQhW1mq6ya2pFZRD6lb%2FHwxQudGAtUKi6f53%2F7koQmNLLpZDd%2B%2F7whYb4YeU6GPh1GrXOADEUfeDdeByFWJMyTFVbKrBGAfhB3eYrySIR6cDaPcYDeEqsmssrUy%2BI94VjrgSLRZWEnNEva%2FnIgnV%2F6ejcws8; ; __ControllerTempData=AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL; decision=7-VLXRDbi3OJgt16rsMPcXlStDUmtsu6GbL8U-cak1nhAxRFE0ugOTmft5mDUC45vTWYJwvvjoZ4gSCsgI6wyA_7T1IPkT9w8eOylQwNuorsC_y_lZjAtMK6m-uWTg5KOseCUw-3KVQHdDZjRsk9kfW9-em-Efrk-Dvq6cTcnf1wBQbPqBn0k1SZKdDEgV7l0Tm2nmRJ74ixx-1o-xowKFpNfKNNdPAux0Hr2AWGgSZ89oXyHobeKuOPVXUMlxIitAH7oOGFebFe0npsbU05zLIqDygHqC7qfBx5Rxr_UIf86Yix1LHJ9RN7dcix_09rKBvAl6qcJ5QSmOPnB0CXy1bCiYPakzVMWnfx6akWDR3qgylWpR_0zZcfNsji31DEV5XwVniH2M8eoKyHR9y0j0h1JOyJTPUudhCNnJZfGTb7LNlkhSMA745eT_Ku4dZ_fXZnndImrSQR4epLZRrc8zLatRb__A9jyfeA_vMXMWaoNrn8v0HRsACz_QlNo2z2XOpuyRHci3Wd0sx_W7yYTq4wMRfro2K0Fp13laNmx1Nzj5OB6NZ5N-pk4mR8b6hhm62vlonfS1I4XO4i6kc3S5vMRl1_teOWGkkI7gurDDOOVcKlZNrLUFkqtXSoHmGxslJpzB1vUobf2OMRnQFBRhjDKW7ocZ2LAsSxrqc9t6C7ekp7TqN-KtM2KZt7ZgT9n4NiGphGd5rBnkULe_OzdjD6kupVRB-_lC0jqMN325kuJ1H0IKBsACG3VZpJh_ZdOrctUMd_0lxc1TIQvpWE4B42TIAwnAk3gn_zFC3K6Lstrw0MH7l2sxQ33S69cktuHXG7U5zNeD-unHJxWqGNjp0uCEtG88sftkKp_G1DsXUfbghZUcg79yrYUagYrvvmKycorrx1jsK3UbN5Fiz8B7U6tTltY9_qMsRdjdHwJZt82BttMyxNZRtVVoY3KXpE4nvsnwrqYjGK4Et4HmcsFyhJLbviD_xVvevE0ejJUrVlcI0QFlXvMECT10iLMpQpFVAKJKlGtX2e2g2ZHOplJQ" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:25890" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="YKhRYbVSJfL3_TI-HhvcbtU6WozW-VvoDs8KcdhpnxFdDBZNCjmizfw3AVcWdWfTX7UkIw0T22-ZuwSszynK8aJBpqCTZIH7Zce-93cCudE1" />
+    </item>
+    <item name=".AspNetCore.Antiforgery.UYMXLyu-uvc">
+      <value string="CfDJ8Ly4IbJLtENNhu9pyQhW1mqjRMDYGlGruIZCnLGPgu6jBNhzg_rF5Nja9okbIX5xTWHMgp14P4Kai90polR45INBa4twpX-PmBSUW7wa3d7sDBDzqzQA6_QCQ_tWR7IhhPcJ_SiRrqqP4caQ65J2v1A" />
+    </item>
+    <item name=".AspNetCore.Antiforgery.VWF0gocGWtE">
+      <value string="CfDJ8Ly4IbJLtENNhu9pyQhW1mr4DCWU42MOffojaeefZIyJD6w22ToiPMq-BYjW-n2agM1B6d2qDP2c_cQMOvCTwsGJbEwMi6ZtnRTV_1bEPd1WiEPRPdwS9mcpEE-RG5x1-ZRVmBQKkPQTsJVqukH67DE" />
+    </item>
+    <item name=".WebAuthentication">
+      <value string="CfDJ8Ly4IbJLtENNhu9pyQhW1mohJwD8EVCbQs_awUccynKg5EgBx2lK7rJjNW3dza3Da1RJuiJhMq0CIVyyVCNPOvruxOzhXOx0UFxR-aPRLnovYqCo725wxGYh6tyLfcqzvrNOmzYrDt4S2avVDkJHy9QQYPtRTIQ5a8un10CIPewgcwuWfmVTpw_VWXcBOHaGsaBDEkU5PZuSCvU3puMJ-T5nJQpg6KMqd4W6ei3gHvjL9Kj3TxU40bMnMwJmczJVcYQpb80LIThP65P8mssORA2dY23PrYQoyLx21mleXQEu" />
+    </item>
+    <item name=".AspNetCore.Session">
+      <value string="CfDJ8Ly4IbJLtENNhu9pyQhW1mq6ya2pFZRD6lb%2FHwxQudGAtUKi6f53%2F7koQmNLLpZDd%2B%2F7whYb4YeU6GPh1GrXOADEUfeDdeByFWJMyTFVbKrBGAfhB3eYrySIR6cDaPcYDeEqsmssrUy%2BI94VjrgSLRZWEnNEva%2FnIgnV%2F6ejcws8" />
+    </item>
+    <item name="__ControllerTempData">
+      <value string="AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL" />
+    </item>
+    <item name="decision">
+      <value string="7-VLXRDbi3OJgt16rsMPcXlStDUmtsu6GbL8U-cak1nhAxRFE0ugOTmft5mDUC45vTWYJwvvjoZ4gSCsgI6wyA_7T1IPkT9w8eOylQwNuorsC_y_lZjAtMK6m-uWTg5KOseCUw-3KVQHdDZjRsk9kfW9-em-Efrk-Dvq6cTcnf1wBQbPqBn0k1SZKdDEgV7l0Tm2nmRJ74ixx-1o-xowKFpNfKNNdPAux0Hr2AWGgSZ89oXyHobeKuOPVXUMlxIitAH7oOGFebFe0npsbU05zLIqDygHqC7qfBx5Rxr_UIf86Yix1LHJ9RN7dcix_09rKBvAl6qcJ5QSmOPnB0CXy1bCiYPakzVMWnfx6akWDR3qgylWpR_0zZcfNsji31DEV5XwVniH2M8eoKyHR9y0j0h1JOyJTPUudhCNnJZfGTb7LNlkhSMA745eT_Ku4dZ_fXZnndImrSQR4epLZRrc8zLatRb__A9jyfeA_vMXMWaoNrn8v0HRsACz_QlNo2z2XOpuyRHci3Wd0sx_W7yYTq4wMRfro2K0Fp13laNmx1Nzj5OB6NZ5N-pk4mR8b6hhm62vlonfS1I4XO4i6kc3S5vMRl1_teOWGkkI7gurDDOOVcKlZNrLUFkqtXSoHmGxslJpzB1vUobf2OMRnQFBRhjDKW7ocZ2LAsSxrqc9t6C7ekp7TqN-KtM2KZt7ZgT9n4NiGphGd5rBnkULe_OzdjD6kupVRB-_lC0jqMN325kuJ1H0IKBsACG3VZpJh_ZdOrctUMd_0lxc1TIQvpWE4B42TIAwnAk3gn_zFC3K6Lstrw0MH7l2sxQ33S69cktuHXG7U5zNeD-unHJxWqGNjp0uCEtG88sftkKp_G1DsXUfbghZUcg79yrYUagYrvvmKycorrx1jsK3UbN5Fiz8B7U6tTltY9_qMsRdjdHwJZt82BttMyxNZRtVVoY3KXpE4nvsnwrqYjGK4Et4HmcsFyhJLbviD_xVvevE0ejJUrVlcI0QFlXvMECT10iLMpQpFVAKJKlGtX2e2g2ZHOplJQ" />
+    </item>
+  </cookies>
+</error>

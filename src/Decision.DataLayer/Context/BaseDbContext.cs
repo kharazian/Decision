@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using EFSecondLevelCache;
-using EntityFramework.Filters;
+using EntityFramework.DynamicFilters;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Decision.DomainClasses.Configurations.Users;
@@ -42,7 +42,6 @@ namespace Decision.DataLayer.Context
             if (modelBuilder == null)
                 throw new ArgumentNullException(nameof(modelBuilder));
 
-            DbInterception.Add(new FilterInterceptor());
             DbInterception.Add(new YeKeInterceptor());
 
             // for full text search  DbInterception.Add(new FtsInterceptor());

@@ -5,10 +5,15 @@
         @if (User.IsInRole(Auth.CanViewApplicantList))
         {
             <li class="main">
+                @Html.SecureActionLink("مدیریت کارکنان", MVC.Employee.List())
+            </li>
+        }
+        @if (User.IsInRole(Auth.CanViewApplicantList))
+        {
+            <li class="main">
                 @Html.SecureActionLink("مدیریت متقاضیان", MVC.Applicant.List())
             </li>
         }
-       
         @if (User.IsInRole(Auth.CanAccessReports))
         {
             <li class="main">
@@ -27,12 +32,12 @@
                 <a href="@Url.Action(MVC.Elmah.Index())">نگهداری سیستم</a>
             </li>
         }
-      @if (Auth.GetBaseSettingPermissions().Any(User.IsInRole))
-      {
-        <li class="main">
-            @Html.SecureActionLink("تنظیمات پایه", MVC.BaseSetting.Index())
-        </li>
-      }
+        @if (Auth.GetBaseSettingPermissions().Any(User.IsInRole))
+        {
+            <li class="main">
+                @Html.SecureActionLink("تنظیمات پایه", MVC.BaseSetting.Index())
+            </li>
+        }
 
     </ul>
     <ul class="nav navbar-nav navbar-left">

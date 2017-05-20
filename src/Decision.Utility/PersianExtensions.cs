@@ -9,6 +9,18 @@ namespace Decision.Utility
 {
     public static class PersianExtensions
     {
+        public static string GetDatePersianNumber(this string data)
+        {
+            if (string.IsNullOrEmpty(data)) return string.Empty;
+            data = data.Insert(data.Length - 2, "/");
+            data = data.Insert(data.Length - 5, "/");
+            for (var i = 48; i < 58; i++)
+            {
+                data = data.Replace(Convert.ToChar(i), Convert.ToChar(1728 + i));
+            }
+            return data;
+        }
+
         public static string GetPersianNumber(this string data)
         {
             if (string.IsNullOrEmpty(data)) return string.Empty;

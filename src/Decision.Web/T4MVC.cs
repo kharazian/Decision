@@ -36,6 +36,8 @@ public static partial class MVC
     public static Decision.Web.Controllers.EducationalBackgroundController EducationalBackground = new Decision.Web.Controllers.T4MVC_EducationalBackgroundController();
     public static Decision.Web.Controllers.EducationalExperienceController EducationalExperience = new Decision.Web.Controllers.T4MVC_EducationalExperienceController();
     public static Decision.Web.Controllers.ElmahController Elmah = new Decision.Web.Controllers.T4MVC_ElmahController();
+    public static Decision.Web.Controllers.EmployeeController Employee = new Decision.Web.Controllers.T4MVC_EmployeeController();
+    public static Decision.Web.Controllers.EmpRelativeController EmpRelative = new Decision.Web.Controllers.T4MVC_EmpRelativeController();
     public static Decision.Web.Controllers.EntireEvaluationController EntireEvaluation = new Decision.Web.Controllers.T4MVC_EntireEvaluationController();
     public static Decision.Web.Controllers.ErrorController Error = new Decision.Web.Controllers.T4MVC_ErrorController();
     public static Decision.Web.Controllers.HomeController Home = new Decision.Web.Controllers.T4MVC_HomeController();

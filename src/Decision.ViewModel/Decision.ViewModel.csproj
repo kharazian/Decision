@@ -74,7 +74,13 @@
     <Compile Include="EducationalExperience\EducationalExperienceListViewModel.cs" />
     <Compile Include="EducationalExperience\EducationalExperienceSearchRequest.cs" />
     <Compile Include="EducationalExperience\EducationalExperienceViewModel.cs" />
+    <Compile Include="Employee\EmployeeListViewModel.cs" />
+    <Compile Include="Employee\EmployeeSearchRequest.cs" />
+    <Compile Include="Employee\EmployeeViewModel.cs" />
     <Compile Include="Employee\EmployeeDetailsViewModel.cs" />
+    <Compile Include="EmpRelative\EmpRelativeListViewModel.cs" />
+    <Compile Include="EmpRelative\EmpRelativeSearchRequest.cs" />
+    <Compile Include="EmpRelative\EmpRelativeViewModel.cs" />
     <Compile Include="EntireEvaluation\AddEnitreEvaluationViewModel.cs" />
     <Compile Include="EntireEvaluation\EditEnitreEvaluationViewModel.cs" />
     <Compile Include="EntireEvaluation\EnitreEvaluationListViewModel.cs" />

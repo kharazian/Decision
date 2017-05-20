@@ -10,14 +10,14 @@ using Decision.DomainClasses.Entities.ApplicantInfo;
 using Decision.Utility;
 using Decision.ViewModel.Home;
 using Decision.ViewModel.Applicant;
-using DNT.Extensions;
+using Decision.DomainClasses.EmployeeEntities;
 
 namespace Decision.AutoMapperProfiles
 {
     public class ApplicantProfile : Profile
     {
         protected override void Configure()
-        {
+        {            
             CreateMap<AddApplicantViewModel, Applicant>()
                                 .ForMember(d => d.BirthCertificateNumber, m => m.MapFrom(a => a.BirthCertificateNumber.GetPersianNumber()))
                  .ForMember(d => d.NationalCode, m => m.MapFrom(a => a.NationalCode))

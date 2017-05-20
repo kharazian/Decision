@@ -26,6 +26,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.DataProtection;
 using RefactorThis.GraphDiff;
+using Decision.DomainClasses.EmployeeEntities;
 
 namespace Decision.ServiceLayer.EFServiecs.Users
 {
@@ -41,6 +42,7 @@ namespace Decision.ServiceLayer.EFServiecs.Users
         private readonly IApplicationRoleManager _roleManager;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IDbSet<User> _users;
+        private readonly IDbSet<Employee> _employee;
         private readonly IDataProtectionProvider _dataProtectionProvider;
         private readonly IMappingEngine _mappingEngine;
 
@@ -64,6 +66,7 @@ namespace Decision.ServiceLayer.EFServiecs.Users
             SmsService = smsService;
             _unitOfWork = unitOfWork;
             _users = _unitOfWork.Set<User>();
+            _employee = _unitOfWork.Set<Employee>();
             _roleManager = roleManager;
             _identity = identity;
             CreateApplicationUserManager();
@@ -134,6 +137,32 @@ namespace Decision.ServiceLayer.EFServiecs.Users
                 this.Create(user, systemAdminPassword);
                 this.SetLockoutEnabled(user.Id, false);
             }
+            //
+            // ایجاد کاربری برای همه کارمندان
+            //
+            //var employees = _employee.ToList();
+            //foreach (var employee in employees)
+            //{
+            //    var newUser = _users.FirstOrDefault(a => a.UserName == employee.Empno);
+            //    if (newUser == null)
+            //    {
+            //        newUser = new User
+            //        {
+            //            DisplayName = employee.Name.Trim() + " " + employee.Family.Trim(),
+            //            UserName = employee.Empno,
+            //            IsSystemAccount = true,
+            //            Email = systemAdminEmail.FixGmailDots(),
+            //            IsApproved = true
+
+            //        };
+            //        this.Create(newUser, employee.Empno);
+            //        this.SetLockoutEnabled(newUser.Id, false);
+            //    }
+
+            //    var newUserRoles = _roleManager.FindUserRoles(newUser.Id);
+            //    if (newUserRoles.Any(a => a == StandardRoles.Administrators)) continue;
+            //    this.AddToRole(newUser.Id, StandardRoles.Administrators);
+            //}
 
             var userRoles = _roleManager.FindUserRoles(user.Id);
             if (userRoles.Any(a => a == StandardRoles.Administrators)) return;

@@ -1,0 +1,48 @@
+﻿@using AttributeRouting.Helpers
+@using Decision.Common.HtmlHelpers
+@using DNT.Extensions
+@model Decision.ViewModel.Employee.EmployeeViewModel
+<div class="col-md-12" id="employee-@Model.Empno">
+    <div class="panel panel-default">
+       
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    @Html.Image(Model.Photo, Model.Name +" "+ Model.Family, "img-rounded img-responsive img-thumbnail", 100)
+                </div>
+
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="text-muted">متقاضی :</label>
+                            <small>@Model.Name +" "+ Model.Family</small> 
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fa fa-star"></i>
+                            <small id="Empno">
+                                @Model.Empno.GetPersianNumber()
+                            </small>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="text-muted">وضعیت پرسنل :</label>
+                            <small>@Html.DisplayFor(a => a.EmpState)</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="text-muted">نوع استخدام :</label>
+                            <small>@Model.EmpType</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <a href="@Url.Action(MVC.Employee.Details(Model.Empno))" class="btn btn-sm btn-info" type="button">
+                    <i class="fa fa-align-justify"></i>
+                    مشاهده اطلاعت بیشتر
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

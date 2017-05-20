@@ -29,7 +29,16 @@ namespace Decision.DomainClasses.Entities.Users
         }
         #endregion
 
-        #region Properties
+        #region Properties        
+        public List<string> Access
+        {
+            get
+            {
+                List<string> _access = new List<string>();
+                _access.Add(UserName);
+                return _access;
+            }
+        }
         /// <summary>
         /// gets or sets Total Size of user's Attachments
         /// </summary>

@@ -161,20 +161,20 @@ WriteAttribute("href", Tuple.Create(" href=\"", 1149), Tuple.Create("\"", 1185)
 
 WriteLiteral("><img");
 
-WriteLiteral(" alt=\"سامانه جذب هئیت علمی\"");
+WriteLiteral(" alt=\"سامانه کارکنان شهرداری اصفهان\"");
 
 WriteLiteral(" class=\"navbar-brand\"");
 
 WriteLiteral(" id=\"logo\"");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 1249), Tuple.Create("\"", 1296)
+WriteAttribute("src", Tuple.Create(" src=\"", 1258), Tuple.Create("\"", 1305)
             
             #line 30 "..\..\Views\Shared\_Layout.cshtml"
-                                            , Tuple.Create(Tuple.Create("", 1255), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/Images/logo.gif")
+                                                     , Tuple.Create(Tuple.Create("", 1264), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/Images/logo.gif")
             
             #line default
             #line hidden
-, 1255), false)
+, 1264), false)
 );
 
 WriteLiteral(" /></a>\r\n                <button");

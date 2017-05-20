@@ -1,0 +1,7 @@
+﻿@* GeneratePrettyNames: true*@
+@model  Decision.ViewModel.Employee.EmployeeListViewModel
+
+@foreach (var Employee in Model.Employees)
+{
+    @Html.Partial(MVC.Employee.Views._EmployeeItem, Employee)
+}

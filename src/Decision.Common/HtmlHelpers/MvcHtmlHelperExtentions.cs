@@ -78,7 +78,10 @@ namespace Decision.Common.HtmlHelpers
         public static MvcHtmlString Image(this HtmlHelper html, byte[] image, string alt, string cssClass, int size = 100)
         {
             var img = string.Empty;
-
+            if(image==null || image.Length==0)
+            {
+                image = BitConverter.GetBytes(0);
+            }
             if (!image.Take(4).SequenceEqual(new byte[] { 0, 0, 0, 0 }))
             {
                 img = $"data:image/png;base64,{Convert.ToBase64String(image.ResizeImageFile(size, size))}";

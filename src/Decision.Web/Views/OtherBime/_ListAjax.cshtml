@@ -1,0 +1,8 @@
+﻿@* GeneratePrettyNames: true*@
+@model Decision.ViewModel.OtherBime.OtherBimeListViewModel
+@foreach (var e in Model.OtherBimes)
+{
+    @Html.Partial(MVC.OtherBime.Views._OtherBimeItem, e)
+}
+
+

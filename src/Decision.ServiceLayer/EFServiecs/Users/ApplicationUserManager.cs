@@ -159,9 +159,6 @@ namespace Decision.ServiceLayer.EFServiecs.Users
             //        this.SetLockoutEnabled(newUser.Id, false);
             //    }
 
-            //    var newUserRoles = _roleManager.FindUserRoles(newUser.Id);
-            //    if (newUserRoles.Any(a => a == StandardRoles.Administrators)) continue;
-            //    this.AddToRole(newUser.Id, StandardRoles.Administrators);
             //}
 
             var userRoles = _roleManager.FindUserRoles(user.Id);
@@ -574,6 +571,13 @@ namespace Decision.ServiceLayer.EFServiecs.Users
         public long Count()
         {
             return _users.LongCount();
+        }
+
+        public bool IsInRoleManager()
+        {
+            if (HttpContext.Current.User.IsInRole("مدیران"))
+                return true;
+            return false;
         }
     }
 }

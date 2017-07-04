@@ -35,6 +35,15 @@ namespace Decision.ViewModel.Employee
             {
                 new SelectListItem
                 {
+                    Value = ApplicantSortBy.Family,
+                    Text = "نام خانوادگی"
+                },                new SelectListItem
+                {
+                    Value = ApplicantSortBy.Name,
+                    Text = "نام"
+                },
+                new SelectListItem
+                {
                     Value = SortByMode.CreatedOn,
                     Text = "تاریخ درج"
                 },
@@ -42,16 +51,6 @@ namespace Decision.ViewModel.Employee
                 {
                     Value = SortByMode.ModifiedOn,
                     Text = "تاریخ آخرین تغییر"
-                },
-                new SelectListItem
-                {
-                    Value = ApplicantSortBy.FirstName,
-                    Text = "نام"
-                },
-                new SelectListItem
-                {
-                    Value = ApplicantSortBy.LastName,
-                    Text = "نام خانوادگی"
                 }
             };
 

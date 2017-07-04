@@ -61,6 +61,14 @@
   <ItemGroup>
     <Compile Include="AddressProfile.cs" />
     <Compile Include="AnswerOptionProfile.cs" />
+    <Compile Include="HokmPayProfile.cs" />
+    <Compile Include="HokmProfile.cs" />
+    <Compile Include="EmpDegreeProfile.cs" />
+    <Compile Include="EblaghProfile.cs" />
+    <Compile Include="OtherBimeProfile.cs" />
+    <Compile Include="MilitaryServiceProfile.cs" />
+    <Compile Include="ExperienceProfile.cs" />
+    <Compile Include="EmpRelativeProfile .cs" />
     <Compile Include="EmployeeProfile.cs" />
     <Compile Include="EducationalBackgroundProfile.cs" />
     <Compile Include="EducationalExperienceProfile.cs" />

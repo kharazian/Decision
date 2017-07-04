@@ -45,7 +45,6 @@ namespace Decision.AutoMapperProfiles
             .ForMember(d => d.BirthCity, m => m.MapFrom(s => s.BirthCity.DscPlace))
             .ForMember(d => d.IssueCity, m => m.MapFrom(s => s.IssueCity.DscPlace))
             .ForMember(d => d.ReligionDsc, m => m.MapFrom(s => s.Religion.Dsc))
-            //.ForMember(d => d.StopStat, m => m.MapFrom(s => s.StopStat))
             .ForMember(d => d.EmpType, m => m.MapFrom(s => s.EmpTypeDsc.Dsc))
             .ForMember(d => d.Unit, m => m.MapFrom(s => s.UnitPlace.Manage2.NamManagement + " / " + s.UnitPlace.NamOrganUnit))
             .ForMember(d => d.RealPlace, m => m.MapFrom(s => s.RUnitPlace.Manage2.NamManagement + " / " + s.RUnitPlace.NamOrganUnit))
@@ -62,9 +61,6 @@ namespace Decision.AutoMapperProfiles
             .ForMember(d => d.LPostEblagh, m => m.MapFrom(s => s.LPost.POstDsc))
             .IgnoreAllNonExisting();
 
-
-            CreateMap<EmpRelative, EmpRelativeViewModel>();
-            //.IgnoreAllNonExisting();
         }
 
     }

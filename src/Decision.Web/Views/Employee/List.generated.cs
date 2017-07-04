@@ -136,7 +136,7 @@ WriteLiteral("\r\n");
             #line hidden
             
             #line 24 "..\..\Views\Employee\List.cshtml"
-                 using (Ajax.BeginForm(MVC.Employee.ListAjax(), new AjaxOptions { AllowCache = false, HttpMethod = "POST", OnComplete = "searchOnComplete(xhr,status,'#progress','#EmployeePager','#EmployeetList')" }, new { @class = "form-horizontal", autocomplete = "off", id = "EmployeeSearchForm" }))
+                 using (Ajax.BeginForm(MVC.Employee.ListAjax(), new AjaxOptions { AllowCache = false, HttpMethod = "POST", OnComplete = "searchOnComplete(xhr,status,'#progress','#EmployeePager','#EmployeeList')" }, new { @class = "form-horizontal", autocomplete = "off", id = "EmployeeSearchForm" }))
                 {
                     
             
@@ -216,7 +216,7 @@ WriteLiteral(" class=\"form-group\"");
 
 WriteLiteral(">\r\n                                    <label");
 
-WriteLiteral(" for=\"FirstName\"");
+WriteLiteral(" for=\"Name\"");
 
 WriteLiteral(">\r\n                                        <i");
 
@@ -225,9 +225,9 @@ WriteLiteral(" class=\"fa fa-align-justify\"");
 WriteLiteral("></i>\r\n                                        نام متقاضی\r\n                      " +
 "              </label>\r\n                                    <input");
 
-WriteLiteral(" name=\"FirstName\"");
+WriteLiteral(" name=\"Name\"");
 
-WriteLiteral(" id=\"FirstName\"");
+WriteLiteral(" id=\"Name\"");
 
 WriteLiteral(" class=\"form-control input-sm\"");
 
@@ -248,7 +248,7 @@ WriteLiteral(" class=\"form-group\"");
 
 WriteLiteral(">\r\n                                    <label");
 
-WriteLiteral(" for=\"LastName\"");
+WriteLiteral(" for=\"Family\"");
 
 WriteLiteral(">\r\n                                        <i");
 
@@ -257,9 +257,9 @@ WriteLiteral(" class=\"fa fa-align-justify\"");
 WriteLiteral("></i>\r\n                                        نام خانودگی متقاضی\r\n              " +
 "                      </label>\r\n                                    <input");
 
-WriteLiteral(" name=\"LastName\"");
+WriteLiteral(" name=\"Family\"");
 
-WriteLiteral(" id=\"LastName\"");
+WriteLiteral(" id=\"Family\"");
 
 WriteLiteral(" class=\"form-control input-sm\"");
 
@@ -280,7 +280,7 @@ WriteLiteral(" class=\"form-group\"");
 
 WriteLiteral(">\r\n                                    <label");
 
-WriteLiteral(" for=\"NationalCode\"");
+WriteLiteral(" for=\"MelliCode\"");
 
 WriteLiteral(">\r\n                                        <i");
 
@@ -289,9 +289,9 @@ WriteLiteral(" class=\"fa fa-list-alt\"");
 WriteLiteral("></i>\r\n                                        شماره ملی\r\n                       " +
 "             </label>\r\n                                    <input");
 
-WriteLiteral(" name=\"NationalCode\"");
+WriteLiteral(" name=\"MelliCode\"");
 
-WriteLiteral(" id=\"NationalCode\"");
+WriteLiteral(" id=\"MelliCode\"");
 
 WriteLiteral(" class=\"form-control input-sm\"");
 
@@ -312,7 +312,7 @@ WriteLiteral(" class=\"form-group\"");
 
 WriteLiteral(">\r\n                                    <label");
 
-WriteLiteral(" for=\"BirthCertificateNumber\"");
+WriteLiteral(" for=\"IdNo\"");
 
 WriteLiteral(">\r\n                                        <i");
 
@@ -321,9 +321,9 @@ WriteLiteral(" class=\"fa fa-list-alt\"");
 WriteLiteral("></i>\r\n                                        شماره شناسنامه\r\n                  " +
 "                  </label>\r\n                                    <input");
 
-WriteLiteral(" name=\"BirthCertificateNumber\"");
+WriteLiteral(" name=\"IdNo\"");
 
-WriteLiteral(" id=\"BirthCertificateNumber\"");
+WriteLiteral(" id=\"IdNo\"");
 
 WriteLiteral("\r\n                                           class=\"form-control input-sm\"");
 
@@ -354,7 +354,7 @@ WriteLiteral(" aria-controls=\"adv-search\"");
 
 WriteLiteral(" aria-expanded=\"false\"");
 
-WriteLiteral(" class=\" btn btn-sm btn-primary\"");
+WriteLiteral(" class=\"btn btn-sm btn-primary\"");
 
 WriteLiteral(" data-target=\"#adv-search\"");
 
@@ -383,7 +383,7 @@ WriteLiteral(" aria-expanded=\"false\"");
 WriteLiteral(" onclick=\"resetSearch(\'#progress\', \'#EmployeeSearchForm\', \'#EmployeePager\', \'#Emp" +
 "loyeeList\', \'#SortBy\', \'#SortOrder\', \'#PageSizer\')\"");
 
-WriteLiteral("\r\n                                            class=\" btn btn-default btn-sm\"");
+WriteLiteral("\r\n                                            class=\"btn btn-default btn-sm\"");
 
 WriteLiteral(" data-target=\"#show-search\"");
 
@@ -415,7 +415,7 @@ WriteLiteral(">\r\n        <div");
 
 WriteLiteral(" class=\"row\"");
 
-WriteLiteral(" id=\"ApplicantList\"");
+WriteLiteral(" id=\"EmployeeList\"");
 
 WriteLiteral(">\r\n");
 
@@ -524,14 +524,14 @@ WriteLiteral(" style=\"display: none\"");
 
 WriteLiteral(">\r\n            <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 7564), Tuple.Create("\"", 7614)
+WriteAttribute("src", Tuple.Create(" src=\"", 7476), Tuple.Create("\"", 7526)
             
             #line 121 "..\..\Views\Employee\List.cshtml"
-, Tuple.Create(Tuple.Create("", 7570), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/images/loading.gif")
+, Tuple.Create(Tuple.Create("", 7482), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/images/loading.gif")
             
             #line default
             #line hidden
-, 7570), false)
+, 7482), false)
 );
 
 WriteLiteral(" alt=\"loading...\"");

@@ -1,0 +1,41 @@
+﻿@model Decision.ViewModel.OtherBime.OtherBimeViewModel
+<div class="col-md-12 data-item" id="OtherBime-@Model.Empno">
+    <div class="panel panel-default">
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <label>وضعیت بیمه </label>
+                    <small>
+                        @if (Model.IsEnable)
+                        {
+                            <i class="fa fa-check-square text-success" title="فعال"></i>
+                        }
+                        else
+                        {
+                            <i class="fa fa-check-square-o text-muted" title="غیر فعال"></i>
+                        }
+                    </small>
+                </div>
+
+                <div class="col-md-2">
+                    <label class="text-muted">نوع بیمه:</label>
+                    <small>@Model.BimeDsc</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">سال و ماه شروع:</label>
+                    <small>@Model.StartYear.GetPersianNumber() @Model.StartMonth.GetPersianNumber() </small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">سال و ماه پایان:</label>
+                    <small>@Model.EndYear.GetPersianNumber() @Model.EndMonth.GetPersianNumber() </small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">شماره بیمه:</label>
+                    <small>@Model.InsNo.GetPersianNumber()</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

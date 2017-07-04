@@ -91,7 +91,13 @@
   <ItemGroup>
     <Compile Include="Contracts\ApplicantInfo\IAddressService.cs" />
     <Compile Include="Contracts\ApplicantInfo\IPresenterService.cs" />
+    <Compile Include="Contracts\EmployeeInfo\IHokmService.cs" />
     <Compile Include="Contracts\EmployeeInfo\IEmployeeService.cs" />
+    <Compile Include="Contracts\EmployeeInfo\IEmpDegreeService.cs" />
+    <Compile Include="Contracts\EmployeeInfo\IEblaghService.cs" />
+    <Compile Include="Contracts\EmployeeInfo\IOtherBimeService.cs" />
+    <Compile Include="Contracts\EmployeeInfo\IMilitaryServiceService.cs" />
+    <Compile Include="Contracts\EmployeeInfo\IExprienceService.cs" />
     <Compile Include="Contracts\EmployeeInfo\IEmpRelativeService.cs" />
     <Compile Include="Contracts\Users\IActivityLogService.cs" />
     <Compile Include="Contracts\Common\ICityService.cs" />
@@ -122,7 +128,14 @@
     <Compile Include="CustomAspNetIdentity\CustomSecurityStampValidator.cs" />
     <Compile Include="EFServiecs\ApplicantInfo\AddressServices.cs" />
     <Compile Include="EFServiecs\ApplicantInfo\PresenterService.cs" />
+    <Compile Include="EFServiecs\BaseService.cs" />
+    <Compile Include="EFServiecs\EmployeeInfo\HokmService.cs" />
     <Compile Include="EFServiecs\EmployeeInfo\EmployeeService.cs" />
+    <Compile Include="EFServiecs\EmployeeInfo\EmpDegreeService.cs" />
+    <Compile Include="EFServiecs\EmployeeInfo\EblaghService.cs" />
+    <Compile Include="EFServiecs\EmployeeInfo\OtherBimeService.cs" />
+    <Compile Include="EFServiecs\EmployeeInfo\MilitaryServiceService.cs" />
+    <Compile Include="EFServiecs\EmployeeInfo\ExperienceService.cs" />
     <Compile Include="EFServiecs\EmployeeInfo\EmpRelativeService.cs" />
     <Compile Include="EFServiecs\Users\ActivityLogService.cs" />
     <Compile Include="EFServiecs\Common\CityService.cs" />

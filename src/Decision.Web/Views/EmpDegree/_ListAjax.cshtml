@@ -1,0 +1,8 @@
+﻿@* GeneratePrettyNames: true*@
+@model Decision.ViewModel.EmpDegree.EmpDegreeListViewModel
+@foreach (var e in Model.Degrees)
+{
+    @Html.Partial(MVC.EmpDegree.Views._EmpDegreeItem, e)
+}
+
+

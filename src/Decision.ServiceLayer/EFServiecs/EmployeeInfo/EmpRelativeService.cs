@@ -16,42 +16,26 @@ using EntityFramework.Extensions;
 
 namespace Decision.ServiceLayer.EFServiecs.EmployeeInfo
 {
-    public class EmpRelativeService : IEmpRelativeService
+    public class EmpRelativeService : BaseService<EmpRelative>, IEmpRelativeService
     {
-        #region Fields
-        private readonly IMappingEngine _mappingEngine;
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IApplicationUserManager _userManager;
-        private readonly IDbSet<EmpRelative> _relative;
-        #endregion
+
 
         #region Ctor
-        public EmpRelativeService(IUnitOfWork unitOfWork, IApplicationUserManager userManager, IMappingEngine mappingEngine)
+        public EmpRelativeService(IUnitOfWork unitOfWork, IApplicationUserManager userManager, IMappingEngine mappingEngine): base(unitOfWork, userManager, mappingEngine)
         {
-            _userManager = userManager;
-            _unitOfWork = unitOfWork;
-            _relative = _unitOfWork.Set<EmpRelative>();
-            _mappingEngine = mappingEngine;
-            var cuser = _userManager.GetCurrentUser();
-            if (cuser.UserName == "Admin")
-            {
-                _unitOfWork.DisableFiltering("Tenant");
-            }
-            else
-            {
-                _unitOfWork.EnableFiltering("Tenant", "empno", cuser.Access);
-            }
         }
         #endregion
 
         #region GetAddressesAsync
         public async Task<EmpRelativeListViewModel> GetRelativeAsync(EmpRelativeSearchRequest request)
         {
+            var t = Service.AsNoTracking().Include(a => a.Bimes).Where(a => a.Empno == request.Empno).ProjectTo<EmpRelativeViewModel>(MappingEngine);
             return new EmpRelativeListViewModel
             {
-                Relatives = await _relative.AsNoTracking()
-                    .Where(a => a.Empno == request.Empno)
-                    .ProjectTo<EmpRelativeViewModel>(_mappingEngine)
+                Relatives = await Service.AsNoTracking()
+                    .Include(a => a.Bimes)
+                    .Where(a => a.Empno == request.Empno)                    
+                    .ProjectTo<EmpRelativeViewModel>(MappingEngine)
                     //.Skip((request.PageIndex - 1) * 5)
                     //.Take(5)
                     .ToListAsync(),

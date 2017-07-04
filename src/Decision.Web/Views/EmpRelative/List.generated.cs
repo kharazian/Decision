@@ -53,40 +53,7 @@ WriteLiteral("\r\n\r\n<div");
 
 WriteLiteral(" class=\"panel panel-default\"");
 
-WriteLiteral(">\r\n    <div");
-
-WriteLiteral(" class=\"panel-heading\"");
-
-WriteLiteral(">\r\n        <div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                <a");
-
-WriteLiteral(" class=\"btn btn-default\"");
-
-WriteLiteral(" data-ajax=\"true\"");
-
-WriteLiteral(" data-ajax-mode=\"replace\"");
-
-WriteLiteral(" data-ajax-success=\"onSuccessFormValidation(data, status, xhr,\'createAddressForm\'" +
-",\'modal\')\"");
-
-WriteLiteral("\r\n                   data-ajax-update=\"#modal\"");
-
-WriteLiteral(" href=\"#\"");
-
-WriteLiteral(" role=\"button\"");
-
-WriteLiteral("><i");
-
-WriteLiteral(" class=\"fa fa-plus\"");
-
-WriteLiteral("></i>درج آدرس جدید</a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div");
+WriteLiteral(">\r\n\r\n    <div");
 
 WriteLiteral(" class=\"panel-body\"");
 
@@ -99,13 +66,13 @@ WriteLiteral(" id=\"addressList\"");
 WriteLiteral(">\r\n");
 
             
-            #line 15 "..\..\Views\EmpRelative\List.cshtml"
+            #line 8 "..\..\Views\EmpRelative\List.cshtml"
             
             
             #line default
             #line hidden
             
-            #line 15 "..\..\Views\EmpRelative\List.cshtml"
+            #line 8 "..\..\Views\EmpRelative\List.cshtml"
                Html.RenderPartial(MVC.EmpRelative.Views.ViewNames._ListAjax, Model);
             
             #line default
@@ -129,7 +96,7 @@ WriteLiteral(" data-page=\"2\"");
 WriteLiteral(" data-json=\'{\"ApplicantId\":\"");
 
             
-            #line 21 "..\..\Views\EmpRelative\List.cshtml"
+            #line 14 "..\..\Views\EmpRelative\List.cshtml"
                                                             Write(Model.Request.Empno);
 
             
@@ -144,7 +111,7 @@ WriteLiteral("\r\n                        data-progress=\"#progress\"");
 WriteLiteral("\r\n                        data-load-url=\"");
 
             
-            #line 23 "..\..\Views\EmpRelative\List.cshtml"
+            #line 16 "..\..\Views\EmpRelative\List.cshtml"
                                   Write(Url.Action(MVC.Address.ListAjax()));
 
             
@@ -169,14 +136,14 @@ WriteLiteral(" style=\"display: none\"");
 
 WriteLiteral(">\r\n            <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 1399), Tuple.Create("\"", 1449)
+WriteAttribute("src", Tuple.Create(" src=\"", 967), Tuple.Create("\"", 1017)
             
-            #line 30 "..\..\Views\EmpRelative\List.cshtml"
-, Tuple.Create(Tuple.Create("", 1405), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/images/loading.gif")
+            #line 23 "..\..\Views\EmpRelative\List.cshtml"
+, Tuple.Create(Tuple.Create("", 973), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/images/loading.gif")
             
             #line default
             #line hidden
-, 1405), false)
+, 973), false)
 );
 
 WriteLiteral(" alt=\"loading...\"");
@@ -186,7 +153,7 @@ WriteLiteral("/>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
 DefineSection("Menu", () => {
 
             
-            #line 34 "..\..\Views\EmpRelative\List.cshtml"
+            #line 27 "..\..\Views\EmpRelative\List.cshtml"
     
             
             #line default
@@ -194,13 +161,13 @@ DefineSection("Menu", () => {
 WriteLiteral("\r\n");
 
             
-            #line 35 "..\..\Views\EmpRelative\List.cshtml"
+            #line 28 "..\..\Views\EmpRelative\List.cshtml"
         
             
             #line default
             #line hidden
             
-            #line 35 "..\..\Views\EmpRelative\List.cshtml"
+            #line 28 "..\..\Views\EmpRelative\List.cshtml"
           Html.RenderPartial(MVC.Employee.Views._EmployeeRelatedLinksBuilder, Model.Request.Empno);
             
             #line default
@@ -218,7 +185,7 @@ WriteLiteral("\r\n");
 WriteLiteral("        ");
 
             
-            #line 38 "..\..\Views\EmpRelative\List.cshtml"
+            #line 31 "..\..\Views\EmpRelative\List.cshtml"
    Write(Scripts.Render("~/bundles/jqueryval"));
 
             

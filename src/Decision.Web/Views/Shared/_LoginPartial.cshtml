@@ -2,7 +2,7 @@
 @using Auth=Decision.ServiceLayer.Security.AssignableToRolePermissions
 <div class="navbar-collapse collapse" id="navbar-main">
     <ul class="nav navbar-nav">
-        @if (User.IsInRole(Auth.CanViewApplicantList))
+        @if (User.IsInRole(Auth.CanViewEmployeeList))
         {
             <li class="main">
                 @Html.SecureActionLink("مدیریت کارکنان", MVC.Employee.List())

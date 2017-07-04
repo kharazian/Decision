@@ -8,28 +8,77 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-2">
-                    @Html.Image(Model.Photo, Model.Name +" "+ Model.Family, "img-rounded img-responsive img-thumbnail", 100)
-                </div>
+                    <div class="center-block text-center">
+
+                        @Html.Image(Model.Photo, Model.Family + " " + Model.Name, "img-rounded img-responsive img-thumbnail", 100)
+
+                    </div>
+                    </div>
 
                 <div class="col-md-10">
                     <div class="row">
                         <div class="col-md-3">
-                            <label class="text-muted">متقاضی :</label>
-                            <small>@Model.Name +" "+ Model.Family</small> 
+                            <label for="EmpnoEmployee">شماره پرسنلی:</label>
+                            <small id="EmpnoEmployee">@Model.Empno.GetPersianNumber()</small>
                         </div>
                         <div class="col-md-3">
-                            <i class="fa fa-star"></i>
-                            <small id="Empno">
-                                @Model.Empno.GetPersianNumber()
-                            </small>
+                            <label for="Family">نام خانوادگی:</label>
+                            <small id="Family">@Model.Family</small>
                         </div>
                         <div class="col-md-3">
-                            <label class="text-muted">وضعیت پرسنل :</label>
-                            <small>@Html.DisplayFor(a => a.EmpState)</small>
+                            <label for="Name">نام:</label>
+                            <small id="Name">@Model.Name</small>
                         </div>
                         <div class="col-md-3">
-                            <label class="text-muted">نوع استخدام :</label>
-                            <small>@Model.EmpType</small>
+                            <label for="StopStat">وضعیت پرسنل:</label>
+                            <small id="StopStat">@Html.DisplayFor(a => a.StopStatE)</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="MelliCode">کد ملی:</label>
+                            <small id="MelliCode">@Model.MelliCode.GetPersianNumber()</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="EmpType">نوع استخدام:</label>
+                            <small id="EmpType">@Model.EmpType</small>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="RealPlace">محل خدمت:</label>
+                            <small id="RealPlace">@Model.RealPlace </small>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <label for="LPostEblagh">آخرین پست سازمانی:</label>
+                            <small id="LPostEblagh">@Model.LPostEblagh</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="LDegreeDsc">آخرین مقطع تحصیلی:</label>
+                            <small id="LDegreeDsc">@Model.LDegreeDsc</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="LMajorDsc">آخرین مدرک تحصیلی:</label>
+                            <small id="LMajorDsc">@Model.LMajorDsc.GetPersianNumber()</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="GovEmpDate">تاریخ استخدام:</label>
+                            <small id="GovEmpDate">@Model.GovEmpDate.GetDatePersianNumber()</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="ManEmpDate">تاریخ ورود به شهرداری:</label>
+                            <small id="ManEmpDate">@Model.ManEmpDate.GetDatePersianNumber()</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="IssueCityCod">سنوات حکم:</label>
+                            <small id="IssueCityCod">@Model.SanavatHokm.GetDatePersianNumber()</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="ReligionCod">سنوات حقوق:</label>
+                            <small id="ReligionCod">@Model.SanavatHoghogh.GetDatePersianNumber()</small>
                         </div>
                     </div>
                 </div>

@@ -21,7 +21,7 @@
                 @Html.HelpAlert(Url.Content("~/Content/Images/lightbulb.png"),
                     "با استفاده از فرم زیر ، امکان جستجوی پیشرفته بین کارکنان را خواهید داشت.",
                     "برای لغو فیلتر اعمال شده میتوانید از دکمه لغو استفاده کنید.")
-                @using (Ajax.BeginForm(MVC.Employee.ListAjax(), new AjaxOptions { AllowCache = false, HttpMethod = "POST", OnComplete = "searchOnComplete(xhr,status,'#progress','#EmployeePager','#EmployeetList')" }, new { @class = "form-horizontal", autocomplete = "off", id = "EmployeeSearchForm" }))
+                @using (Ajax.BeginForm(MVC.Employee.ListAjax(), new AjaxOptions { AllowCache = false, HttpMethod = "POST", OnComplete = "searchOnComplete(xhr,status,'#progress','#EmployeePager','#EmployeeList')" }, new { @class = "form-horizontal", autocomplete = "off", id = "EmployeeSearchForm" }))
                 {
                     @Html.Hidden("PageIndex", Model.SearchRequest.PageIndex)
                     @Html.Hidden("PageSize", Model.SearchRequest.PageSize)
@@ -31,41 +31,41 @@
                         <div class="row">
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <label for="FirstName">
+                                    <label for="Name">
                                         <i class="fa fa-align-justify"></i>
                                         نام متقاضی
                                     </label>
-                                    <input name="FirstName" id="FirstName" class="form-control input-sm"
+                                    <input name="Name" id="Name" class="form-control input-sm"
                                            placeholder="نام متقاضی" type="text" value="">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="LastName">
+                                    <label for="Family">
                                         <i class="fa fa-align-justify"></i>
                                         نام خانودگی متقاضی
                                     </label>
-                                    <input name="LastName" id="LastName" class="form-control input-sm"
+                                    <input name="Family" id="Family" class="form-control input-sm"
                                            placeholder="نام خانودگی متقاضی" type="text" value="">
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <label for="NationalCode">
+                                    <label for="MelliCode">
                                         <i class="fa fa-list-alt"></i>
                                         شماره ملی
                                     </label>
-                                    <input name="NationalCode" id="NationalCode" class="form-control input-sm"
+                                    <input name="MelliCode" id="MelliCode" class="form-control input-sm"
                                            placeholder="کد ملی" type="text" value="">
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <label for="BirthCertificateNumber">
+                                    <label for="IdNo">
                                         <i class="fa fa-list-alt"></i>
                                         شماره شناسنامه
                                     </label>
-                                    <input name="BirthCertificateNumber" id="BirthCertificateNumber"
+                                    <input name="IdNo" id="IdNo"
                                            class="form-control input-sm" placeholder="شماره شناسنامه" type="text" value="">
                                 </div>
                             </div>
@@ -74,13 +74,13 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="pull-left">
-                                    <button type="button" aria-controls="adv-search" aria-expanded="false" class=" btn btn-sm btn-primary" data-target="#adv-search" data-toggle="collapse"
+                                    <button type="button" aria-controls="adv-search" aria-expanded="false" class="btn btn-sm btn-primary" data-target="#adv-search" data-toggle="collapse"
                                             id="userSearchButton" autocomplete="off" onclick="directSearchPagingSorting('#progress', '#EmployeeSearchForm', '#EmployeePager', '#EmployeeList', '#SortBy', '#SortOrder', '#PageSizer')" data-loading-text="درخواست">
                                         <i class="fa fa-ellipsis-h"></i>
                                         اعمال فیلتر
                                     </button>
                                     <button aria-controls="show-search" aria-expanded="false" onclick="resetSearch('#progress', '#EmployeeSearchForm', '#EmployeePager', '#EmployeeList', '#SortBy', '#SortOrder', '#PageSizer')"
-                                            class=" btn btn-default btn-sm" data-target="#show-search" data-toggle="collapse" type="button">
+                                            class="btn btn-default btn-sm" data-target="#show-search" data-toggle="collapse" type="button">
                                         <i class="fa fa-arrow-up"></i>
                                         لغو فیلتر
                                     </button>
@@ -93,7 +93,7 @@
         </div>
     </div>
     <div class="panel-body">
-        <div class="row" id="ApplicantList">
+        <div class="row" id="EmployeeList">
             @{ Html.RenderPartial(MVC.Employee.Views.ViewNames._ListAjax, Model);}
         </div>
     </div>

@@ -1,67 +1,91 @@
 ﻿@model Decision.ViewModel.EmpRelative.EmpRelativeViewModel
 <div class="col-md-12 data-item" id="address-@Model.Empno">
     <div class="panel panel-default">
-      
+
         <div class="panel-body">
             <div class="row">
-                <div class="col-md-3">
-                    <i class="fa fa-mobile"></i>
-                    <label class="text-muted">شماره همراه:</label>
-                    <small>@Model.RelNam</small>
-                </div>
-
-                <div class="col-md-3">
-                    <i class="fa fa-phone"></i>
-                    <label class="text-muted">
-                        شماره تلفن ثابت:
-                    </label>
-                    <small>@Model.Family</small>
-                </div>
-                <div class="col-md-2">
-                    <i class="fa fa-map-o"></i>
-                    <label class="text-muted">
-                        نوع آدرس:
-                    </label>
-                    <small>@Html.DisplayFor(a => a.Family)</small>
-                </div>
-
-                <div class="col-md-2">
-                    <i class="fa fa-location-arrow"></i>
-                    <label class="text-muted">شهر:</label>
-                    <small>@Model.Family</small>
-                </div>
-                <div class="col-md-2">
-                    <i class="fa fa-map-marker"></i>
-                    <label class="text-muted">استان:</label>
-                    <small>@Model.Family</small>
+                <div class="col-md-12 ">
+                    <h3 class="line-status">
+                        <small class="text-muted">
+                            <i class="fa fa-user"></i>
+                            اطلاعات @Model.ReltypeDsc - @Model.RelNam - @Model.Family
+                        </small>
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="text-muted">وضعیت تکفل:</label>
+                            <small id="TakafolStatE">@Html.DisplayFor(a => a.TakafolStatE)</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="text-muted">نام پدر:</label>
+                            <small>@Model.FatherNam</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="text-muted">شماره شناسنامه:</label>
+                            <small>@Model.IdNo.GetPersianNumber()</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="text-muted">تاریخ تولد:</label>
+                            <small>@Model.BirthDate.GetDatePersianNumber()</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="text-muted">وضعیت رفاهی:</label>
+                            <small id="RefahiStateE">@Html.DisplayFor(a => a.RefahiStateE)</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="text-muted">جسیت:</label>
+                            <small>@Model.SexDsc</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="text-muted">وضعیت سلامت:</label>
+                            <small>@Model.HealthDsc</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="text-muted">وضعیت تاهل:</label>
+                            <small>@Model.MarriDsc</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="text-muted">کد ملی:</label>
+                            <small>@Model.MelliCode.GetPersianNumber()</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="text-muted">مدرک تحصیلی:</label>
+                            <small>@Model.DegreeDsc</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="text-muted">رشته تحصیلی:</label>
+                            <small>@Model.MajorDsc</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="text-muted">تاریخ ازدواج:</label>
+                            <small>@Model.ChildDatMarrid.GetDatePersianNumber()</small>
+                        </div>
+                    </div>
                 </div>
             </div>
-           
-            <div class="row">
-                <div class="col-md-12">
-                    <i class="fa fa-map-marker"></i>
-                    <label class="text-muted">نشانی :</label>
-                    <small>@Model.Family.GetPersianNumber()</small>
-                </div>
-
-            </div>           
         </div>
-        <div class="panel-footer ">
-            <div class="pull-left">
-                <a class="btn btn-primary btn-sm" data-ajax-oncomplete="editGetOnComplete(xhr,status)"
-                   data-ajax="true" data-ajax-method="GET"
-                   data-ajax-begin="onBegin(xhr,this)"
-                   data-ajax-mode="REPLACE-WITH" data-ajax-success="inlineEditGetOnSuccess(data, status, xhr,'@Model.Empno')"
-                   data-ajax-update="#address-@Model.Empno"
-                   href="#" role="button"><i class="fa fa-edit"></i>ویرایش</a>
-
-                <button class="btn-sm btn btn-danger"
-                        type="button" data-delete-url="@Url.Action(MVC.Address.Delete())" data-applicant="@Model.Empno" data-removal-element="#address-@Model.Empno" id="remove-@Model.Empno">
-                    <i class="fa fa-trash-o"></i>
-                    حذف
+        <div class="row">
+            <div class="col-md-12">
+                <button aria-controls="show-bime" aria-expanded="false" class="btn btn-default  btn-block" data-target="#show-bime-@Model.MelliCode" data-toggle="collapse" type="button">
+                    <i class="fa fa-search"></i>
+                    نمایش اطلاعات بیمه
                 </button>
             </div>
-            <div class="clearfix"></div>
         </div>
-    </div>
+        <div class="panel-footer">
+            <div class="row collapse" id="show-bime-@Model.MelliCode">
+                <hr class="margin-top-5 margin-bottom-5" />
+                <div class="col-md-12">
+                        @foreach (var e in Model.Bimes)
+                        {
+                            @Html.Partial(MVC.OtherBime.Views._OtherBimeItem, e)
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>

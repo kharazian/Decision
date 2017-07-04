@@ -23,7 +23,6 @@ namespace Decision.Web.Controllers
     {
         #region	Fields
 
-        private const string IranCitiesPath = "~/App_Data/IranCities.xml";
         private readonly IUnitOfWork _unitOfWork;
         private readonly IEmpRelativeService _relativeService;
         private readonly IApplicationUserManager _userManager;

@@ -1,0 +1,22 @@
+﻿@model Decision.ViewModel.HokmPay.HokmPayViewModel
+<div class="col-md-12 data-item" id="hokm-pay-@Model.HokmYear-@Model.Seq">
+    <div class="panel panel-default">
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="text-muted">شرح:</label>
+                    <small>@Model.PayDsc</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">مبلغ:</label>
+                    <small>@Model.Price.GetPersianNumber()</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

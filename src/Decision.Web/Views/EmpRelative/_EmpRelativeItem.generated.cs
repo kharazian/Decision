@@ -61,7 +61,7 @@ WriteLiteral(">\r\n    <div");
 
 WriteLiteral(" class=\"panel panel-default\"");
 
-WriteLiteral(">\r\n      \r\n        <div");
+WriteLiteral(">\r\n\r\n        <div");
 
 WriteLiteral(" class=\"panel-body\"");
 
@@ -71,250 +71,371 @@ WriteLiteral(" class=\"row\"");
 
 WriteLiteral(">\r\n                <div");
 
-WriteLiteral(" class=\"col-md-3\"");
+WriteLiteral(" class=\"col-md-12 \"");
 
-WriteLiteral(">\r\n                    <i");
+WriteLiteral(">\r\n                    <h3");
 
-WriteLiteral(" class=\"fa fa-mobile\"");
+WriteLiteral(" class=\"line-status\"");
 
-WriteLiteral("></i>\r\n                    <label");
+WriteLiteral(">\r\n                        <small");
 
 WriteLiteral(" class=\"text-muted\"");
 
-WriteLiteral(">شماره همراه:</label>\r\n                    <small>");
+WriteLiteral(">\r\n                            <i");
+
+WriteLiteral(" class=\"fa fa-user\"");
+
+WriteLiteral("></i>\r\n                            اطلاعات ");
 
             
-            #line 10 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                      Write(Model.RelNam);
+            #line 11 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                               Write(Model.ReltypeDsc);
 
             
             #line default
             #line hidden
-WriteLiteral("</small>\r\n                </div>\r\n\r\n                <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                    <i");
-
-WriteLiteral(" class=\"fa fa-phone\"");
-
-WriteLiteral("></i>\r\n                    <label");
-
-WriteLiteral(" class=\"text-muted\"");
-
-WriteLiteral(">\r\n                        شماره تلفن ثابت:\r\n                    </label>\r\n      " +
-"              <small>");
+WriteLiteral(" - ");
 
             
-            #line 18 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                      Write(Model.Family);
+            #line 11 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                                                   Write(Model.RelNam);
 
             
             #line default
             #line hidden
-WriteLiteral("</small>\r\n                </div>\r\n                <div");
-
-WriteLiteral(" class=\"col-md-2\"");
-
-WriteLiteral(">\r\n                    <i");
-
-WriteLiteral(" class=\"fa fa-map-o\"");
-
-WriteLiteral("></i>\r\n                    <label");
-
-WriteLiteral(" class=\"text-muted\"");
-
-WriteLiteral(">\r\n                        نوع آدرس:\r\n                    </label>\r\n             " +
-"       <small>");
+WriteLiteral(" - ");
 
             
-            #line 25 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                      Write(Html.DisplayFor(a => a.Family));
+            #line 11 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                                                                   Write(Model.Family);
 
             
             #line default
             #line hidden
-WriteLiteral("</small>\r\n                </div>\r\n\r\n                <div");
-
-WriteLiteral(" class=\"col-md-2\"");
-
-WriteLiteral(">\r\n                    <i");
-
-WriteLiteral(" class=\"fa fa-location-arrow\"");
-
-WriteLiteral("></i>\r\n                    <label");
-
-WriteLiteral(" class=\"text-muted\"");
-
-WriteLiteral(">شهر:</label>\r\n                    <small>");
-
-            
-            #line 31 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                      Write(Model.Family);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                </div>\r\n                <div");
-
-WriteLiteral(" class=\"col-md-2\"");
-
-WriteLiteral(">\r\n                    <i");
-
-WriteLiteral(" class=\"fa fa-map-marker\"");
-
-WriteLiteral("></i>\r\n                    <label");
-
-WriteLiteral(" class=\"text-muted\"");
-
-WriteLiteral(">استان:</label>\r\n                    <small>");
-
-            
-            #line 36 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                      Write(Model.Family);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                </div>\r\n            </div>\r\n           \r\n            <d" +
-"iv");
+WriteLiteral("\r\n                        </small>\r\n                    </h3>\r\n                  " +
+"  <div");
 
 WriteLiteral(" class=\"row\"");
 
-WriteLiteral(">\r\n                <div");
+WriteLiteral(">\r\n                        <div");
 
-WriteLiteral(" class=\"col-md-12\"");
+WriteLiteral(" class=\"col-md-3\"");
 
-WriteLiteral(">\r\n                    <i");
-
-WriteLiteral(" class=\"fa fa-map-marker\"");
-
-WriteLiteral("></i>\r\n                    <label");
+WriteLiteral(">\r\n                            <label");
 
 WriteLiteral(" class=\"text-muted\"");
 
-WriteLiteral(">نشانی :</label>\r\n                    <small>");
+WriteLiteral(">وضعیت تکفل:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"TakafolStatE\"");
+
+WriteLiteral(">");
 
             
-            #line 44 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                      Write(Model.Family.GetPersianNumber());
+            #line 17 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                                                Write(Html.DisplayFor(a => a.TakafolStatE));
 
             
             #line default
             #line hidden
-WriteLiteral("</small>\r\n                </div>\r\n\r\n            </div>           \r\n        </div>" +
-"\r\n        <div");
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
 
-WriteLiteral(" class=\"panel-footer \"");
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" class=\"text-muted\"");
+
+WriteLiteral(">نام پدر:</label>\r\n                            <small>");
+
+            
+            #line 21 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                              Write(Model.FatherNam);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" class=\"text-muted\"");
+
+WriteLiteral(">شماره شناسنامه:</label>\r\n                            <small>");
+
+            
+            #line 25 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                              Write(Model.IdNo.GetPersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" class=\"text-muted\"");
+
+WriteLiteral(">تاریخ تولد:</label>\r\n                            <small>");
+
+            
+            #line 29 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                              Write(Model.BirthDate.GetDatePersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                    </div>\r\n           " +
+"         <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(">\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" class=\"text-muted\"");
+
+WriteLiteral(">وضعیت رفاهی:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"RefahiStateE\"");
+
+WriteLiteral(">");
+
+            
+            #line 35 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                                                Write(Html.DisplayFor(a => a.RefahiStateE));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" class=\"text-muted\"");
+
+WriteLiteral(">جسیت:</label>\r\n                            <small>");
+
+            
+            #line 39 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                              Write(Model.SexDsc);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" class=\"text-muted\"");
+
+WriteLiteral(">وضعیت سلامت:</label>\r\n                            <small>");
+
+            
+            #line 43 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                              Write(Model.HealthDsc);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" class=\"text-muted\"");
+
+WriteLiteral(">وضعیت تاهل:</label>\r\n                            <small>");
+
+            
+            #line 47 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                              Write(Model.MarriDsc);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                    </div>\r\n           " +
+"         <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(">\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" class=\"text-muted\"");
+
+WriteLiteral(">کد ملی:</label>\r\n                            <small>");
+
+            
+            #line 53 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                              Write(Model.MelliCode.GetPersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" class=\"text-muted\"");
+
+WriteLiteral(">مدرک تحصیلی:</label>\r\n                            <small>");
+
+            
+            #line 57 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                              Write(Model.DegreeDsc);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" class=\"text-muted\"");
+
+WriteLiteral(">رشته تحصیلی:</label>\r\n                            <small>");
+
+            
+            #line 61 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                              Write(Model.MajorDsc);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" class=\"text-muted\"");
+
+WriteLiteral(">تاریخ ازدواج:</label>\r\n                            <small>");
+
+            
+            #line 65 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                              Write(Model.ChildDatMarrid.GetDatePersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                    </div>\r\n           " +
+"     </div>\r\n            </div>\r\n        </div>\r\n        <div");
+
+WriteLiteral(" class=\"row\"");
 
 WriteLiteral(">\r\n            <div");
 
-WriteLiteral(" class=\"pull-left\"");
+WriteLiteral(" class=\"col-md-12\"");
 
-WriteLiteral(">\r\n                <a");
+WriteLiteral(">\r\n                <button");
 
-WriteLiteral(" class=\"btn btn-primary btn-sm\"");
+WriteLiteral(" aria-controls=\"show-bime\"");
 
-WriteLiteral(" data-ajax-oncomplete=\"editGetOnComplete(xhr,status)\"");
+WriteLiteral(" aria-expanded=\"false\"");
 
-WriteLiteral("\r\n                   data-ajax=\"true\"");
+WriteLiteral(" class=\"btn btn-default  btn-block\"");
 
-WriteLiteral(" data-ajax-method=\"GET\"");
-
-WriteLiteral("\r\n                   data-ajax-begin=\"onBegin(xhr,this)\"");
-
-WriteLiteral("\r\n                   data-ajax-mode=\"REPLACE-WITH\"");
-
-WriteLiteral(" data-ajax-success=\"inlineEditGetOnSuccess(data, status, xhr,\'");
+WriteLiteral(" data-target=\"#show-bime-");
 
             
-            #line 54 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                                                                                                         Write(Model.Empno);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\')\"");
-
-WriteLiteral("\r\n                   data-ajax-update=\"#address-");
-
-            
-            #line 55 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                                         Write(Model.Empno);
+            #line 73 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                                                                                                                              Write(Model.MelliCode);
 
             
             #line default
             #line hidden
 WriteLiteral("\"");
 
-WriteLiteral("\r\n                   href=\"#\"");
+WriteLiteral(" data-toggle=\"collapse\"");
 
-WriteLiteral(" role=\"button\"");
-
-WriteLiteral("><i");
-
-WriteLiteral(" class=\"fa fa-edit\"");
-
-WriteLiteral("></i>ویرایش</a>\r\n\r\n                <button");
-
-WriteLiteral(" class=\"btn-sm btn btn-danger\"");
-
-WriteLiteral("\r\n                        type=\"button\"");
-
-WriteLiteral(" data-delete-url=\"");
-
-            
-            #line 59 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                                                  Write(Url.Action(MVC.Address.Delete()));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\"");
-
-WriteLiteral(" data-applicant=\"");
-
-            
-            #line 59 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                                                                                                     Write(Model.Empno);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\"");
-
-WriteLiteral(" data-removal-element=\"#address-");
-
-            
-            #line 59 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                                                                                                                                                  Write(Model.Empno);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\"");
-
-WriteAttribute("id", Tuple.Create(" id=\"", 2655), Tuple.Create("\"", 2679)
-, Tuple.Create(Tuple.Create("", 2660), Tuple.Create("remove-", 2660), true)
-            
-            #line 59 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
-                                                                                                , Tuple.Create(Tuple.Create("", 2667), Tuple.Create<System.Object, System.Int32>(Model.Empno
-            
-            #line default
-            #line hidden
-, 2667), false)
-);
+WriteLiteral(" type=\"button\"");
 
 WriteLiteral(">\r\n                    <i");
 
-WriteLiteral(" class=\"fa fa-trash-o\"");
+WriteLiteral(" class=\"fa fa-search\"");
 
-WriteLiteral("></i>\r\n                    حذف\r\n                </button>\r\n            </div>\r\n  " +
-"          <div");
+WriteLiteral("></i>\r\n                    نمایش اطلاعات بیمه\r\n                </button>\r\n       " +
+"     </div>\r\n        </div>\r\n        <div");
 
-WriteLiteral(" class=\"clearfix\"");
+WriteLiteral(" class=\"panel-footer\"");
 
-WriteLiteral("></div>\r\n        </div>\r\n    </div>\r\n</div>");
+WriteLiteral(">\r\n            <div");
+
+WriteLiteral(" class=\"row collapse\"");
+
+WriteAttribute("id", Tuple.Create(" id=\"", 4056), Tuple.Create("\"", 4087)
+, Tuple.Create(Tuple.Create("", 4061), Tuple.Create("show-bime-", 4061), true)
+            
+            #line 80 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+, Tuple.Create(Tuple.Create("", 4071), Tuple.Create<System.Object, System.Int32>(Model.MelliCode
+            
+            #line default
+            #line hidden
+, 4071), false)
+);
+
+WriteLiteral(">\r\n                <hr");
+
+WriteLiteral(" class=\"margin-top-5 margin-bottom-5\"");
+
+WriteLiteral(" />\r\n                <div");
+
+WriteLiteral(" class=\"col-md-12\"");
+
+WriteLiteral(">\r\n");
+
+            
+            #line 83 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                        
+            
+            #line default
+            #line hidden
+            
+            #line 83 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                         foreach (var e in Model.Bimes)
+                        {
+                            
+            
+            #line default
+            #line hidden
+            
+            #line 85 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                       Write(Html.Partial(MVC.OtherBime.Views._OtherBimeItem, e));
+
+            
+            #line default
+            #line hidden
+            
+            #line 85 "..\..\Views\EmpRelative\_EmpRelativeItem.cshtml"
+                                                                                
+                        }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                    </div>\r\n                </div>\r\n            </div>\r\n        <" +
+"/div>\r\n</div>");
 
         }
     }

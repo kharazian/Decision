@@ -1,0 +1,8 @@
+﻿@* GeneratePrettyNames: true*@
+@model Decision.ViewModel.Hokm.HokmListViewModel
+@foreach (var e in Model.Hokms)
+{
+    @Html.Partial(MVC.Hokm.Views._HokmItem, e)
+}
+
+

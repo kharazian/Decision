@@ -33,15 +33,21 @@ public static partial class MVC
     public static Decision.Web.Controllers.ArticleController Article = new Decision.Web.Controllers.T4MVC_ArticleController();
     public static Decision.Web.Controllers.BaseSettingController BaseSetting = new Decision.Web.Controllers.T4MVC_BaseSettingController();
     public static Decision.Web.Controllers.CityController City = new Decision.Web.Controllers.T4MVC_CityController();
+    public static Decision.Web.Controllers.EblaghController Eblagh = new Decision.Web.Controllers.T4MVC_EblaghController();
     public static Decision.Web.Controllers.EducationalBackgroundController EducationalBackground = new Decision.Web.Controllers.T4MVC_EducationalBackgroundController();
     public static Decision.Web.Controllers.EducationalExperienceController EducationalExperience = new Decision.Web.Controllers.T4MVC_EducationalExperienceController();
     public static Decision.Web.Controllers.ElmahController Elmah = new Decision.Web.Controllers.T4MVC_ElmahController();
+    public static Decision.Web.Controllers.EmpDegreeController EmpDegree = new Decision.Web.Controllers.T4MVC_EmpDegreeController();
     public static Decision.Web.Controllers.EmployeeController Employee = new Decision.Web.Controllers.T4MVC_EmployeeController();
     public static Decision.Web.Controllers.EmpRelativeController EmpRelative = new Decision.Web.Controllers.T4MVC_EmpRelativeController();
     public static Decision.Web.Controllers.EntireEvaluationController EntireEvaluation = new Decision.Web.Controllers.T4MVC_EntireEvaluationController();
     public static Decision.Web.Controllers.ErrorController Error = new Decision.Web.Controllers.T4MVC_ErrorController();
+    public static Decision.Web.Controllers.ExperienceController Experience = new Decision.Web.Controllers.T4MVC_ExperienceController();
+    public static Decision.Web.Controllers.HokmController Hokm = new Decision.Web.Controllers.T4MVC_HokmController();
     public static Decision.Web.Controllers.HomeController Home = new Decision.Web.Controllers.T4MVC_HomeController();
     public static Decision.Web.Controllers.InterviewController Interview = new Decision.Web.Controllers.T4MVC_InterviewController();
+    public static Decision.Web.Controllers.MilitartyServiceController MilitartyService = new Decision.Web.Controllers.T4MVC_MilitartyServiceController();
+    public static Decision.Web.Controllers.OtherBimeController OtherBime = new Decision.Web.Controllers.T4MVC_OtherBimeController();
     public static Decision.Web.Controllers.PresenterController Presenter = new Decision.Web.Controllers.T4MVC_PresenterController();
     public static Decision.Web.Controllers.PrivateMessageController PrivateMessage = new Decision.Web.Controllers.T4MVC_PrivateMessageController();
     public static Decision.Web.Controllers.QuestionController Question = new Decision.Web.Controllers.T4MVC_QuestionController();
@@ -50,6 +56,7 @@ public static partial class MVC
     public static Decision.Web.Controllers.RoleController Role = new Decision.Web.Controllers.T4MVC_RoleController();
     public static Decision.Web.Controllers.UserController User = new Decision.Web.Controllers.T4MVC_UserController();
     public static Decision.Web.Controllers.WorkExperienceController WorkExperience = new Decision.Web.Controllers.T4MVC_WorkExperienceController();
+    public static T4MVC.HokmPayController HokmPay = new T4MVC.HokmPayController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
 

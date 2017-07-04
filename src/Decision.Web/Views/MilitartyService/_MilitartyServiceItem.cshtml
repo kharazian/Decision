@@ -1,0 +1,37 @@
+﻿@model Decision.ViewModel.EmpMilitary.MilitaryServiceViewModel
+<div class="col-md-12 data-item" id="Empno-@Model.Empno">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <label class="text-muted">نوع سابقه:</label>
+                    <small>@Model.TypeDsc</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">تاریخ شروع:</label>
+                    <small>@Model.StartDate.GetDatePersianNumber()</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">تاریخ پایان:</label>
+                    <small>@Model.EndDate.GetDatePersianNumber()</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">درصد جانبازی:</label>
+                    <small>@Model.JanBazPercent</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">تعداد گروه مرتبط:</label>
+                    <small>@Model.Groups</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">محل:</label>
+                    <small>@Model.PlcDsc</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">تاریخ اجرا:</label>
+                    <small>@Model.StartDate.GetDatePersianNumber()</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

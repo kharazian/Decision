@@ -10,8 +10,8 @@ namespace Decision.DomainClasses.EmployeeEntities
     public partial class EmpRelative : ITenant
     {
         [StringLength(6)]
+        [Column("Empno")]
         public string Empno { get; set; }
-        [StringLength(5)]
         public string ReltypeCod { get; set; }
         [StringLength(2)]
         public string RelSequence { get; set; }
@@ -20,7 +20,6 @@ namespace Decision.DomainClasses.EmployeeEntities
         [StringLength(14)]
         public string IdNo { get; set; }
 
-        [Required]
         [StringLength(1)]
         public string TakafolStat { get; set; }
 
@@ -28,11 +27,9 @@ namespace Decision.DomainClasses.EmployeeEntities
         [StringLength(20)]
         public string RelNam { get; set; }
 
-        [Required]
         [StringLength(30)]
         public string Family { get; set; }
 
-        [Required]
         [StringLength(5)]
         public string SexCod { get; set; }
 
@@ -93,6 +90,13 @@ namespace Decision.DomainClasses.EmployeeEntities
         [StringLength(15)]
         public string OprCod { get; set; }
 
+        public CodeFile Reltype { get; set; }
+        public CodeFile Sex { get; set; }
+        public CodeFile Helath { get; set; }
+        public CodeFile Mariage { get; set; }
+        public CodeFile Degree { get; set; }
+        public Major Major { get; set; }
 
+        public ICollection<OtherBime> Bimes { get; set; }
     }
 }

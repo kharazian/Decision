@@ -14,54 +14,53 @@ namespace Decision.DomainClasses.EmployeeEntities
         public Employee()
         {
             Photo = BitConverter.GetBytes(0);
-
         }
 
         [StringLength(6)]
+        [Column("Empno")]
         public string Empno { get; set; }
 
-        [Required]
         [StringLength(20)]
         public string Name { get; set; }
 
-        [Required]
+
         [StringLength(30)]
         public string Family { get; set; }
 
-        [Required]
+
         [StringLength(20)]
         public string FatherName { get; set; }
 
         [StringLength(30)]
         public string LastFamily { get; set; }
 
-        [Required]
+
         [StringLength(14)]
         public string IdNo { get; set; }
 
         [StringLength(20)]
         public string IdNoContinued { get; set; }
 
-        [Required]
+
         [StringLength(8)]
         public string BirthDate { get; set; }
 
-        [Required]
+
         [StringLength(5)]
         public string SexCod { get; set; }
 
         [StringLength(10)]
         public string MostakhdemNo { get; set; }
 
-        [Required]
+
         [StringLength(6)]
         public string BirthCityCod { get; set; }
 
-        [Required]
+
         [StringLength(6)]
         public string IssueCityCod { get; set; }
 
-        [Required]
+
         [StringLength(5)]
         public string EmpType { get; set; }
 
@@ -86,7 +85,7 @@ namespace Decision.DomainClasses.EmployeeEntities
         [StringLength(10)]
         public string MelliCode { get; set; }
 
-        [Required]
+
         [StringLength(5)]
         public string MarriCod { get; set; }
 
@@ -130,11 +129,11 @@ namespace Decision.DomainClasses.EmployeeEntities
 
         public int Sanavat { get; set; }
 
-        [Required]
+
         [StringLength(1)]
         public string StopStat { get; set; }
 
-        [Required]
+
         [StringLength(1)]
         public string PartTime { get; set; }
 
@@ -177,7 +176,7 @@ namespace Decision.DomainClasses.EmployeeEntities
         [Column(TypeName = "image")]
         public byte[] Signature { get; set; }
 
-        [Required]
+
         [StringLength(1)]
         public string SetadiCod { get; set; }
 
@@ -197,29 +196,29 @@ namespace Decision.DomainClasses.EmployeeEntities
         [StringLength(8)]
         public string LPostNoHokm { get; set; }
 
-        [Required]
+
         [StringLength(8)]
         public string LRunDate { get; set; }
 
         [StringLength(4)]
         public string HokmType { get; set; }
 
-        [Required]
+
         [StringLength(1)]
         public string EmpState { get; set; }
 
-        [Required]
+
         [StringLength(8)]
         public string IssueDate { get; set; }
 
         [StringLength(2)]
         public string Grooh { get; set; }
 
-        [Required]
+
         [StringLength(1)]
         public string BackUp { get; set; }
 
-        [Required]
+
         [StringLength(1)]
         public string Type { get; set; }
 
@@ -236,13 +235,13 @@ namespace Decision.DomainClasses.EmployeeEntities
         [StringLength(2)]
         public string zonecode { get; set; }
 
-        [Required]
+
         [StringLength(1)]
         public string Sakhtykar { get; set; }
 
         public double RemMorOldYear { get; set; }
 
-        [Required]
+
         [StringLength(4)]
         public string UpdRemMor { get; set; }
 
@@ -254,7 +253,7 @@ namespace Decision.DomainClasses.EmployeeEntities
         [StringLength(15)]
         public string AccNoSh { get; set; }
 
-        [Required]
+
         [StringLength(1)]
         public string SibaPay { get; set; }
 
@@ -297,7 +296,7 @@ namespace Decision.DomainClasses.EmployeeEntities
         public CodeFile Blood { get; set; }
         public CodeFile Health { get; set; }
         public CodeFile House { get; set; }
-        public  ExePostNumber LPost { get; set; }
+        public ExePostNumber LPost { get; set; }
 
     }
 }

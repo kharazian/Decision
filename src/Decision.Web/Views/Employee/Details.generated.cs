@@ -117,6 +117,17 @@ WriteLiteral("                                        ");
 
             
             #line 25 "..\..\Views\Employee\Details.cshtml"
+                                   Write(Model.Empno);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                                        <br />\r\n");
+
+WriteLiteral("                                        ");
+
+            
+            #line 27 "..\..\Views\Employee\Details.cshtml"
                                    Write(Model.Name);
 
             
@@ -125,24 +136,24 @@ WriteLiteral("                                        ");
 WriteLiteral(" ");
 
             
-            #line 25 "..\..\Views\Employee\Details.cshtml"
+            #line 27 "..\..\Views\Employee\Details.cshtml"
                                                Write(Model.Family);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n                                        <br>\r\n                                 " +
-"   </h5>\r\n");
+WriteLiteral("\r\n                                        <br />\r\n                               " +
+"     </h5>\r\n");
 
             
-            #line 28 "..\..\Views\Employee\Details.cshtml"
+            #line 30 "..\..\Views\Employee\Details.cshtml"
                                     
             
             #line default
             #line hidden
             
-            #line 28 "..\..\Views\Employee\Details.cshtml"
-                                     if (Model.SexCod == "SEX01")//GenderType.Male)
+            #line 30 "..\..\Views\Employee\Details.cshtml"
+                                     if (Model.SexCod == "SEX01")
                                     {
 
             
@@ -157,7 +168,7 @@ WriteLiteral(" title=\"مرد\"");
 WriteLiteral("></i>\r\n");
 
             
-            #line 31 "..\..\Views\Employee\Details.cshtml"
+            #line 33 "..\..\Views\Employee\Details.cshtml"
                                     }
                                     else
                                     {
@@ -174,7 +185,7 @@ WriteLiteral(" title=\"زن\"");
 WriteLiteral("></i>\r\n");
 
             
-            #line 35 "..\..\Views\Employee\Details.cshtml"
+            #line 37 "..\..\Views\Employee\Details.cshtml"
                                     }
 
             
@@ -196,8 +207,8 @@ WriteLiteral(" id=\"StopStat\"");
 WriteLiteral(">");
 
             
-            #line 39 "..\..\Views\Employee\Details.cshtml"
-                                                        Write(Html.DisplayFor(a => a.StopStatE ));
+            #line 41 "..\..\Views\Employee\Details.cshtml"
+                                                        Write(Html.DisplayFor(a => a.StopStatE));
 
             
             #line default
@@ -235,11 +246,74 @@ WriteLiteral(">\r\n                                <i");
 WriteLiteral(" class=\"fa fa-user\"");
 
 WriteLiteral("></i>\r\n                                اطلاعات فردی\r\n                            " +
-"</small>\r\n                        </h3>\r\n                       <div");
+"</small>\r\n                        </h3>\r\n                        <div");
 
 WriteLiteral(" class=\"row\"");
 
 WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"Empno\"");
+
+WriteLiteral(">شماره پرسنلی:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"Empno\"");
+
+WriteLiteral(">");
+
+            
+            #line 62 "..\..\Views\Employee\Details.cshtml"
+                                             Write(Model.Empno);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"Name\"");
+
+WriteLiteral(">نام:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"Name\"");
+
+WriteLiteral(">");
+
+            
+            #line 66 "..\..\Views\Employee\Details.cshtml"
+                                            Write(Model.Name);
+
+            
+            #line default
+            #line hidden
+WriteLiteral(" </small>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"Family\"");
+
+WriteLiteral(">نام خانوادگی:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"Family\"");
+
+WriteLiteral(">");
+
+            
+            #line 70 "..\..\Views\Employee\Details.cshtml"
+                                              Write(Model.Family);
+
+            
+            #line default
+            #line hidden
+WriteLiteral(" </small>\r\n                            </div>\r\n                            <div");
 
 WriteLiteral(" class=\"col-md-3\"");
 
@@ -254,71 +328,8 @@ WriteLiteral(" id=\"LastFamily\"");
 WriteLiteral(">");
 
             
-            #line 60 "..\..\Views\Employee\Details.cshtml"
+            #line 74 "..\..\Views\Employee\Details.cshtml"
                                                   Write(Model.LastFamily);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"IdNo\"");
-
-WriteLiteral(">شماره شناسنامه:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"IdNo\"");
-
-WriteLiteral(">");
-
-            
-            #line 64 "..\..\Views\Employee\Details.cshtml"
-                                            Write(Model.IdNo.GetPersianNumber());
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"IdNoContinued\"");
-
-WriteLiteral(">شماره مسلسل شناسنامه:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"IdNoContinued\"");
-
-WriteLiteral(">");
-
-            
-            #line 68 "..\..\Views\Employee\Details.cshtml"
-                                                     Write(Model.IdNoContinued.GetPersianNumber());
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"BirthDate\"");
-
-WriteLiteral(">تاریخ تولد:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"BirthDate\"");
-
-WriteLiteral(">");
-
-            
-            #line 72 "..\..\Views\Employee\Details.cshtml"
-                                                 Write(Model.BirthDate.GetDatePersianNumber());
 
             
             #line default
@@ -343,13 +354,81 @@ WriteLiteral(" id=\"MelliCode\"");
 WriteLiteral(">");
 
             
-            #line 78 "..\..\Views\Employee\Details.cshtml"
+            #line 80 "..\..\Views\Employee\Details.cshtml"
                                                  Write(Model.MelliCode.GetPersianNumber());
 
             
             #line default
             #line hidden
 WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"IdNo\"");
+
+WriteLiteral(">شماره شناسنامه:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"IdNo\"");
+
+WriteLiteral(">");
+
+            
+            #line 84 "..\..\Views\Employee\Details.cshtml"
+                                            Write(Model.IdNo.GetPersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"IdNoContinued\"");
+
+WriteLiteral(">شماره مسلسل شناسنامه:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"IdNoContinued\"");
+
+WriteLiteral(">");
+
+            
+            #line 88 "..\..\Views\Employee\Details.cshtml"
+                                                     Write(Model.IdNoContinued.GetPersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"BirthDate\"");
+
+WriteLiteral(">تاریخ تولد:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"BirthDate\"");
+
+WriteLiteral(">");
+
+            
+            #line 92 "..\..\Views\Employee\Details.cshtml"
+                                                 Write(Model.BirthDate.GetDatePersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                            </div>\r\n                        </div>\r\n   " +
+"                     <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(">\r\n                            <div");
 
 WriteLiteral(" class=\"col-md-3\"");
 
@@ -364,7 +443,7 @@ WriteLiteral(" id=\"BirthCityCod\"");
 WriteLiteral(">");
 
             
-            #line 82 "..\..\Views\Employee\Details.cshtml"
+            #line 98 "..\..\Views\Employee\Details.cshtml"
                                                     Write(Model.BirthCity);
 
             
@@ -385,55 +464,8 @@ WriteLiteral(" id=\"IssueCityCod\"");
 WriteLiteral(">");
 
             
-            #line 86 "..\..\Views\Employee\Details.cshtml"
+            #line 102 "..\..\Views\Employee\Details.cshtml"
                                                     Write(Model.IssueCity);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"ReligionDsc\"");
-
-WriteLiteral(">دین:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"ReligionDsc\"");
-
-WriteLiteral(">");
-
-            
-            #line 90 "..\..\Views\Employee\Details.cshtml"
-                                                   Write(Model.ReligionDsc);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                        </div>\r\n   " +
-"                     <div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"EmpType\"");
-
-WriteLiteral(">نوع استخدام:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"EmpType\"");
-
-WriteLiteral(">");
-
-            
-            #line 96 "..\..\Views\Employee\Details.cshtml"
-                                               Write(Model.EmpType);
 
             
             #line default
@@ -453,7 +485,7 @@ WriteLiteral(" id=\"MarriageDsc\"");
 WriteLiteral(">");
 
             
-            #line 100 "..\..\Views\Employee\Details.cshtml"
+            #line 106 "..\..\Views\Employee\Details.cshtml"
                                                    Write(Model.MarriageDsc);
 
             
@@ -474,13 +506,18 @@ WriteLiteral(" id=\"MarriDate\"");
 WriteLiteral(">");
 
             
-            #line 104 "..\..\Views\Employee\Details.cshtml"
+            #line 110 "..\..\Views\Employee\Details.cshtml"
                                                  Write(Model.MarriDate.GetDatePersianNumber());
 
             
             #line default
             #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
+WriteLiteral("</small>\r\n                            </div>\r\n                        </div>\r\n   " +
+"                     <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(">\r\n                            <div");
 
 WriteLiteral(" class=\"col-md-3\"");
 
@@ -495,8 +532,177 @@ WriteLiteral(" id=\"NoChild\"");
 WriteLiteral(">");
 
             
-            #line 108 "..\..\Views\Employee\Details.cshtml"
+            #line 116 "..\..\Views\Employee\Details.cshtml"
                                                Write(Model.NoChild);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"ReligionDsc\"");
+
+WriteLiteral(">دین:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"ReligionDsc\"");
+
+WriteLiteral(">");
+
+            
+            #line 120 "..\..\Views\Employee\Details.cshtml"
+                                                   Write(Model.ReligionDsc);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"NationalDsc\"");
+
+WriteLiteral(">ملیت:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"NationalDsc\"");
+
+WriteLiteral(">");
+
+            
+            #line 124 "..\..\Views\Employee\Details.cshtml"
+                                                   Write(Model.NationalDsc);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"HealthDsc\"");
+
+WriteLiteral(">وضعیت سلامتی:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"HealthDsc\"");
+
+WriteLiteral(">");
+
+            
+            #line 128 "..\..\Views\Employee\Details.cshtml"
+                                                 Write(Model.HealthDsc);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                            </div>\r\n                        </div>\r\n\r\n " +
+"                   </div>\r\n                </div>\r\n                <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(">\r\n                    <div");
+
+WriteLiteral(" class=\"col-md-12 \"");
+
+WriteLiteral(">\r\n                        <h3");
+
+WriteLiteral(" class=\"line-status\"");
+
+WriteLiteral(">\r\n                            <small>\r\n                                <i");
+
+WriteLiteral(" class=\"fa fa-graduation-cap\"");
+
+WriteLiteral("></i>\r\n                                وضعیت شغلی تحصیلی\r\n                       " +
+"     </small>\r\n                        </h3>\r\n                        <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"EmpType\"");
+
+WriteLiteral(">نوع استخدام:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"EmpType\"");
+
+WriteLiteral(">");
+
+            
+            #line 145 "..\..\Views\Employee\Details.cshtml"
+                                               Write(Model.EmpType);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"LPostEblagh\"");
+
+WriteLiteral(">آخرین پست سازمانی:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"LPostEblagh\"");
+
+WriteLiteral(">");
+
+            
+            #line 149 "..\..\Views\Employee\Details.cshtml"
+                                                   Write(Model.LPostEblagh);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"LDegreeDsc\"");
+
+WriteLiteral(">آخرین مقطع تحصیلی:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"LDegreeDsc\"");
+
+WriteLiteral(">");
+
+            
+            #line 153 "..\..\Views\Employee\Details.cshtml"
+                                                  Write(Model.LDegreeDsc);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" for=\"LMajorDsc\"");
+
+WriteLiteral(">آخرین مدرک تحصیلی:</label>\r\n                                <small");
+
+WriteLiteral(" id=\"LMajorDsc\"");
+
+WriteLiteral(">");
+
+            
+            #line 157 "..\..\Views\Employee\Details.cshtml"
+                                                 Write(Model.LMajorDsc.GetPersianNumber());
 
             
             #line default
@@ -521,7 +727,7 @@ WriteLiteral(" id=\"RealPlace\"");
 WriteLiteral(">");
 
             
-            #line 114 "..\..\Views\Employee\Details.cshtml"
+            #line 163 "..\..\Views\Employee\Details.cshtml"
                                                  Write(Model.RealPlace);
 
             
@@ -542,7 +748,7 @@ WriteLiteral(" id=\"Unit\"");
 WriteLiteral(">");
 
             
-            #line 118 "..\..\Views\Employee\Details.cshtml"
+            #line 167 "..\..\Views\Employee\Details.cshtml"
                                             Write(Model.Unit);
 
             
@@ -568,7 +774,7 @@ WriteLiteral(" id=\"GovEmpDate\"");
 WriteLiteral(">");
 
             
-            #line 124 "..\..\Views\Employee\Details.cshtml"
+            #line 173 "..\..\Views\Employee\Details.cshtml"
                                                   Write(Model.GovEmpDate.GetDatePersianNumber());
 
             
@@ -589,7 +795,7 @@ WriteLiteral(" id=\"ManEmpDate\"");
 WriteLiteral(">");
 
             
-            #line 128 "..\..\Views\Employee\Details.cshtml"
+            #line 177 "..\..\Views\Employee\Details.cshtml"
                                                   Write(Model.ManEmpDate.GetDatePersianNumber());
 
             
@@ -610,7 +816,7 @@ WriteLiteral(" id=\"IssueCityCod\"");
 WriteLiteral(">");
 
             
-            #line 132 "..\..\Views\Employee\Details.cshtml"
+            #line 181 "..\..\Views\Employee\Details.cshtml"
                                                     Write(Model.SanavatHokm.GetDatePersianNumber());
 
             
@@ -631,7 +837,7 @@ WriteLiteral(" id=\"ReligionCod\"");
 WriteLiteral(">");
 
             
-            #line 136 "..\..\Views\Employee\Details.cshtml"
+            #line 185 "..\..\Views\Employee\Details.cshtml"
                                                    Write(Model.SanavatHoghogh.GetDatePersianNumber());
 
             
@@ -642,412 +848,8 @@ WriteLiteral("</small>\r\n                            </div>\r\n                
 
 WriteLiteral(" class=\"row\"");
 
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"NationalDsc\"");
-
-WriteLiteral(">ملیت:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"NationalDsc\"");
-
-WriteLiteral(">");
-
-            
-            #line 142 "..\..\Views\Employee\Details.cshtml"
-                                                   Write(Model.NationalDsc);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"TelNo\"");
-
-WriteLiteral(">تلفن منزل:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"TelNo\"");
-
-WriteLiteral(">");
-
-            
-            #line 146 "..\..\Views\Employee\Details.cshtml"
-                                             Write(Model.TelNo.GetPersianNumber());
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"Mobile\"");
-
-WriteLiteral(">تلفن همراه:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"Mobile\"");
-
-WriteLiteral(">");
-
-            
-            #line 150 "..\..\Views\Employee\Details.cshtml"
-                                              Write(Model.Mobile.GetPersianNumber());
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"MainTelNo\"");
-
-WriteLiteral(">تلفن ضروری:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"MainTelNo\"");
-
-WriteLiteral(">");
-
-            
-            #line 154 "..\..\Views\Employee\Details.cshtml"
-                                                 Write(Model.MainTelNo.GetPersianNumber());
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                        </div>\r\n   " +
-"                     <div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-9\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"Addr\"");
-
-WriteLiteral(">آدرس:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"Addr\"");
-
-WriteLiteral(">");
-
-            
-            #line 160 "..\..\Views\Employee\Details.cshtml"
-                                            Write(Model.Addr);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"ZipNo\"");
-
-WriteLiteral(">کد پستی:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"ZipNo\"");
-
-WriteLiteral(">");
-
-            
-            #line 164 "..\..\Views\Employee\Details.cshtml"
-                                             Write(Model.ZipNo.GetPersianNumber());
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                        </div>\r\n   " +
-"                     <div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"Email\"");
-
-WriteLiteral(">آدرس الکترونیک:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"Email\"");
-
-WriteLiteral(">");
-
-            
-            #line 170 "..\..\Views\Employee\Details.cshtml"
-                                             Write(Model.Email);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"NezStatDsc\"");
-
-WriteLiteral(">وضعیت نظام وظیفه:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"NezStatDsc\"");
-
-WriteLiteral(">");
-
-            
-            #line 174 "..\..\Views\Employee\Details.cshtml"
-                                                  Write(Model.NezStatDsc);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"LDegreeDsc\"");
-
-WriteLiteral(">آخرین مقطع تحصیلی:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"LDegreeDsc\"");
-
-WriteLiteral(">");
-
-            
-            #line 178 "..\..\Views\Employee\Details.cshtml"
-                                                  Write(Model.LDegreeDsc);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"LMajorDsc\"");
-
-WriteLiteral(">آخرین مدرک تحصیلی:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"LMajorDsc\"");
-
-WriteLiteral(">");
-
-            
-            #line 182 "..\..\Views\Employee\Details.cshtml"
-                                                 Write(Model.LMajorDsc.GetPersianNumber());
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                        </div>\r\n   " +
-"                     <div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"Acc\"");
-
-WriteLiteral(">شماره حساب:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"Acc\"");
-
-WriteLiteral(">");
-
-            
-            #line 188 "..\..\Views\Employee\Details.cshtml"
-                                           Write(Model.Acc.GetPersianNumber());
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"InsTypeDsc\"");
-
-WriteLiteral(">وضعیت بیمه:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"InsTypeDsc\"");
-
-WriteLiteral(">");
-
-            
-            #line 192 "..\..\Views\Employee\Details.cshtml"
-                                                  Write(Model.InsTypeDsc);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"InsNo\"");
-
-WriteLiteral(">شماره بیمه:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"InsNo\"");
-
-WriteLiteral(">");
-
-            
-            #line 196 "..\..\Views\Employee\Details.cshtml"
-                                             Write(Model.InsNo);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"BloodDsc\"");
-
-WriteLiteral(">گروه خونی:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"BloodDsc\"");
-
-WriteLiteral(">");
-
-            
-            #line 200 "..\..\Views\Employee\Details.cshtml"
-                                                Write(Model.BloodDsc);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n\r\n                        </div>\r\n " +
-"                       <div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"HealthDsc\"");
-
-WriteLiteral(">وضعیت سلامتی:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"HealthDsc\"");
-
-WriteLiteral(">");
-
-            
-            #line 207 "..\..\Views\Employee\Details.cshtml"
-                                                 Write(Model.HealthDsc);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"HouseDsc\"");
-
-WriteLiteral(">وضعیت خانه:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"HouseDsc\"");
-
-WriteLiteral(">");
-
-            
-            #line 211 "..\..\Views\Employee\Details.cshtml"
-                                                Write(Model.HouseDsc);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                            <div");
-
-WriteLiteral(" class=\"col-md-6\"");
-
-WriteLiteral(">\r\n                                <label");
-
-WriteLiteral(" for=\"LPostEblagh\"");
-
-WriteLiteral(">آخرین پست سازمانی:</label>\r\n                                <small");
-
-WriteLiteral(" id=\"LPostEblagh\"");
-
-WriteLiteral(">");
-
-            
-            #line 215 "..\..\Views\Employee\Details.cshtml"
-                                                   Write(Model.LPostEblagh);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</small>\r\n                            </div>\r\n                        </div>\r\n   " +
-"                 </div>\r\n\r\n\r\n\r\n                </div>\r\n            </div>\r\n     " +
-"       <div");
-
-WriteLiteral(" class=\" row\"");
-
-WriteLiteral(">\r\n                <div");
-
-WriteLiteral(" class=\"col-md-12 \"");
-
-WriteLiteral(">\r\n                    <h3");
-
-WriteLiteral(" class=\"line-status\"");
-
-WriteLiteral(">\r\n                        <small>\r\n                            <i");
-
-WriteLiteral(" class=\"fa fa-graduation-cap\"");
-
-WriteLiteral("></i>\r\n                            وضعیت شغلی تحصیلی\r\n                        </s" +
-"mall>\r\n                    </h3>\r\n                    <div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n\r\n\r\n                    </div>\r\n                    <div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n    " +
-"        <div");
+WriteLiteral(">\r\n\r\n                        </div>\r\n                    </div>\r\n                " +
+"</div>\r\n            </div>\r\n            <div");
 
 WriteLiteral(" class=\"row\"");
 
@@ -1068,8 +870,228 @@ WriteLiteral("></i>\r\n                            سایر مشخصات\r\n    
 
 WriteLiteral(" class=\"row\"");
 
-WriteLiteral(">\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n  " +
-"      </div>\r\n    </div>\r\n    ");
+WriteLiteral(">\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" for=\"Acc\"");
+
+WriteLiteral(">شماره حساب:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"Acc\"");
+
+WriteLiteral(">");
+
+            
+            #line 205 "..\..\Views\Employee\Details.cshtml"
+                                       Write(Model.Acc.GetPersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" for=\"InsTypeDsc\"");
+
+WriteLiteral(">وضعیت بیمه:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"InsTypeDsc\"");
+
+WriteLiteral(">");
+
+            
+            #line 209 "..\..\Views\Employee\Details.cshtml"
+                                              Write(Model.InsTypeDsc);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" for=\"InsNo\"");
+
+WriteLiteral(">شماره بیمه:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"InsNo\"");
+
+WriteLiteral(">");
+
+            
+            #line 213 "..\..\Views\Employee\Details.cshtml"
+                                         Write(Model.InsNo);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" for=\"BloodDsc\"");
+
+WriteLiteral(">گروه خونی:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"BloodDsc\"");
+
+WriteLiteral(">");
+
+            
+            #line 217 "..\..\Views\Employee\Details.cshtml"
+                                            Write(Model.BloodDsc);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                    </div>\r\n           " +
+"         <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(">\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" for=\"TelNo\"");
+
+WriteLiteral(">تلفن منزل:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"TelNo\"");
+
+WriteLiteral(">");
+
+            
+            #line 223 "..\..\Views\Employee\Details.cshtml"
+                                         Write(Model.TelNo.GetPersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" for=\"Mobile\"");
+
+WriteLiteral(">تلفن همراه:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"Mobile\"");
+
+WriteLiteral(">");
+
+            
+            #line 227 "..\..\Views\Employee\Details.cshtml"
+                                          Write(Model.Mobile.GetPersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" for=\"MainTelNo\"");
+
+WriteLiteral(">تلفن ضروری:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"MainTelNo\"");
+
+WriteLiteral(">");
+
+            
+            #line 231 "..\..\Views\Employee\Details.cshtml"
+                                             Write(Model.MainTelNo.GetPersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" for=\"Email\"");
+
+WriteLiteral(">آدرس الکترونیک:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"Email\"");
+
+WriteLiteral(">");
+
+            
+            #line 235 "..\..\Views\Employee\Details.cshtml"
+                                         Write(Model.Email);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                    </div>\r\n           " +
+"         <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(">\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-9\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" for=\"Addr\"");
+
+WriteLiteral(">آدرس:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"Addr\"");
+
+WriteLiteral(">");
+
+            
+            #line 241 "..\..\Views\Employee\Details.cshtml"
+                                        Write(Model.Addr);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-3\"");
+
+WriteLiteral(">\r\n                            <label");
+
+WriteLiteral(" for=\"ZipNo\"");
+
+WriteLiteral(">کد پستی:</label>\r\n                            <small");
+
+WriteLiteral(" id=\"ZipNo\"");
+
+WriteLiteral(">");
+
+            
+            #line 245 "..\..\Views\Employee\Details.cshtml"
+                                         Write(Model.ZipNo.GetPersianNumber());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</small>\r\n                        </div>\r\n                    </div>\r\n           " +
+"     </div>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    ");
 
 WriteLiteral("\r\n</div>\r\n\r\n</div>\r\n\r\n");
 
@@ -1078,13 +1100,13 @@ DefineSection("Menu", () => {
 WriteLiteral("\r\n");
 
             
-            #line 263 "..\..\Views\Employee\Details.cshtml"
+            #line 259 "..\..\Views\Employee\Details.cshtml"
     
             
             #line default
             #line hidden
             
-            #line 263 "..\..\Views\Employee\Details.cshtml"
+            #line 259 "..\..\Views\Employee\Details.cshtml"
       Html.RenderPartial(MVC.Employee.Views._EmployeeRelatedLinksBuilder, Model.Empno);
             
             #line default

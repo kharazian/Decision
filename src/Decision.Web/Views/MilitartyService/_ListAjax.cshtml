@@ -1,0 +1,8 @@
+﻿@* GeneratePrettyNames: true*@
+@model Decision.ViewModel.EmpMilitary.MilitaryServiceListViewModel
+@foreach (var e in Model.Militaries)
+{
+    @Html.Partial(MVC.MilitartyService.Views._MilitartyServiceItem, e)
+}
+
+

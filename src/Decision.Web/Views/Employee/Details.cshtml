@@ -22,10 +22,12 @@
                                 @Html.Image(Model.Photo, Model.Family + " " + Model.Name, "img-circle img-responsive img-thumbnail", 200)
                                 <figcaption>
                                     <h5>
+                                        @Model.Empno
+                                        <br />
                                         @Model.Name @Model.Family
-                                        <br>
+                                        <br />
                                     </h5>
-                                    @if (Model.SexCod == "SEX01")//GenderType.Male)
+                                    @if (Model.SexCod == "SEX01")
                                     {
                                         <i class="fa fa-male" title="مرد"></i>
                                     }
@@ -36,7 +38,7 @@
                                     <br />
                                     <div class="col-md-12">
                                         <label for="StopStat">وضعیت پرسنل:</label>
-                                        <small id="StopStat">@Html.DisplayFor(a => a.StopStatE )</small>
+                                        <small id="StopStat">@Html.DisplayFor(a => a.StopStatE)</small>
                                     </div>
                                 </figcaption>
                             </figure>
@@ -54,10 +56,28 @@
                                 اطلاعات فردی
                             </small>
                         </h3>
-                       <div class="row">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="Empno">شماره پرسنلی:</label>
+                                <small id="Empno">@Model.Empno</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="Name">نام:</label>
+                                <small id="Name">@Model.Name </small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="Family">نام خانوادگی:</label>
+                                <small id="Family">@Model.Family </small>
+                            </div>
                             <div class="col-md-3">
                                 <label for="LastFamily">نام خانوادگی قبلی:</label>
                                 <small id="LastFamily">@Model.LastFamily</small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="MelliCode">کد ملی:</label>
+                                <small id="MelliCode">@Model.MelliCode.GetPersianNumber()</small>
                             </div>
                             <div class="col-md-3">
                                 <label for="IdNo">شماره شناسنامه:</label>
@@ -74,26 +94,12 @@
                         </div>
                         <div class="row">
                             <div class="col-md-3">
-                                <label for="MelliCode">کد ملی:</label>
-                                <small id="MelliCode">@Model.MelliCode.GetPersianNumber()</small>
-                            </div>
-                            <div class="col-md-3">
                                 <label for="BirthCityCod">محل تولد:</label>
                                 <small id="BirthCityCod">@Model.BirthCity</small>
                             </div>
                             <div class="col-md-3">
                                 <label for="IssueCityCod">محل صدور:</label>
                                 <small id="IssueCityCod">@Model.IssueCity</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="ReligionDsc">دین:</label>
-                                <small id="ReligionDsc">@Model.ReligionDsc</small>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label for="EmpType">نوع استخدام:</label>
-                                <small id="EmpType">@Model.EmpType</small>
                             </div>
                             <div class="col-md-3">
                                 <label for="MarriageDsc">وضعیت تاهل:</label>
@@ -103,9 +109,52 @@
                                 <label for="MarriDate">تاریخ ازدواج:</label>
                                 <small id="MarriDate">@Model.MarriDate.GetDatePersianNumber()</small>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-3">
                                 <label for="NoChild">تعداد فرزندان:</label>
                                 <small id="NoChild">@Model.NoChild</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="ReligionDsc">دین:</label>
+                                <small id="ReligionDsc">@Model.ReligionDsc</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="NationalDsc">ملیت:</label>
+                                <small id="NationalDsc">@Model.NationalDsc</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="HealthDsc">وضعیت سلامتی:</label>
+                                <small id="HealthDsc">@Model.HealthDsc</small>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <h3 class="line-status">
+                            <small>
+                                <i class="fa fa-graduation-cap"></i>
+                                وضعیت شغلی تحصیلی
+                            </small>
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="EmpType">نوع استخدام:</label>
+                                <small id="EmpType">@Model.EmpType</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="LPostEblagh">آخرین پست سازمانی:</label>
+                                <small id="LPostEblagh">@Model.LPostEblagh</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="LDegreeDsc">آخرین مقطع تحصیلی:</label>
+                                <small id="LDegreeDsc">@Model.LDegreeDsc</small>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="LMajorDsc">آخرین مدرک تحصیلی:</label>
+                                <small id="LMajorDsc">@Model.LMajorDsc.GetPersianNumber()</small>
                             </div>
                         </div>
                         <div class="row">
@@ -137,104 +186,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3">
-                                <label for="NationalDsc">ملیت:</label>
-                                <small id="NationalDsc">@Model.NationalDsc</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="TelNo">تلفن منزل:</label>
-                                <small id="TelNo">@Model.TelNo.GetPersianNumber()</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="Mobile">تلفن همراه:</label>
-                                <small id="Mobile">@Model.Mobile.GetPersianNumber()</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="MainTelNo">تلفن ضروری:</label>
-                                <small id="MainTelNo">@Model.MainTelNo.GetPersianNumber()</small>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <label for="Addr">آدرس:</label>
-                                <small id="Addr">@Model.Addr</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="ZipNo">کد پستی:</label>
-                                <small id="ZipNo">@Model.ZipNo.GetPersianNumber()</small>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label for="Email">آدرس الکترونیک:</label>
-                                <small id="Email">@Model.Email</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="NezStatDsc">وضعیت نظام وظیفه:</label>
-                                <small id="NezStatDsc">@Model.NezStatDsc</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="LDegreeDsc">آخرین مقطع تحصیلی:</label>
-                                <small id="LDegreeDsc">@Model.LDegreeDsc</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="LMajorDsc">آخرین مدرک تحصیلی:</label>
-                                <small id="LMajorDsc">@Model.LMajorDsc.GetPersianNumber()</small>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label for="Acc">شماره حساب:</label>
-                                <small id="Acc">@Model.Acc.GetPersianNumber()</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="InsTypeDsc">وضعیت بیمه:</label>
-                                <small id="InsTypeDsc">@Model.InsTypeDsc</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="InsNo">شماره بیمه:</label>
-                                <small id="InsNo">@Model.InsNo</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="BloodDsc">گروه خونی:</label>
-                                <small id="BloodDsc">@Model.BloodDsc</small>
-                            </div>
 
                         </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label for="HealthDsc">وضعیت سلامتی:</label>
-                                <small id="HealthDsc">@Model.HealthDsc</small>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="HouseDsc">وضعیت خانه:</label>
-                                <small id="HouseDsc">@Model.HouseDsc</small>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="LPostEblagh">آخرین پست سازمانی:</label>
-                                <small id="LPostEblagh">@Model.LPostEblagh</small>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-            <div class=" row">
-                <div class="col-md-12 ">
-                    <h3 class="line-status">
-                        <small>
-                            <i class="fa fa-graduation-cap"></i>
-                            وضعیت شغلی تحصیلی
-                        </small>
-                    </h3>
-                    <div class="row">
-
-
-                    </div>
-                    <div class="row">
-
                     </div>
                 </div>
             </div>
@@ -247,7 +200,50 @@
                         </small>
                     </h3>
                     <div class="row">
-
+                        <div class="col-md-3">
+                            <label for="Acc">شماره حساب:</label>
+                            <small id="Acc">@Model.Acc.GetPersianNumber()</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="InsTypeDsc">وضعیت بیمه:</label>
+                            <small id="InsTypeDsc">@Model.InsTypeDsc</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="InsNo">شماره بیمه:</label>
+                            <small id="InsNo">@Model.InsNo</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="BloodDsc">گروه خونی:</label>
+                            <small id="BloodDsc">@Model.BloodDsc</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="TelNo">تلفن منزل:</label>
+                            <small id="TelNo">@Model.TelNo.GetPersianNumber()</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="Mobile">تلفن همراه:</label>
+                            <small id="Mobile">@Model.Mobile.GetPersianNumber()</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="MainTelNo">تلفن ضروری:</label>
+                            <small id="MainTelNo">@Model.MainTelNo.GetPersianNumber()</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="Email">آدرس الکترونیک:</label>
+                            <small id="Email">@Model.Email</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <label for="Addr">آدرس:</label>
+                            <small id="Addr">@Model.Addr</small>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="ZipNo">کد پستی:</label>
+                            <small id="ZipNo">@Model.ZipNo.GetPersianNumber()</small>
+                        </div>
                     </div>
                 </div>
             </div>

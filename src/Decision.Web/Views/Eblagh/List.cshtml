@@ -1,0 +1,34 @@
+﻿@model  Decision.ViewModel.Eblagh.EblaghListViewModel
+@Html.AntiForgeryToken()
+
+<div class="panel panel-default">
+
+    <div class="panel-body">
+        <div class="row" id="EblaghList">
+            @{ Html.RenderPartial(MVC.Eblagh.Views.ViewNames._ListAjax, Model);}
+        </div>
+    </div>
+    <div class="panel-footer padding-5-5">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <button data-page="2" data-json='{"ApplicantId":"@Model.Request.Empno"}' data-container="#EblaghList"
+                        data-progress="#progress"
+                        data-load-url="@Url.Action(MVC.Eblagh.ListAjax())"
+                        onclick="justPaging(this)" class="btn btn-info btn-block btn-sm" type="button">
+                    بیشتر
+                </button>
+            </div>
+        </div>
+        <div id="progress" align="center" style="display: none">
+            <img src="@Url.Content("~/Content/images/loading.gif")" alt="loading..."/>
+        </div>
+    </div>
+</div>
+    @section Menu{
+        @{Html.RenderPartial(MVC.Employee.Views._EmployeeRelatedLinksBuilder, Model.Request.Empno);}
+    }
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+

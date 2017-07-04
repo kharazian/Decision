@@ -1,0 +1,8 @@
+﻿@* GeneratePrettyNames: true*@
+@model Decision.ViewModel.Experience.ExperienceListViewModel
+@foreach (var e in Model.Experiences)
+{
+    @Html.Partial(MVC.Experience.Views._ExperienceItem, e)
+}
+
+

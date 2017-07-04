@@ -1,0 +1,172 @@
+﻿<error errorId="4ca97414-bc08-4594-9d15-0ed80ce9b317" application="/LM/W3SVC/3/ROOT" host="EDAKHAVAN-0522" type="System.Data.SqlClient.SqlException" message="Invalid column name 'Pay_ItemCode'." source=".Net SqlClient Data Provider" detail="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---&gt; System.Data.SqlClient.SqlException: Invalid column name 'Pay_ItemCode'.&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.&lt;&gt;c.&lt;ExecuteDbDataReaderAsync&gt;b__167_0(Task`1 result)&#xD;&#xA;   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()&#xD;&#xA;   at System.Threading.Tasks.Task.Execute()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.&lt;ExecuteStoreCommandsAsync&gt;d__c.MoveNext()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.&lt;ExecuteStoreCommandsAsync&gt;d__c.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.&lt;ExecuteAsync&gt;d__0`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;ExecuteInTransactionAsync&gt;d__3d`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;ExecuteAsyncImplementation&gt;d__9`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;GetResultsAsync&gt;d__e.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()&#xD;&#xA;   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.&lt;FirstMoveNextAsync&gt;d__0.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.&lt;ForEachAsync&gt;d__5`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at Decision.ServiceLayer.EFServiecs.EmployeeInfo.HokmService.&lt;GetHokmAsync&gt;d__3.MoveNext() in C:\Users\Amir\Source\Repos\Decision\src\Decision.ServiceLayer\EFServiecs\EmployeeInfo\HokmService.cs:line 34&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at Decision.Web.Controllers.HokmController.&lt;List&gt;d__4.MoveNext() in C:\Users\Amir\Source\Repos\Decision\src\Decision.Web\Controllers\HokmController.cs:line 46&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass37.&lt;BeginInvokeAsynchronousActionMethod&gt;b__36(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3d()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass46.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass46.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass33.&lt;BeginInvokeActionMethodWithFilters&gt;b__32(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)" user="501021" time="2017-07-04T04:20:40.7276938Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.8&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=HcYn6Tpmc289V1mhuUer-TPkkoJQdSwE1yCGNTG7alO7UZP13Ho7xerS2jfPTWLf0g6K21nNvqLtynShDAc9oVnCsQN3CNrXHCk9kv3UiDE1; __ControllerTempData=AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL; decision=S0qQZbkUiYFpwqqNkxnGSLYs0T515ptiMZFGk3-RpxiYuZjxy5FbBBCKF25OXq29OgMlUAYxYoOLFXGWMk4f4ZOkpVbeMKmfB6k_m8BRaHVfRkX6tlQQHtV-p36bkNyUMFsUwHPW2Y8tNOWgiquZCixRsieinCxoYbV19XMXjdLgP3CCTMgmD5bDudOx987VC3_9ruhI_37UhpbzJr8iWzkQJ7Dumcv6LLd8RUHwngmSQft6VTFpOxkDtxh_PVH55qSlZ7E7QFI66YdK68-TGMqIfniu4yq839rlXL7MwYJGTfTKqHlCwGF2hlKMwXcgOakLGtEnfmYyC9TzOO3jtpbaFMmvMSBGYY25f17jjXiwFQ7KCGwu5B3QG35FWkxyx3zUF4I0eUIp1zU5XWIjFYX0oEHsiviTIia0119FYh2-WZhieYxxoQ8meHM7U2LUM1lsSxjn55zbvRkYFSmvOP1iz2dvmVDZgd1SRqlhCtbXFZtenayuGuptyg5kNy28Tr4ghwzw8GVXF-grjrgpOIwbcAFOGhiBhC4Z8_4VJg-nN5kO19CGqNFvk7kVg-EwmCmTXtLUWwr7DNl4bM0yEDx1-NE2fIoun7ASVMKa7NGUzymhLwyfu5ltFXtJx1WaNJ10P_q2IR7M7LjG6rT7ubRHovhGNtct5lBRaL0QZ0TWVf7AL3CPSlxrQYnCbXZ17oFhhibZK-2-4eYs4ev8v7r6pJkq3KAM_meXeNAG3hvpbtZ2EkYgnO-JWInYCM6Qy91JC1wBH69xrL2W62vyFS5_ywMrRR3geSqyp9CezgXex1g4RTF-GiJAudAVhSWtSLdX0cOVTkF0rSIp2nfueKONPwFbHeqlGIDu5_gcQYfpYkkfSpLasZhJa8nBOEeQkUN36FpLr4lx3sMa7T1tDL6b98PlyCE1iDziIe2YjP0mFK_75e3vvUMWYpd9r7HM8CTpBvXiiN9knA7X9vpmurFMOTHg_rFZCDEF-K7dW0cwQZ5tzjoZu53rjx2QHH90p0JOwBGTK3pxgL9ZRzVZrl-D-k8ShurQ0zSj-Tj5H9qnBIouiwhMxSM-kkdvvBHk&#xD;&#xA;HTTP_HOST:localhost:25600&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.8&#xD;&#xA;Cookie: __RequestVerificationToken=HcYn6Tpmc289V1mhuUer-TPkkoJQdSwE1yCGNTG7alO7UZP13Ho7xerS2jfPTWLf0g6K21nNvqLtynShDAc9oVnCsQN3CNrXHCk9kv3UiDE1; __ControllerTempData=AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL; decision=S0qQZbkUiYFpwqqNkxnGSLYs0T515ptiMZFGk3-RpxiYuZjxy5FbBBCKF25OXq29OgMlUAYxYoOLFXGWMk4f4ZOkpVbeMKmfB6k_m8BRaHVfRkX6tlQQHtV-p36bkNyUMFsUwHPW2Y8tNOWgiquZCixRsieinCxoYbV19XMXjdLgP3CCTMgmD5bDudOx987VC3_9ruhI_37UhpbzJr8iWzkQJ7Dumcv6LLd8RUHwngmSQft6VTFpOxkDtxh_PVH55qSlZ7E7QFI66YdK68-TGMqIfniu4yq839rlXL7MwYJGTfTKqHlCwGF2hlKMwXcgOakLGtEnfmYyC9TzOO3jtpbaFMmvMSBGYY25f17jjXiwFQ7KCGwu5B3QG35FWkxyx3zUF4I0eUIp1zU5XWIjFYX0oEHsiviTIia0119FYh2-WZhieYxxoQ8meHM7U2LUM1lsSxjn55zbvRkYFSmvOP1iz2dvmVDZgd1SRqlhCtbXFZtenayuGuptyg5kNy28Tr4ghwzw8GVXF-grjrgpOIwbcAFOGhiBhC4Z8_4VJg-nN5kO19CGqNFvk7kVg-EwmCmTXtLUWwr7DNl4bM0yEDx1-NE2fIoun7ASVMKa7NGUzymhLwyfu5ltFXtJx1WaNJ10P_q2IR7M7LjG6rT7ubRHovhGNtct5lBRaL0QZ0TWVf7AL3CPSlxrQYnCbXZ17oFhhibZK-2-4eYs4ev8v7r6pJkq3KAM_meXeNAG3hvpbtZ2EkYgnO-JWInYCM6Qy91JC1wBH69xrL2W62vyFS5_ywMrRR3geSqyp9CezgXex1g4RTF-GiJAudAVhSWtSLdX0cOVTkF0rSIp2nfueKONPwFbHeqlGIDu5_gcQYfpYkkfSpLasZhJa8nBOEeQkUN36FpLr4lx3sMa7T1tDL6b98PlyCE1iDziIe2YjP0mFK_75e3vvUMWYpd9r7HM8CTpBvXiiN9knA7X9vpmurFMOTHg_rFZCDEF-K7dW0cwQZ5tzjoZu53rjx2QHH90p0JOwBGTK3pxgL9ZRzVZrl-D-k8ShurQ0zSj-Tj5H9qnBIouiwhMxSM-kkdvvBHk&#xD;&#xA;Host: localhost:25600&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/3/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\Amir\Source\Repos\Decision\src\Decision.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="501021" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="501021" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="3" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/3" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/employee/hokm/list/126099" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\Amir\Source\Repos\Decision\src\Decision.Web\employee\hokm\list\126099" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="39358" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/employee/hokm/list/126099" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="25600" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/employee/hokm/list/126099" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.8" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=HcYn6Tpmc289V1mhuUer-TPkkoJQdSwE1yCGNTG7alO7UZP13Ho7xerS2jfPTWLf0g6K21nNvqLtynShDAc9oVnCsQN3CNrXHCk9kv3UiDE1; __ControllerTempData=AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL; decision=S0qQZbkUiYFpwqqNkxnGSLYs0T515ptiMZFGk3-RpxiYuZjxy5FbBBCKF25OXq29OgMlUAYxYoOLFXGWMk4f4ZOkpVbeMKmfB6k_m8BRaHVfRkX6tlQQHtV-p36bkNyUMFsUwHPW2Y8tNOWgiquZCixRsieinCxoYbV19XMXjdLgP3CCTMgmD5bDudOx987VC3_9ruhI_37UhpbzJr8iWzkQJ7Dumcv6LLd8RUHwngmSQft6VTFpOxkDtxh_PVH55qSlZ7E7QFI66YdK68-TGMqIfniu4yq839rlXL7MwYJGTfTKqHlCwGF2hlKMwXcgOakLGtEnfmYyC9TzOO3jtpbaFMmvMSBGYY25f17jjXiwFQ7KCGwu5B3QG35FWkxyx3zUF4I0eUIp1zU5XWIjFYX0oEHsiviTIia0119FYh2-WZhieYxxoQ8meHM7U2LUM1lsSxjn55zbvRkYFSmvOP1iz2dvmVDZgd1SRqlhCtbXFZtenayuGuptyg5kNy28Tr4ghwzw8GVXF-grjrgpOIwbcAFOGhiBhC4Z8_4VJg-nN5kO19CGqNFvk7kVg-EwmCmTXtLUWwr7DNl4bM0yEDx1-NE2fIoun7ASVMKa7NGUzymhLwyfu5ltFXtJx1WaNJ10P_q2IR7M7LjG6rT7ubRHovhGNtct5lBRaL0QZ0TWVf7AL3CPSlxrQYnCbXZ17oFhhibZK-2-4eYs4ev8v7r6pJkq3KAM_meXeNAG3hvpbtZ2EkYgnO-JWInYCM6Qy91JC1wBH69xrL2W62vyFS5_ywMrRR3geSqyp9CezgXex1g4RTF-GiJAudAVhSWtSLdX0cOVTkF0rSIp2nfueKONPwFbHeqlGIDu5_gcQYfpYkkfSpLasZhJa8nBOEeQkUN36FpLr4lx3sMa7T1tDL6b98PlyCE1iDziIe2YjP0mFK_75e3vvUMWYpd9r7HM8CTpBvXiiN9knA7X9vpmurFMOTHg_rFZCDEF-K7dW0cwQZ5tzjoZu53rjx2QHH90p0JOwBGTK3pxgL9ZRzVZrl-D-k8ShurQ0zSj-Tj5H9qnBIouiwhMxSM-kkdvvBHk" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:25600" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="HcYn6Tpmc289V1mhuUer-TPkkoJQdSwE1yCGNTG7alO7UZP13Ho7xerS2jfPTWLf0g6K21nNvqLtynShDAc9oVnCsQN3CNrXHCk9kv3UiDE1" />
+    </item>
+    <item name="__ControllerTempData">
+      <value string="AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL" />
+      <value string="AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL" />
+    </item>
+    <item name="decision">
+      <value string="S0qQZbkUiYFpwqqNkxnGSLYs0T515ptiMZFGk3-RpxiYuZjxy5FbBBCKF25OXq29OgMlUAYxYoOLFXGWMk4f4ZOkpVbeMKmfB6k_m8BRaHVfRkX6tlQQHtV-p36bkNyUMFsUwHPW2Y8tNOWgiquZCixRsieinCxoYbV19XMXjdLgP3CCTMgmD5bDudOx987VC3_9ruhI_37UhpbzJr8iWzkQJ7Dumcv6LLd8RUHwngmSQft6VTFpOxkDtxh_PVH55qSlZ7E7QFI66YdK68-TGMqIfniu4yq839rlXL7MwYJGTfTKqHlCwGF2hlKMwXcgOakLGtEnfmYyC9TzOO3jtpbaFMmvMSBGYY25f17jjXiwFQ7KCGwu5B3QG35FWkxyx3zUF4I0eUIp1zU5XWIjFYX0oEHsiviTIia0119FYh2-WZhieYxxoQ8meHM7U2LUM1lsSxjn55zbvRkYFSmvOP1iz2dvmVDZgd1SRqlhCtbXFZtenayuGuptyg5kNy28Tr4ghwzw8GVXF-grjrgpOIwbcAFOGhiBhC4Z8_4VJg-nN5kO19CGqNFvk7kVg-EwmCmTXtLUWwr7DNl4bM0yEDx1-NE2fIoun7ASVMKa7NGUzymhLwyfu5ltFXtJx1WaNJ10P_q2IR7M7LjG6rT7ubRHovhGNtct5lBRaL0QZ0TWVf7AL3CPSlxrQYnCbXZ17oFhhibZK-2-4eYs4ev8v7r6pJkq3KAM_meXeNAG3hvpbtZ2EkYgnO-JWInYCM6Qy91JC1wBH69xrL2W62vyFS5_ywMrRR3geSqyp9CezgXex1g4RTF-GiJAudAVhSWtSLdX0cOVTkF0rSIp2nfueKONPwFbHeqlGIDu5_gcQYfpYkkfSpLasZhJa8nBOEeQkUN36FpLr4lx3sMa7T1tDL6b98PlyCE1iDziIe2YjP0mFK_75e3vvUMWYpd9r7HM8CTpBvXiiN9knA7X9vpmurFMOTHg_rFZCDEF-K7dW0cwQZ5tzjoZu53rjx2QHH90p0JOwBGTK3pxgL9ZRzVZrl-D-k8ShurQ0zSj-Tj5H9qnBIouiwhMxSM-kkdvvBHk" />
+    </item>
+  </cookies>
+</error>

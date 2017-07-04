@@ -424,7 +424,7 @@ WriteLiteral(" aria-controls=\"adv-search\"");
 
 WriteLiteral(" aria-expanded=\"false\"");
 
-WriteLiteral(" class=\" btn btn-sm btn-primary\"");
+WriteLiteral(" class=\"btn btn-sm btn-primary\"");
 
 WriteLiteral(" data-target=\"#adv-search\"");
 
@@ -594,14 +594,14 @@ WriteLiteral(" style=\"display: none\"");
 
 WriteLiteral(">\r\n            <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 9207), Tuple.Create("\"", 9257)
+WriteAttribute("src", Tuple.Create(" src=\"", 9206), Tuple.Create("\"", 9256)
             
             #line 149 "..\..\Views\Applicant\List.cshtml"
-, Tuple.Create(Tuple.Create("", 9213), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/images/loading.gif")
+, Tuple.Create(Tuple.Create("", 9212), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/images/loading.gif")
             
             #line default
             #line hidden
-, 9213), false)
+, 9212), false)
 );
 
 WriteLiteral(" alt=\"loading...\"");

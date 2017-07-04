@@ -1,0 +1,52 @@
+﻿@model Decision.ViewModel.Eblagh.EblaghViewModel
+<div class="col-md-12 data-item" id="Eblagh-@Model.Empno">
+    <div class="panel panel-default">
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="text-muted">سال ثبت حکم:</label>
+                    <small>@Model.HokmYear.GetPersianNumber()</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">سریال حکم:</label>
+                    <small>@Model.Seq.ToString().GetPersianNumber()</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">تاریخ اجرا:</label>
+                    <small>@Model.RunDate.GetDatePersianNumber()</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">وضعیت حکم:</label>
+                    <small>@Model.Permanent.GetPersianNumber()</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">واحد:</label>
+                    <small>@Model.RealUnit</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">مرکز هزینه:</label>
+                    <small>@Model.CostUnit</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">پست:</label>
+                    <small>@Model.Post</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">سمت:</label>
+                    <small>@Model.SematDsc</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">نوع ابلاغ:</label>
+                    <small>@Model.EblType</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">توضیحات:</label>
+                    <small>@Model.EblDes</small>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

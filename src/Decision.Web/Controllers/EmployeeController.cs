@@ -38,7 +38,7 @@ namespace Decision.Web.Controllers
         #region List,ListAjax
         [HttpGet]
         [Activity(Description = "مشاهده لیست کارکنان")]
-        [Mvc5Authorize(Auth.CanViewApplicantList)]
+        [Mvc5Authorize(Auth.CanViewEmployeeList)]
         public virtual async Task<ActionResult> List()
         {
             var viewModel = await _EmployeeService.GetPagedListAsync(new EmployeeSearchRequest());
@@ -47,19 +47,19 @@ namespace Decision.Web.Controllers
         //[CheckReferrer]
         [AjaxOnly]
         [HttpPost]
-        [Mvc5Authorize(Auth.CanViewApplicantList)]
+        [Mvc5Authorize(Auth.CanViewEmployeeList)]
         [OutputCache(Location = OutputCacheLocation.None, NoStore = true, Duration = 0)]
         public virtual async Task<ActionResult> ListAjax(EmployeeSearchRequest request)
         {
             var viewModel = await _EmployeeService.GetPagedListAsync(request);
             if (viewModel.Employees == null || !viewModel.Employees.Any()) return Content("no-more-info");
-            return PartialView(MVC.Applicant.Views._ListAjax, viewModel);
+            return PartialView(MVC.Employee.Views._ListAjax, viewModel);
         }
         #endregion
 
         #region Details
         [HttpGet]
-        [Mvc5Authorize(Auth.CanViewApplicantDetails)]
+        [Mvc5Authorize(Auth.CanViewEmployeeDetails)]
         [Route("Details/{EmployeeId}")]
 
         [SiteMapTitle("FullName", Target = AttributeTarget.CurrentNode)]

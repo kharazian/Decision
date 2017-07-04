@@ -19,6 +19,8 @@ namespace Decision.ServiceLayer.Security
 
         #region permissionNames
 
+        public const string CanViewEmployeeList = "CanViewEmployeeList";
+        public const string CanViewEmployeeDetails = "CanViewEmployeeDetails";
         public const string CanViewApplicantList = "CanViewApplicantList";
         public const string CanEditApplicant = "CanEditApplicant";
         public const string CanCreateApplicant = "CanCreateApplicant";
@@ -66,6 +68,8 @@ namespace Decision.ServiceLayer.Security
         #endregion
 
         #region Permissions
+        public static readonly PermissionModel CanViewEmployeeDetailsPermission = new PermissionModel { Name = CanViewEmployeeDetails, Category = CanViewCategory, Description = "میتوانند  فرم جزئیات کارکنان را مشاهده کنند" };
+        public static readonly PermissionModel CanViewEmployeeListPermission = new PermissionModel { Name = CanViewEmployeeList, Category = CanViewCategory, Description = "میتوانند  لیست کارکنان را مشاهده کنند" };
         public static readonly PermissionModel CanViewApplicantDetailsPermission = new PermissionModel { Name = CanViewApplicantDetails, Category = CanViewCategory, Description = "میتوانند  فرم جزئیات اساتید را مشاهده کنند" };
         public static readonly PermissionModel CanViewApplicantListPermission = new PermissionModel { Name = CanViewApplicantList, Category = CanViewCategory, Description = "میتوانند  لیست اساتید را مشاهده کنند" };
         public static readonly PermissionModel CanManageArticleEvaluationPermission = new PermissionModel { Name = CanManageArticleEvaluation, Category = CanManageCategory, Description = "میتوانند ارزیابی های به عمل آمده از مقالات را مدیریت کنند" };
@@ -120,6 +124,8 @@ namespace Decision.ServiceLayer.Security
         {
             return new List<PermissionModel>
             {
+                CanViewEmployeeListPermission,
+                CanViewEmployeeDetailsPermission,
                 CanManageAddressPermission,
                 CanManageAppraiserPermission,
                 CanManageEducationalBackgroundPermission,
@@ -159,6 +165,8 @@ namespace Decision.ServiceLayer.Security
         {
             return new List<string>()
             {
+                CanViewApplicantList,
+                CanViewApplicantDetails,
                 CanViewApplicantList,
                 CanEditApplicant,
                 CanCreateApplicant,

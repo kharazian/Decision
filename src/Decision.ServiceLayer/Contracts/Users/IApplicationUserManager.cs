@@ -596,6 +596,7 @@ namespace Decision.ServiceLayer.Contracts.Users
         Task<UserViewModel> GetUserViewModel(Guid id);
         Task<IEnumerable<SelectListItem>> GetAsSelectListItem();
         long Count();
+        bool IsInRoleManager();
     }
 
 }

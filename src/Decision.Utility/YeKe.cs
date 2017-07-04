@@ -20,7 +20,7 @@ namespace Decision.Utility
         {
             return string.IsNullOrWhiteSpace(data) ?
                         string.Empty :
-                        data.Replace(ArabicYeChar, PersianYeChar).Replace(ArabicKeChar, PersianKeChar).Trim();
+                        data.Replace(PersianYeChar,ArabicYeChar ).Replace( PersianKeChar, ArabicKeChar).Trim();
         }
         public static string ApplyCorrectYeKeWitOutTrim(this string data)
         {

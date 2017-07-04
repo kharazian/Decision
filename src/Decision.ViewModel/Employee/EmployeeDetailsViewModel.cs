@@ -46,7 +46,21 @@ namespace Decision.ViewModel.Employee
         public string LDegreeDsc { get; set; }
         public string LMajorDsc { get; set; }
         public string StopStat { get; set; }
-        public EmpState StopStatE { get{ return (EmpState)Enum.Parse(typeof(EmpState), StopStat);  } }
+        public EmpState StopStatE
+        {
+            get
+            {
+                try
+                {
+                    return (EmpState)Enum.Parse(typeof(EmpState), StopStat);
+                }
+                catch (Exception)
+                {
+                    return EmpState.None;
+                }
+            }
+
+        }
         public string Acc { get; set; }
         public string InsTypeDsc { get; set; }
         public string InsNo { get; set; }
@@ -55,7 +69,6 @@ namespace Decision.ViewModel.Employee
         public string HouseDsc { get; set; }
         public byte[] Photo { get; set; }
         public string LPostEblagh { get; set; }
-        public string EmpState { get; set; }
         public string zonecode { get; set; }
         public string RealPlace { get; set; }
         #endregion

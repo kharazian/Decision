@@ -6,22 +6,22 @@
 
 @Html.SideBarSecureActionLink("وابستگان", Url.Action(MVC.EmpRelative.List(Model)), "list-group-item second-split", "fa fa-map-marker", AssignableToRolePermissions.CanManageAddress)
 
-@Html.SideBarSecureActionLink("سوابق استخدامی", "#", "list-group-item second-split", "fa fa-graduation-cap", AssignableToRolePermissions.CanManageEducationalBackground)
+@Html.SideBarSecureActionLink("سوابق استخدامی", Url.Action(MVC.Experience.List(Model)), "list-group-item second-split", "fa fa-graduation-cap", AssignableToRolePermissions.CanManageEducationalBackground)
 
-@Html.SideBarSecureActionLink("سوابق تحصیلی", "#", "list-group-item second-split", "fa fa-th-list", AssignableToRolePermissions.CanManageArticle)
+@Html.SideBarSecureActionLink("سوابق تحصیلی", Url.Action(MVC.EmpDegree.List(Model)), "list-group-item second-split", "fa fa-th-list", AssignableToRolePermissions.CanManageArticle)
 
-@Html.SideBarSecureActionLink("سوابق نظامی", "#", "list-group-item second-split", "fa fa-comments", AssignableToRolePermissions.CanManageInterview)
+@Html.SideBarSecureActionLink("سوابق نظامی", Url.Action(MVC.MilitartyService.List(Model)), "list-group-item second-split", "fa fa-comments", AssignableToRolePermissions.CanManageInterview)
 
 @Html.SideBarSecureActionLink("سبد رفاهی", "#", "list-group-item second-split", "fa fa-university", AssignableToRolePermissions.CanManageScientificTeaching)
 
-@Html.SideBarSecureActionLink("بیمه متفرقه شخص", "#", "list-group-item second-split", "fa fa-leanpub", AssignableToRolePermissions.CanManageResearchExperience)
+@Html.SideBarSecureActionLink("بیمه متفرقه شخص", Url.Action(MVC.OtherBime.List(Model)), "list-group-item second-split", "fa fa-leanpub", AssignableToRolePermissions.CanManageResearchExperience)
 
-@Html.SideBarSecureActionLink("بیمه متفرقه وابسته", "#", "list-group-item second-split", "fa fa-list-alt", AssignableToRolePermissions.CanManageWorkExperience)
+@Html.SideBarSecureActionLink("بیمه متفرقه وابسته", Url.Action(MVC.OtherBime.ListOther(Model)), "list-group-item second-split", "fa fa-list-alt", AssignableToRolePermissions.CanManageWorkExperience)
 
 @Html.SideBarSecureActionLink("مامورین", "#", "list-group-item second-split", "fa fa-list", AssignableToRolePermissions.CanManageWorkExperience)
 
-@Html.SideBarSecureActionLink("ابلاغ ها", "#", "list-group-item thrid-split", "fa fa-leanpub", AssignableToRolePermissions.CanManageAddress)
+@Html.SideBarSecureActionLink("ابلاغ ها", Url.Action(MVC.Eblagh.List(Model)), "list-group-item thrid-split", "fa fa-leanpub", AssignableToRolePermissions.CanManageAddress)
 
-@Html.SideBarSecureActionLink("احکام", "#", "list-group-item thrid-split", "fa fa-comments", AssignableToRolePermissions.CanManageAddress)
+@Html.SideBarSecureActionLink("احکام", Url.Action(MVC.Hokm.List(Model)), "list-group-item thrid-split", "fa fa-comments", AssignableToRolePermissions.CanManageAddress)
 
 

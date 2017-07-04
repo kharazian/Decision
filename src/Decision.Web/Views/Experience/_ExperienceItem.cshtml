@@ -1,0 +1,51 @@
+﻿@model Decision.ViewModel.Experience.ExperienceViewModel
+<div class="col-md-12 data-item" id="Empno-@Model.Empno">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <label class="text-muted">تاریخ شروع:</label>
+                    <small>@Model.StartDate.GetDatePersianNumber()</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">تاریخ پایان:</label>
+                    <small>@Model.EndDate.GetDatePersianNumber()</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">محل خدمت:</label>
+                    <small>@Model.PlcDsc</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">توضیحات شغل:</label>
+                    <small>@Model.JobDsc</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">قبول در حقوق:</label>
+                    <small>
+                        @if (Model.OkCod=="1")
+                        {
+                            <i class="fa fa-check-square text-success" title="فعال"></i>
+                        }
+                        else
+                        {
+                            <i class="fa fa-check-square-o text-muted" title="غیر فعال"></i>
+                        }    
+                    </small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">قبول در حکم:</label>
+                    <small>
+                        @if (Model.OkCod2 == "1")
+                        {
+                            <i class="fa fa-check-square text-success" title="فعال"></i>
+                        }
+                        else
+                        {
+                            <i class="fa fa-check-square-o text-muted" title="غیر فعال"></i>
+                        }
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

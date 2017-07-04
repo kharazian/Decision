@@ -73,7 +73,7 @@ WriteLiteral("\r\n\r\n");
 
             
             #line 9 "..\..\Views\Employee\_EmployeeRelatedLinksBuilder.cshtml"
-Write(Html.SideBarSecureActionLink("سوابق استخدامی", "#", "list-group-item second-split", "fa fa-graduation-cap", AssignableToRolePermissions.CanManageEducationalBackground));
+Write(Html.SideBarSecureActionLink("سوابق استخدامی", Url.Action(MVC.Experience.List(Model)), "list-group-item second-split", "fa fa-graduation-cap", AssignableToRolePermissions.CanManageEducationalBackground));
 
             
             #line default
@@ -82,7 +82,7 @@ WriteLiteral("\r\n\r\n");
 
             
             #line 11 "..\..\Views\Employee\_EmployeeRelatedLinksBuilder.cshtml"
-Write(Html.SideBarSecureActionLink("سوابق تحصیلی", "#", "list-group-item second-split", "fa fa-th-list", AssignableToRolePermissions.CanManageArticle));
+Write(Html.SideBarSecureActionLink("سوابق تحصیلی", Url.Action(MVC.EmpDegree.List(Model)), "list-group-item second-split", "fa fa-th-list", AssignableToRolePermissions.CanManageArticle));
 
             
             #line default
@@ -91,7 +91,7 @@ WriteLiteral("\r\n\r\n");
 
             
             #line 13 "..\..\Views\Employee\_EmployeeRelatedLinksBuilder.cshtml"
-Write(Html.SideBarSecureActionLink("سوابق نظامی", "#", "list-group-item second-split", "fa fa-comments", AssignableToRolePermissions.CanManageInterview));
+Write(Html.SideBarSecureActionLink("سوابق نظامی", Url.Action(MVC.MilitartyService.List(Model)), "list-group-item second-split", "fa fa-comments", AssignableToRolePermissions.CanManageInterview));
 
             
             #line default
@@ -109,7 +109,7 @@ WriteLiteral("\r\n\r\n");
 
             
             #line 17 "..\..\Views\Employee\_EmployeeRelatedLinksBuilder.cshtml"
-Write(Html.SideBarSecureActionLink("بیمه متفرقه شخص", "#", "list-group-item second-split", "fa fa-leanpub", AssignableToRolePermissions.CanManageResearchExperience));
+Write(Html.SideBarSecureActionLink("بیمه متفرقه شخص", Url.Action(MVC.OtherBime.List(Model)), "list-group-item second-split", "fa fa-leanpub", AssignableToRolePermissions.CanManageResearchExperience));
 
             
             #line default
@@ -118,7 +118,7 @@ WriteLiteral("\r\n\r\n");
 
             
             #line 19 "..\..\Views\Employee\_EmployeeRelatedLinksBuilder.cshtml"
-Write(Html.SideBarSecureActionLink("بیمه متفرقه وابسته", "#", "list-group-item second-split", "fa fa-list-alt", AssignableToRolePermissions.CanManageWorkExperience));
+Write(Html.SideBarSecureActionLink("بیمه متفرقه وابسته", Url.Action(MVC.OtherBime.ListOther(Model)), "list-group-item second-split", "fa fa-list-alt", AssignableToRolePermissions.CanManageWorkExperience));
 
             
             #line default
@@ -136,7 +136,7 @@ WriteLiteral("\r\n\r\n");
 
             
             #line 23 "..\..\Views\Employee\_EmployeeRelatedLinksBuilder.cshtml"
-Write(Html.SideBarSecureActionLink("ابلاغ ها", "#", "list-group-item thrid-split", "fa fa-leanpub", AssignableToRolePermissions.CanManageAddress));
+Write(Html.SideBarSecureActionLink("ابلاغ ها", Url.Action(MVC.Eblagh.List(Model)), "list-group-item thrid-split", "fa fa-leanpub", AssignableToRolePermissions.CanManageAddress));
 
             
             #line default
@@ -145,7 +145,7 @@ WriteLiteral("\r\n\r\n");
 
             
             #line 25 "..\..\Views\Employee\_EmployeeRelatedLinksBuilder.cshtml"
-Write(Html.SideBarSecureActionLink("احکام", "#", "list-group-item thrid-split", "fa fa-comments", AssignableToRolePermissions.CanManageAddress));
+Write(Html.SideBarSecureActionLink("احکام", Url.Action(MVC.Hokm.List(Model)), "list-group-item thrid-split", "fa fa-comments", AssignableToRolePermissions.CanManageAddress));
 
             
             #line default

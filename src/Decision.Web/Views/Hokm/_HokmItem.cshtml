@@ -1,0 +1,95 @@
+﻿@model Decision.ViewModel.Hokm.HokmViewModel
+<div class="col-md-12 data-item" id="address-@Model.Empno">
+    <div class="panel panel-default">
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="text-muted">سال ثبت حکم:</label>
+                    <small>@Model.HokmYear.GetPersianNumber()</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">سریال حکم:</label>
+                    <small>@Model.Seq.ToString().GetPersianNumber()</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">تاریخ اجرا:</label>
+                    <small>@Model.RunDate.GetDatePersianNumber()</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">نوع حکم:</label>
+                    <small>@Model.HokmTypeDsc</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">رسته:</label>
+                    <small>@Model.RastehDsc</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">رشته:</label>
+                    <small>@Model.ReshtehDsc</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">مدرک تحصیلی حکم:</label>
+                    <small>@Model.DegreeDsc</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">رشته تحصیلی حکم:</label>
+                    <small>@Model.MajorDsc</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">گروه:</label>
+                    <small>@Model.Grooh</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">سنوات:</label>
+                    <small>@Model.Sanavat</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">وضعیت حکم:</label>
+                    <small>@Model.Permanent</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">وضعیت تاهل:</label>
+                    <small>@Model.MarriedDsc</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">سرپرست خانوار:</label>
+                    <small>@Model.FamilyProtector</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">تعداد فرزند در حکم:</label>
+                    <small>@Model.NoChild</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="text-muted">وضعیت پرسنل:</label>
+                    <small>@Model.StopStat</small>
+                </div>
+                <div class="col-md-12">
+                    <label class="text-muted">توضیحات:</label>
+                    <small>@Model.FDsc</small>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button aria-controls="show-bime" aria-expanded="false" class="btn btn-default  btn-block" data-target="#show-hokm-@Model.Empno-@Model.HokmYear-@Model.Seq" data-toggle="collapse" type="button">
+                    <i class="fa fa-search"></i>
+                    نمایش جزییات حکم
+                </button>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row collapse" id="show-hokm-@Model.Empno-@Model.HokmYear-@Model.Seq">
+                <hr class="margin-top-5 margin-bottom-5" />
+                <div class="col-md-12">
+                    @foreach (var e in Model.HokmPays.Where(e => e.Price != 0))
+                    {
+                        @Html.Partial(MVC.HokmPay.Views._HokmPayItem, e)
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

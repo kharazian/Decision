@@ -2,14 +2,7 @@
 @Html.AntiForgeryToken()
 
 <div class="panel panel-default">
-    <div class="panel-heading">
-        <div class="row">
-            <div class="col-md-3">
-                <a class="btn btn-default" data-ajax="true" data-ajax-mode="replace" data-ajax-success="onSuccessFormValidation(data, status, xhr,'createAddressForm','modal')"
-                   data-ajax-update="#modal" href="#" role="button"><i class="fa fa-plus"></i>درج آدرس جدید</a>
-            </div>
-        </div>
-    </div>
+
     <div class="panel-body">
         <div class="row" id="addressList">
             @{ Html.RenderPartial(MVC.EmpRelative.Views.ViewNames._ListAjax, Model);}

@@ -24,6 +24,13 @@
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <UseGlobalApplicationHostFile />
     <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>True</UpdateAssemblyInfoVersion>
+    <AssemblyFileVersionSettings>None.None.None.Increment</AssemblyFileVersionSettings>
+    <AssemblyInfoVersionSettings>YearStamp.MonthStamp.DayOfYearStamp.Increment</AssemblyInfoVersionSettings>
+    <AssemblyVersionSettings>None.None.None.Increment</AssemblyVersionSettings>
+    <AssemblyInfoFilePath>bin\Decision.Web.dll</AssemblyInfoFilePath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -242,8 +249,14 @@
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\BaseSettingController.cs" />
     <Compile Include="Controllers\CityController.cs" />
+    <Compile Include="Controllers\HokmController.cs" />
     <Compile Include="Controllers\EducationalBackgroundController.cs" />
     <Compile Include="Controllers\ElmahController.cs" />
+    <Compile Include="Controllers\EblaghController.cs" />
+    <Compile Include="Controllers\OtherBimeController.cs" />
+    <Compile Include="Controllers\MilitartyServiceController.cs" />
+    <Compile Include="Controllers\ExperienceController.cs" />
+    <Compile Include="Controllers\EmpDegreeController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\EmpRelativeController.cs" />
     <Compile Include="Controllers\EntireEvaluationController.cs" />
@@ -256,6 +269,9 @@
     <Compile Include="Controllers\EducationalExperienceController.cs" />
     <Compile Include="Controllers\WorkExperienceController.cs" />
     <Compile Include="Controllers\PrivateMessageController.cs" />
+    <Compile Include="EblaghController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="EducationalBackgroundController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -263,6 +279,9 @@
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="ElmahController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpDegreeController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="EmployeeController.generated.cs">
@@ -277,13 +296,28 @@
     <Compile Include="ErrorController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="ExperienceController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\LazySingleton.cs" />
+    <Compile Include="HokmController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HokmPayController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="HomeController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="Hubs\HomeHub.cs" />
     <Compile Include="Hubs\NotificationHub.cs" />
     <Compile Include="InterviewController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MilitartyServiceController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OtherBimeController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="PresenterController.generated.cs">
@@ -324,6 +358,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Eblagh\List.generated.cs">
+      <DependentUpon>List.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Eblagh\_EblaghItem.generated.cs">
+      <DependentUpon>_EblaghItem.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Eblagh\_ListAjax.generated.cs">
+      <DependentUpon>_ListAjax.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Views\EducationalBackground\_EducationalBackgroundItem.generated.cs">
       <AutoGen>True</AutoGen>
@@ -429,6 +478,56 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Unauthorized.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmpDegree\List.generated.cs">
+      <DependentUpon>List.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\EmpDegree\_EmpDegreeItem.generated.cs">
+      <DependentUpon>_EmpDegreeItem.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\EmpDegree\_ListAjax.generated.cs">
+      <DependentUpon>_ListAjax.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Experience\List.generated.cs">
+      <DependentUpon>List.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Experience\_ExperienceItem.generated.cs">
+      <DependentUpon>_ExperienceItem.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Experience\_ListAjax.generated.cs">
+      <DependentUpon>_ListAjax.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Hokm\List.generated.cs">
+      <DependentUpon>List.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\HokmPay\_HokmPayItem.generated.cs">
+      <DependentUpon>_HokmPayItem.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Hokm\_HokmItem.generated.cs">
+      <DependentUpon>_HokmItem.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Hokm\_ListAjax.generated.cs">
+      <DependentUpon>_ListAjax.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Views\Home\_Benckmarks.generated.cs">
       <AutoGen>True</AutoGen>
@@ -569,6 +668,36 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_ListAjax.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MilitartyService\List.generated.cs">
+      <DependentUpon>List.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\MilitartyService\_MilitartyServiceItem.generated.cs">
+      <DependentUpon>_MilitartyServiceItem.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\MilitartyService\_ListAjax.generated.cs">
+      <DependentUpon>_ListAjax.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\OtherBime\List.generated.cs">
+      <DependentUpon>List.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\OtherBime\_OtherBimeItem.generated.cs">
+      <DependentUpon>_OtherBimeItem.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\OtherBime\_ListAjax.generated.cs">
+      <DependentUpon>_ListAjax.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Views\Presenter\List.generated.cs">
       <AutoGen>True</AutoGen>
@@ -2492,7 +2621,7 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
-    <None Include="Properties\PublishProfiles\Decision.pubxml" />
+    <None Include="Properties\PublishProfiles\HR.pubxml" />
     <None Include="Scripts\libs\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\libs\jquery-2.1.4.js" />
     <Content Include="Scripts\libs\jquery-2.1.4.min.js" />
@@ -2783,6 +2912,82 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>List.generated.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\EmpDegree\_EmpDegreeItem.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_EmpDegreeItem.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\EmpDegree\_ListAjax.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ListAjax.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\EmpDegree\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Experience\_ExperienceItem.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ExperienceItem.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Experience\_ListAjax.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ListAjax.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Experience\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\MilitartyService\_MilitartyServiceItem.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_MilitartyServiceItem.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\MilitartyService\_ListAjax.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ListAjax.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\MilitartyService\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\OtherBime\_OtherBimeItem.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_OtherBimeItem.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\OtherBime\_ListAjax.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ListAjax.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\OtherBime\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Eblagh\_EblaghItem.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_EblaghItem.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Eblagh\_ListAjax.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ListAjax.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Eblagh\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Hokm\_HokmItem.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_HokmItem.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Hokm\_ListAjax.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ListAjax.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Hokm\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\HokmPay\_HokmPayItem.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_HokmPayItem.generated.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\ErrorLogs\" />
@@ -2857,7 +3062,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>25890</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:25890/</IISUrl>
+          <IISUrl>http://localhost:25600/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

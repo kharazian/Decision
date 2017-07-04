@@ -1,0 +1,41 @@
+﻿@model Decision.ViewModel.EmpDegree.EmpDegreeViewModel
+<div class="col-md-12 data-item" id="Empno-@Model.Empno">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <label class="text-muted">مدرک تحصیلی:</label>
+                    <small>@Model.DegreeDsc</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">تاریخ اخذ:</label>
+                    <small>@Model.DegreeDate.GetDatePersianNumber()</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">رشته تحصیلی:</label>
+                    <small>@Model.MajorDsc</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">گرایش:</label>
+                    <small>@Model.MinorDsc</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">تاریخ شروع:</label>
+                    <small>@Model.StartDate.GetDatePersianNumber()</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">تاریخ پایان:</label>
+                    <small>@Model.EndDate.GetDatePersianNumber()</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">کشور:</label>
+                    <small>@Model.CountryDsc</small>
+                </div>
+                <div class="col-md-2">
+                    <label class="text-muted">دانشگاه:</label>
+                    <small>@Model.SchoolName</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

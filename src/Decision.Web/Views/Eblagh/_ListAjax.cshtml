@@ -1,0 +1,8 @@
+﻿@* GeneratePrettyNames: true*@
+@model Decision.ViewModel.Eblagh.EblaghListViewModel
+@foreach (var e in Model.Eblaghs)
+{
+    @Html.Partial(MVC.Eblagh.Views._EblaghItem, e)
+}
+
+

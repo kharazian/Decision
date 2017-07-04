@@ -69,6 +69,8 @@ namespace Decision.ServiceLayer.Security
                     Permissions = new List<PermissionModel>
                     {
 
+                        AssignableToRolePermissions.CanViewEmployeeListPermission,
+                        AssignableToRolePermissions.CanViewEmployeeDetailsPermission,
                         AssignableToRolePermissions.CanManageAddressPermission,
                         AssignableToRolePermissions.CanManageAppraiserPermission,
                         AssignableToRolePermissions.CanManageEducationalBackgroundPermission,

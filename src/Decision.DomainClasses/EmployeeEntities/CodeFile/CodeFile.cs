@@ -152,9 +152,9 @@ namespace Decision.DomainClasses.EmployeeEntities
     public enum EmpState
     {
         /// <summary>
-        /// فعال رسمی
+        /// فعال
         /// </summary>
-        [Display(Name = "فعال رسمی")]
+        [Display(Name = "فعال")]
         Activeofficial = 0,
         /// <summary>
         /// راکد موقت
@@ -170,6 +170,30 @@ namespace Decision.DomainClasses.EmployeeEntities
         /// فعال شرکتی
         /// </summary>
         [Display(Name = "فعال شرکتی")]
-        ActiveCorporative
+        ActiveCorporative,
+        /// <summary>
+        /// نامشخص
+        /// </summary>
+        [Display(Name = "نامشخص")]
+        None
     }
+    public enum Takafol
+    {
+        /// <summary>
+        /// نیست
+        /// </summary>
+        [Display(Name = "عدم دریافت")]
+        No = 0,
+        /// <summary>
+        /// هست
+        /// </summary>
+        [Display(Name = "دریافت")]
+        Yes,
+        /// <summary>
+        /// نامشخص
+        /// </summary>
+        [Display(Name = "نامشخص")]
+        None
+    }
+
 }

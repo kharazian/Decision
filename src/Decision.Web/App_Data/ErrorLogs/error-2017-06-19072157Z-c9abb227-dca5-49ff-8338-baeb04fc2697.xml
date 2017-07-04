@@ -1,0 +1,169 @@
+﻿<error errorId="c9abb227-dca5-49ff-8338-baeb04fc2697" application="/LM/W3SVC/3/ROOT" host="EDAKHAVAN-0522" type="System.NotSupportedException" message="The specified type member 'Empno' is not supported in LINQ to Entities. Only initializers, entity members, and entity navigation properties are supported." source="EntityFramework" detail="System.NotSupportedException: The specified type member 'Empno' is not supported in LINQ to Entities. Only initializers, entity members, and entity navigation properties are supported.&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MemberAccessTranslator.TypedTranslate(ExpressionConverter parent, MemberExpression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding&amp; binding)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression&amp; source, DbExpressionBinding&amp; sourceBinding, DbExpression&amp; lambda)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClassc.&lt;GetResultsAsync&gt;b__a()&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;ExecuteInTransactionAsync&gt;d__3d`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;ExecuteAsyncImplementation&gt;d__9`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;GetResultsAsync&gt;d__e.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()&#xD;&#xA;   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.&lt;FirstMoveNextAsync&gt;d__0.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.&lt;ForEachAsync&gt;d__5`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at Decision.ServiceLayer.EFServiecs.EmployeeInfo.EmpDegreeService.&lt;GetEmpDegreeAsync&gt;d__1.MoveNext() in C:\Users\Amir\Source\Repos\Decision\src\Decision.ServiceLayer\EFServiecs\EmployeeInfo\EmpDegreeService.cs:line 32&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at Decision.Web.Controllers.EmpDegreeController.&lt;List&gt;d__4.MoveNext() in C:\Users\Amir\Source\Repos\Decision\src\Decision.Web\Controllers\EmpDegreeController.cs:line 46&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass37.&lt;BeginInvokeAsynchronousActionMethod&gt;b__36(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3d()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass46.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass46.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass33.&lt;BeginInvokeActionMethodWithFilters&gt;b__32(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="162761" time="2017-06-19T07:21:57.3462369Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:Keep-Alive&#xD;&#xA;HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.7,fa;q=0.3&#xD;&#xA;HTTP_COOKIE:__ControllerTempData=AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL; __RequestVerificationToken=Cs4gIdCoQj13Z7Q-5mvlZYQbLAksPA1lCqSBghNQBNZw9qDWYMnNVMgO81LKeVaChZZ_o3zfI_ySpyUIiTIsZeJPiffSpaKy2ypIS0U8KbQ1; decision=b2Ph7oqhN72ar0jSbDt3TMflJc0vFInnDELpu4OGXceqRFItrrOrEQwafdfDwnDAav5Dp18VTrV6vZw2pSHMox2v7rfUuVP_NHOjHC6i4F2OoQHRyDztjkXRWADkcL_OvjZAWaQ-6OHYAQbwf_D00AbxkJU5_clFHy_I6YU3OEO_oxiv-nW5OOcHqsUMcbDa65vvuEOD5TO_AbgQA8NSTBx72c087V3gZkiQaF32VYjEHSGyuttGzveuna558bEYwy6eMt4b8Hh49w2mWSRCY5nRqIoe3zWQkFtw6sQqzHZmm8EnGJCTtsA7BXT5YOd25IiInkON81bVm3o9ZSyNRHRldyBfiRAt9ACwxqemOzP6IuQ7fWdGokCWQW2uF6HP__HC2L_2ji2YlgYe3DBAjs4eUUtAzfeCZKEPu7DGYu8NeT8ie9mXSFq7HgVX2ntUsV1PE6sVBqlqUHiNM_CqGVoOSuO5pYpFcERUCBWwmvJ6SFHvEMZ5Gjj2ZUVPX_LxIUYpAG2aeEGD_RAgH6MksW6tlMPKi4qnaU_EzUZ4O-n52if0hZbpdYB9MM0xfGfa2nZ69dJ2QLywx58kDZIcLq6hgdOBsYIk5hHDIvmw0nRs1xbigxAA8etXJnlWJy_jzEaUnIO2YYIS_WYOuxFM063Uj0rGzcc8NsepFppURAQ-qwKSUMhyAMid2EjpUt9SuQhXFRHD-22Kl6PRMKhztMt9nMZpyrzcQyfibpKrVyOTOCSePW3Lvj5TZadas_8dkz9M8Qp_1ag9jPJKezApf_9ULu-hFBAd6vH0WJ4zH2W0bvmnBtIQYEmBB0MqPlLfXR5xGqCRjdWw1lvE-xcdBQhVROk0fgsDH3P3OJ7sIlLaU2ndh6WbRJlLd1-qH8vS75iEZw8g2S_dhaVOl_ESz-mb9Cvo0ELXrfjxXbWOW0rhTwSZ3NP3SwJBLp3XOrKt&#xD;&#xA;HTTP_HOST:localhost:25600&#xD;&#xA;HTTP_REFERER:http://localhost:25600/employee/militarty/list/501021&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: Keep-Alive&#xD;&#xA;Accept: text/html, application/xhtml+xml, image/jxr, */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: en-US,en;q=0.7,fa;q=0.3&#xD;&#xA;Cookie: __ControllerTempData=AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL; __RequestVerificationToken=Cs4gIdCoQj13Z7Q-5mvlZYQbLAksPA1lCqSBghNQBNZw9qDWYMnNVMgO81LKeVaChZZ_o3zfI_ySpyUIiTIsZeJPiffSpaKy2ypIS0U8KbQ1; decision=b2Ph7oqhN72ar0jSbDt3TMflJc0vFInnDELpu4OGXceqRFItrrOrEQwafdfDwnDAav5Dp18VTrV6vZw2pSHMox2v7rfUuVP_NHOjHC6i4F2OoQHRyDztjkXRWADkcL_OvjZAWaQ-6OHYAQbwf_D00AbxkJU5_clFHy_I6YU3OEO_oxiv-nW5OOcHqsUMcbDa65vvuEOD5TO_AbgQA8NSTBx72c087V3gZkiQaF32VYjEHSGyuttGzveuna558bEYwy6eMt4b8Hh49w2mWSRCY5nRqIoe3zWQkFtw6sQqzHZmm8EnGJCTtsA7BXT5YOd25IiInkON81bVm3o9ZSyNRHRldyBfiRAt9ACwxqemOzP6IuQ7fWdGokCWQW2uF6HP__HC2L_2ji2YlgYe3DBAjs4eUUtAzfeCZKEPu7DGYu8NeT8ie9mXSFq7HgVX2ntUsV1PE6sVBqlqUHiNM_CqGVoOSuO5pYpFcERUCBWwmvJ6SFHvEMZ5Gjj2ZUVPX_LxIUYpAG2aeEGD_RAgH6MksW6tlMPKi4qnaU_EzUZ4O-n52if0hZbpdYB9MM0xfGfa2nZ69dJ2QLywx58kDZIcLq6hgdOBsYIk5hHDIvmw0nRs1xbigxAA8etXJnlWJy_jzEaUnIO2YYIS_WYOuxFM063Uj0rGzcc8NsepFppURAQ-qwKSUMhyAMid2EjpUt9SuQhXFRHD-22Kl6PRMKhztMt9nMZpyrzcQyfibpKrVyOTOCSePW3Lvj5TZadas_8dkz9M8Qp_1ag9jPJKezApf_9ULu-hFBAd6vH0WJ4zH2W0bvmnBtIQYEmBB0MqPlLfXR5xGqCRjdWw1lvE-xcdBQhVROk0fgsDH3P3OJ7sIlLaU2ndh6WbRJlLd1-qH8vS75iEZw8g2S_dhaVOl_ESz-mb9Cvo0ELXrfjxXbWOW0rhTwSZ3NP3SwJBLp3XOrKt&#xD;&#xA;Host: localhost:25600&#xD;&#xA;Referer: http://localhost:25600/employee/militarty/list/501021&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/3/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\Amir\Source\Repos\Decision\src\Decision.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="162761" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="162761" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="162761" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="3" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/3" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/employee/empdegree/list/501021" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\Amir\Source\Repos\Decision\src\Decision.Web\employee\empdegree\list\501021" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="11895" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/employee/empdegree/list/501021" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="25600" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/employee/empdegree/list/501021" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html, application/xhtml+xml, image/jxr, */*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.7,fa;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__ControllerTempData=AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL; __RequestVerificationToken=Cs4gIdCoQj13Z7Q-5mvlZYQbLAksPA1lCqSBghNQBNZw9qDWYMnNVMgO81LKeVaChZZ_o3zfI_ySpyUIiTIsZeJPiffSpaKy2ypIS0U8KbQ1; decision=b2Ph7oqhN72ar0jSbDt3TMflJc0vFInnDELpu4OGXceqRFItrrOrEQwafdfDwnDAav5Dp18VTrV6vZw2pSHMox2v7rfUuVP_NHOjHC6i4F2OoQHRyDztjkXRWADkcL_OvjZAWaQ-6OHYAQbwf_D00AbxkJU5_clFHy_I6YU3OEO_oxiv-nW5OOcHqsUMcbDa65vvuEOD5TO_AbgQA8NSTBx72c087V3gZkiQaF32VYjEHSGyuttGzveuna558bEYwy6eMt4b8Hh49w2mWSRCY5nRqIoe3zWQkFtw6sQqzHZmm8EnGJCTtsA7BXT5YOd25IiInkON81bVm3o9ZSyNRHRldyBfiRAt9ACwxqemOzP6IuQ7fWdGokCWQW2uF6HP__HC2L_2ji2YlgYe3DBAjs4eUUtAzfeCZKEPu7DGYu8NeT8ie9mXSFq7HgVX2ntUsV1PE6sVBqlqUHiNM_CqGVoOSuO5pYpFcERUCBWwmvJ6SFHvEMZ5Gjj2ZUVPX_LxIUYpAG2aeEGD_RAgH6MksW6tlMPKi4qnaU_EzUZ4O-n52if0hZbpdYB9MM0xfGfa2nZ69dJ2QLywx58kDZIcLq6hgdOBsYIk5hHDIvmw0nRs1xbigxAA8etXJnlWJy_jzEaUnIO2YYIS_WYOuxFM063Uj0rGzcc8NsepFppURAQ-qwKSUMhyAMid2EjpUt9SuQhXFRHD-22Kl6PRMKhztMt9nMZpyrzcQyfibpKrVyOTOCSePW3Lvj5TZadas_8dkz9M8Qp_1ag9jPJKezApf_9ULu-hFBAd6vH0WJ4zH2W0bvmnBtIQYEmBB0MqPlLfXR5xGqCRjdWw1lvE-xcdBQhVROk0fgsDH3P3OJ7sIlLaU2ndh6WbRJlLd1-qH8vS75iEZw8g2S_dhaVOl_ESz-mb9Cvo0ELXrfjxXbWOW0rhTwSZ3NP3SwJBLp3XOrKt" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:25600" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:25600/employee/militarty/list/501021" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="__ControllerTempData">
+      <value string="AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL" />
+      <value string="AAEAAAD/////AQAAAAAAAAAEAQAAAOIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAgWU3lzdGVtLk9yZGluYWxDb21wYXJlcggAAAAACQIAAAAAAAAABAIAAAAWU3lzdGVtLk9yZGluYWxDb21wYXJlcgEAAAALX2lnbm9yZUNhc2UAAQEL" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="Cs4gIdCoQj13Z7Q-5mvlZYQbLAksPA1lCqSBghNQBNZw9qDWYMnNVMgO81LKeVaChZZ_o3zfI_ySpyUIiTIsZeJPiffSpaKy2ypIS0U8KbQ1" />
+    </item>
+    <item name="decision">
+      <value string="b2Ph7oqhN72ar0jSbDt3TMflJc0vFInnDELpu4OGXceqRFItrrOrEQwafdfDwnDAav5Dp18VTrV6vZw2pSHMox2v7rfUuVP_NHOjHC6i4F2OoQHRyDztjkXRWADkcL_OvjZAWaQ-6OHYAQbwf_D00AbxkJU5_clFHy_I6YU3OEO_oxiv-nW5OOcHqsUMcbDa65vvuEOD5TO_AbgQA8NSTBx72c087V3gZkiQaF32VYjEHSGyuttGzveuna558bEYwy6eMt4b8Hh49w2mWSRCY5nRqIoe3zWQkFtw6sQqzHZmm8EnGJCTtsA7BXT5YOd25IiInkON81bVm3o9ZSyNRHRldyBfiRAt9ACwxqemOzP6IuQ7fWdGokCWQW2uF6HP__HC2L_2ji2YlgYe3DBAjs4eUUtAzfeCZKEPu7DGYu8NeT8ie9mXSFq7HgVX2ntUsV1PE6sVBqlqUHiNM_CqGVoOSuO5pYpFcERUCBWwmvJ6SFHvEMZ5Gjj2ZUVPX_LxIUYpAG2aeEGD_RAgH6MksW6tlMPKi4qnaU_EzUZ4O-n52if0hZbpdYB9MM0xfGfa2nZ69dJ2QLywx58kDZIcLq6hgdOBsYIk5hHDIvmw0nRs1xbigxAA8etXJnlWJy_jzEaUnIO2YYIS_WYOuxFM063Uj0rGzcc8NsepFppURAQ-qwKSUMhyAMid2EjpUt9SuQhXFRHD-22Kl6PRMKhztMt9nMZpyrzcQyfibpKrVyOTOCSePW3Lvj5TZadas_8dkz9M8Qp_1ag9jPJKezApf_9ULu-hFBAd6vH0WJ4zH2W0bvmnBtIQYEmBB0MqPlLfXR5xGqCRjdWw1lvE-xcdBQhVROk0fgsDH3P3OJ7sIlLaU2ndh6WbRJlLd1-qH8vS75iEZw8g2S_dhaVOl_ESz-mb9Cvo0ELXrfjxXbWOW0rhTwSZ3NP3SwJBLp3XOrKt" />
+    </item>
+  </cookies>
+</error>

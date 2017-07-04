@@ -13,26 +13,26 @@ namespace Decision.ViewModel.Employee
     {
         public EmployeeSearchRequest()
         {
-            CurrentSort = SortByMode.CreatedOn;
+            CurrentSort = ApplicantSortBy.Family;
         }
 
         [DisplayName("نام")]
-        public string FirstName { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// نام خانوادگی
         /// </summary>
         [DisplayName("نام خانوادگی")]
-        public string LastName { get; set; }
+        public string Family { get; set; }
         /// <summary>
         /// کد ملی متقاضی
         /// </summary>
         [DisplayName("کد ملی")]
-        public string NationalCode { get; set; }
+        public string MelliCode { get; set; }
         /// <summary>
         /// شماره شناسنامه متقاضی
         /// </summary>
         [DisplayName("شماره شناسنامه")]
-        public string BirthCertificateNumber { get; set; } 
+        public string IdNo { get; set; } 
         /// <summary>
         /// فیلتر بر اساس تأیید شده یا نشده
         /// </summary>
@@ -46,7 +46,7 @@ namespace Decision.ViewModel.Employee
 
 public static class ApplicantSortBy
     {
-        public const string FirstName = nameof(FirstName);
-        public const string LastName = nameof(LastName);
+        public const string Name = nameof(Name);
+        public const string Family = nameof(Family);
     }
 }

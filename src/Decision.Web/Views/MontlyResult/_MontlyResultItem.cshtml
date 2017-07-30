@@ -1,0 +1,40 @@
+﻿@model Decision.ViewModel.MontlyResult.MontlyResultViewModel
+
+<div class="col-md-2 data-item" id="MontlyResult-@Model.Empno">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <button type="button" class="btn btn-success col-md-12">@Model.ResultMonth.GetPersianMonth()<span class="badge pull-left">@Model.ResultMonth</span></button>
+
+            <a class="btn btn-default" data-ajax="true" data-ajax-mode="replace" data-ajax-success="onSuccessFormValidation(data, status, xhr,'createAddressForm','modal')"
+               data-ajax-update="#modal" href="@Url.Action(MVC.EmpRelative.List(Model.Empno))" role="button"><i class="fa fa-plus"></i>درج آدرس جدید</a>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div class="row">
+                    <label class="text-muted">ناخالص دریافتی:</label>
+                </div>
+                <div class="row text-center">
+                    <small>@Model.SumPay.GetPersianMoney()</small>
+                </div>
+                <div class="row">
+                    <label class="text-muted">کسورات:</label>
+                </div>
+                <div class="row text-center">
+                    <small>@Model.SumDeduct.GetPersianMoney()</small>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-md-12">
+                    <label class="text-muted">خالص دریافتی:</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <small>@((Model.SumPay - Model.SumDeduct).GetPersianMoney())</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

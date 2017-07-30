@@ -76,6 +76,7 @@
     <Compile Include="Configurations\Users\UserConfig.cs" />
     <Compile Include="Configurations\Users\UserLoginConfig.cs" />
     <Compile Include="Configurations\Users\UserRoleConfig.cs" />
+    <Compile Include="EmployeeConfigurations\EmployeeInfo\MontlyResultConfig.cs" />
     <Compile Include="EmployeeConfigurations\EmployeeInfo\HokmPayKargariConfig.cs" />
     <Compile Include="EmployeeConfigurations\EmployeeInfo\HokmPayRasmyConfig.cs" />
     <Compile Include="EmployeeConfigurations\EmployeeInfo\PlaceEmpConfig.cs" />
@@ -180,7 +181,7 @@
     <Compile Include="EmployeeEntities\Employee\Messages.cs" />
     <Compile Include="EmployeeEntities\EmployeeInfo\MilitaryService.cs" />
     <Compile Include="EmployeeEntities\Employee\MontlyDeductBoss.cs" />
-    <Compile Include="EmployeeEntities\Employee\MontlyResult.cs" />
+    <Compile Include="EmployeeEntities\EmployeeInfo\MontlyResult.cs" />
     <Compile Include="EmployeeEntities\Employee\Morakhasi.cs" />
     <Compile Include="EmployeeEntities\Employee\MorControl.cs" />
     <Compile Include="EmployeeEntities\Employee\MREM.cs" />

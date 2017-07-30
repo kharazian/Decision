@@ -1,11 +1,5 @@
 [
   {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
     "outputFileName": "Scripts/customs/ajax.methods.js",
     "inputFiles": [
       "Scripts/customs/ajax.methods.js"
@@ -42,12 +36,6 @@
     ]
   },
   {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
     "outputFileName": "Scripts/plugins/jquery.mvc.deleteItem.js",
     "inputFiles": [
       "Scripts/plugins/jquery.mvc.deleteItem.js"
@@ -66,126 +54,6 @@
     ]
   },
   {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/site.css",
-    "inputFiles": [
-      "Content/site.css"
-    ]
-  },
-  {
     "outputFileName": "Scripts/plugins/jquery.farsiInput.js",
     "inputFiles": [
       "Scripts/plugins/jquery.farsiInput.js"
@@ -195,6 +63,12 @@
     "outputFileName": "Scripts/plugins/jquery.farsiInput.js",
     "inputFiles": [
       "Scripts/plugins/jquery.farsiInput.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/site.min.css",
+    "inputFiles": [
+      "Content/site.css"
     ]
   }
 ]

@@ -67,6 +67,9 @@
     <Compile Include="Eblagh\EblaghListViewModel.cs" />
     <Compile Include="Eblagh\EblaghSearchRequest.cs" />
     <Compile Include="Eblagh\EblaghViewModel.cs" />
+    <Compile Include="MontlyResult\MontlyResultListViewModel.cs" />
+    <Compile Include="MontlyResult\MontlyResultSearchRequest.cs" />
+    <Compile Include="MontlyResult\MontlyResultViewModel.cs" />
     <Compile Include="EducationalBackground\AddEducationalBackgroundViewModel.cs" />
     <Compile Include="EducationalBackground\EditEducationalBackgroundViewModel.cs" />
     <Compile Include="EducationalBackground\EducationalBackgroundListViewModel.cs" />

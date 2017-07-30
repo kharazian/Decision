@@ -55,7 +55,7 @@ namespace ASP
         {
             
             #line 5 "..\..\Views\Employee\_EmployeeRelatedLinksBuilder.cshtml"
-Write(Html.SideBarSecureActionLink("فرم مشخصات متقاضی", Url.Action(MVC.Employee.Details(Model)), "list-group-item thrid-split", "fa fa-eye",AssignableToRolePermissions.CanViewApplicantDetails));
+Write(Html.SideBarSecureActionLink("فرم مشخصات متقاضی", Url.Action(MVC.Employee.Details(Model)), "list-group-item second-split", "fa fa-eye",AssignableToRolePermissions.CanViewApplicantDetails));
 
             
             #line default
@@ -136,7 +136,7 @@ WriteLiteral("\r\n\r\n");
 
             
             #line 23 "..\..\Views\Employee\_EmployeeRelatedLinksBuilder.cshtml"
-Write(Html.SideBarSecureActionLink("ابلاغ ها", Url.Action(MVC.Eblagh.List(Model)), "list-group-item thrid-split", "fa fa-leanpub", AssignableToRolePermissions.CanManageAddress));
+Write(Html.SideBarSecureActionLink("ابلاغ ها", Url.Action(MVC.Eblagh.List(Model)), "list-group-item second-split", "fa fa-leanpub", AssignableToRolePermissions.CanManageAddress));
 
             
             #line default
@@ -145,7 +145,16 @@ WriteLiteral("\r\n\r\n");
 
             
             #line 25 "..\..\Views\Employee\_EmployeeRelatedLinksBuilder.cshtml"
-Write(Html.SideBarSecureActionLink("احکام", Url.Action(MVC.Hokm.List(Model)), "list-group-item thrid-split", "fa fa-comments", AssignableToRolePermissions.CanManageAddress));
+Write(Html.SideBarSecureActionLink("احکام", Url.Action(MVC.Hokm.List(Model)), "list-group-item second-split", "fa fa-comments", AssignableToRolePermissions.CanManageAddress));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n\r\n");
+
+            
+            #line 27 "..\..\Views\Employee\_EmployeeRelatedLinksBuilder.cshtml"
+Write(Html.SideBarSecureActionLink("حقوق", Url.Action(MVC.MontlyResult.List(Model)), "list-group-item second-split", "fa fa-comments", AssignableToRolePermissions.CanManageAddress));
 
             
             #line default

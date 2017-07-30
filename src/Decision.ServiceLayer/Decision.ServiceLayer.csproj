@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="Contracts\ApplicantInfo\IAddressService.cs" />
     <Compile Include="Contracts\ApplicantInfo\IPresenterService.cs" />
+    <Compile Include="Contracts\EmployeeInfo\IMontlyResultService.cs" />
     <Compile Include="Contracts\EmployeeInfo\IHokmService.cs" />
     <Compile Include="Contracts\EmployeeInfo\IEmployeeService.cs" />
     <Compile Include="Contracts\EmployeeInfo\IEmpDegreeService.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="EFServiecs\ApplicantInfo\AddressServices.cs" />
     <Compile Include="EFServiecs\ApplicantInfo\PresenterService.cs" />
     <Compile Include="EFServiecs\BaseService.cs" />
+    <Compile Include="EFServiecs\EmployeeInfo\MontlyResultService.cs" />
     <Compile Include="EFServiecs\EmployeeInfo\HokmService.cs" />
     <Compile Include="EFServiecs\EmployeeInfo\EmployeeService.cs" />
     <Compile Include="EFServiecs\EmployeeInfo\EmpDegreeService.cs" />

@@ -47,6 +47,7 @@ public static partial class MVC
     public static Decision.Web.Controllers.HomeController Home = new Decision.Web.Controllers.T4MVC_HomeController();
     public static Decision.Web.Controllers.InterviewController Interview = new Decision.Web.Controllers.T4MVC_InterviewController();
     public static Decision.Web.Controllers.MilitartyServiceController MilitartyService = new Decision.Web.Controllers.T4MVC_MilitartyServiceController();
+    public static Decision.Web.Controllers.MontlyResultController MontlyResult = new Decision.Web.Controllers.T4MVC_MontlyResultController();
     public static Decision.Web.Controllers.OtherBimeController OtherBime = new Decision.Web.Controllers.T4MVC_OtherBimeController();
     public static Decision.Web.Controllers.PresenterController Presenter = new Decision.Web.Controllers.T4MVC_PresenterController();
     public static Decision.Web.Controllers.PrivateMessageController PrivateMessage = new Decision.Web.Controllers.T4MVC_PrivateMessageController();

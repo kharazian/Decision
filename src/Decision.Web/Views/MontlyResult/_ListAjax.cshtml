@@ -1,0 +1,85 @@
+﻿@* GeneratePrettyNames: true*@
+@model Decision.ViewModel.MontlyResult.MontlyResultListViewModel
+
+    <div class="timeline">
+        <!-- Line component -->
+        <div class="line text-muted"></div>
+
+        @foreach (var eYearGroup in Model.MontlyResults.GroupBy(e => e.ResultYear))
+        {
+        <article class="timeline panel  panel-primary">
+            <div class="row">
+                <!-- Icon -->
+                <div class="panel-heading icon">
+
+                    <a role="button" aria-controls="show-search" aria-expanded="false" data-toggle="collapse" data-parent="#accordion" href="#show-monthlyresult-@eYearGroup.Key">
+                        @eYearGroup.Key
+                    </a>
+
+                </div>
+                <div id="show-monthlyresult-@eYearGroup.Key" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                    <div class="panel-body">
+                        @foreach (var e in eYearGroup.ToList())
+                        {
+                            @Html.Partial(MVC.MontlyResult.Views._MontlyResultItem, e)
+                        }
+                    </div>
+                </div>
+            </div>
+        </article>
+        }
+
+    </div>
+
+@*<div class="timeline">
+    <div class="line text-muted"></div>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        @foreach (var eYearGroup in Model.MontlyResults.GroupBy(e => e.ResultYear))
+        {
+
+            @*<div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <button aria-controls="show-search" aria-expanded="false" class="btn btn-default  btn-block" data-target="#show-monthlyresult-@eYearGroup.Key" data-toggle="collapse" type="button">
+                                    <i class="fa fa-info"></i>
+                                    سال @eYearGroup.Key
+                                </button>
+                            </div>
+                            <div class="row collapse" id="show-monthlyresult-@eYearGroup.Key">
+                                @foreach (var e in eYearGroup.ToList())
+                                {
+                                    @Html.Partial(MVC.MontlyResult.Views._MontlyResultItem, e)
+                                }
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>*@@*
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading1">
+                    <div class="icon">
+                        <i class="glyphicon glyphicon-one-fine-dot"></i>
+                    </div>
+                    <h4 class="panel-title">
+                        <a role="button" aria-controls="show-search" aria-expanded="false" data-toggle="collapse" data-parent="#accordion" href="#show-monthlyresult-@eYearGroup.Key">
+                            سال @eYearGroup.Key
+                        </a>
+                    </h4>
+
+                </div>
+                <div id="show-monthlyresult-@eYearGroup.Key" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                    <div class="panel-body">
+                        @foreach (var e in eYearGroup.ToList())
+                        {
+                            @Html.Partial(MVC.MontlyResult.Views._MontlyResultItem, e)
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>*@

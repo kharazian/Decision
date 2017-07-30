@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="AddressProfile.cs" />
     <Compile Include="AnswerOptionProfile.cs" />
+    <Compile Include="MontlyResultProfile.cs" />
     <Compile Include="HokmPayProfile.cs" />
     <Compile Include="HokmProfile.cs" />
     <Compile Include="EmpDegreeProfile.cs" />

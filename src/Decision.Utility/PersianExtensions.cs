@@ -61,6 +61,63 @@ namespace Decision.Utility
         {
             return data.ToString(CultureInfo.InvariantCulture).GetPersianNumber();
         }
+        public static string GetPersianMonth(this string data)
+        {
+            var temp = string.Empty;
+            switch (data)
+            {
+                case ("01"):
+                    temp = "فروردین";
+                    break;
+                case ("02"):
+                    temp = "اردیبهشت";
+                    break;
+                case ("03"):
+                    temp = "خرداد";
+                    break;
+                case ("04"):
+                    temp = "مرداد";
+                    break;
+                case ("05"):
+                    temp = "تیر";
+                    break;
+                case ("06"):
+                    temp = "شهریور";
+                    break;
+                case ("07"):
+                    temp = "مهر";
+                    break;
+                case ("08"):
+                    temp = "آبان";
+                    break;
+                case ("09"):
+                    temp = "آذر";
+                    break;
+                case ("10"):
+                    temp = "دی";
+                    break;
+                case ("11"):
+                    temp = "بهمن";
+                    break;
+                case ("12"):
+                    temp = "اسفند";
+                    break;
+                default:
+                    return string.Empty;
+
+            }
+            return temp;
+        }
+
+        public static string GetPersianMoney(this decimal data)
+        {
+            var temp = data.GetPersianNumber();
+            var arData = temp.Split('.');
+            temp = arData[0];
+            for (var i = temp.Length-3; i > 0; i -= 3)
+                temp = temp.Insert(i, ",");
+            return temp;
+        }
     }
 }
 

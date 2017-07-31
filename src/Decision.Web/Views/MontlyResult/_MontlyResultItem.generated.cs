@@ -65,17 +65,36 @@ WriteLiteral(">\r\n        <div");
 
 WriteLiteral(" class=\"panel-heading\"");
 
-WriteLiteral(">\r\n            <button");
-
-WriteLiteral(" type=\"button\"");
+WriteLiteral(">\r\n            <a");
 
 WriteLiteral(" class=\"btn btn-success col-md-12\"");
+
+WriteLiteral(" data-ajax=\"true\"");
+
+WriteLiteral(" data-ajax-mode=\"replace\"");
+
+WriteLiteral(" data-ajax-success=\"onSuccessFormValidation(data, status, xhr,\'createAddressForm\'" +
+",\'modal\')\"");
+
+WriteLiteral("\r\n               data-ajax-update=\"#modal\"");
+
+WriteAttribute("href", Tuple.Create(" href=\"", 428), Tuple.Create("\"", 520)
+            
+            #line 7 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
+, Tuple.Create(Tuple.Create("", 435), Tuple.Create<System.Object, System.Int32>(Url.Action(MVC.MontlyResult.Details(Model.Empno,Model.ResultYear,Model.ResultMonth))
+            
+            #line default
+            #line hidden
+, 435), false)
+);
+
+WriteLiteral(" role=\"button\"");
 
 WriteLiteral(">");
 
             
-            #line 6 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
-                                                               Write(Model.ResultMonth.GetPersianMonth());
+            #line 7 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
+                                                                                                                                               Write(Model.ResultMonth.GetPersianMonth());
 
             
             #line default
@@ -87,42 +106,13 @@ WriteLiteral(" class=\"badge pull-left\"");
 WriteLiteral(">");
 
             
-            #line 6 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
-                                                                                                                                 Write(Model.ResultMonth);
+            #line 7 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
+                                                                                                                                                                                                                 Write(Model.ResultMonth);
 
             
             #line default
             #line hidden
-WriteLiteral("</span></button>\r\n\r\n            <a");
-
-WriteLiteral(" class=\"btn btn-default\"");
-
-WriteLiteral(" data-ajax=\"true\"");
-
-WriteLiteral(" data-ajax-mode=\"replace\"");
-
-WriteLiteral(" data-ajax-success=\"onSuccessFormValidation(data, status, xhr,\'createAddressForm\'" +
-",\'modal\')\"");
-
-WriteLiteral("\r\n               data-ajax-update=\"#modal\"");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 590), Tuple.Create("\"", 643)
-            
-            #line 9 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
-, Tuple.Create(Tuple.Create("", 597), Tuple.Create<System.Object, System.Int32>(Url.Action(MVC.EmpRelative.List(Model.Empno))
-            
-            #line default
-            #line hidden
-, 597), false)
-);
-
-WriteLiteral(" role=\"button\"");
-
-WriteLiteral("><i");
-
-WriteLiteral(" class=\"fa fa-plus\"");
-
-WriteLiteral("></i>درج آدرس جدید</a>\r\n        </div>\r\n        <div");
+WriteLiteral("</span></a>\r\n        </div>\r\n        <div");
 
 WriteLiteral(" class=\"panel-body\"");
 
@@ -145,7 +135,7 @@ WriteLiteral(" class=\"row text-center\"");
 WriteLiteral(">\r\n                    <small>");
 
             
-            #line 17 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
+            #line 15 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
                       Write(Model.SumPay.GetPersianMoney());
 
             
@@ -166,7 +156,7 @@ WriteLiteral(" class=\"row text-center\"");
 WriteLiteral(">\r\n                    <small>");
 
             
-            #line 23 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
+            #line 21 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
                       Write(Model.SumDeduct.GetPersianMoney());
 
             
@@ -201,7 +191,7 @@ WriteLiteral(" class=\"col-md-12 text-center\"");
 WriteLiteral(">\r\n                    <small>");
 
             
-            #line 35 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
+            #line 33 "..\..\Views\MontlyResult\_MontlyResultItem.cshtml"
                        Write((Model.SumPay - Model.SumDeduct).GetPersianMoney());
 
             

@@ -693,6 +693,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Views\MontlyResult\_Details.generated.cs">
+      <DependentUpon>_Details.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Views\MontlyResult\_ListAjax.generated.cs">
       <DependentUpon>_ListAjax.cshtml</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -3021,6 +3026,10 @@
     <Content Include="Views\MontlyResult\List.cshtml">
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\MontlyResult\_Details.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Details.generated.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

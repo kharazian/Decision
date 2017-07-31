@@ -29,16 +29,29 @@ namespace Decision.ServiceLayer.EFServiecs.EmployeeInfo
         #region GetAddressesAsync
         public async Task<MontlyResultListViewModel> GetMontlyResultAsync(MontlyResultSearchRequest request)
         {
-            return new MontlyResultListViewModel
-            {
-                MontlyResults = await Service.AsNoTracking()
-                    .Where(a => a.Empno == request.Empno && a.PayType=="1" )
-                    .ProjectTo<MontlyResultViewModel>(MappingEngine)
-                    //.Skip((request.PageIndex - 1) * 5)
-                    //.Take(5)
-                    .ToListAsync(),
-                Request = request
-            };
+            var montlyResults = 
+                Service//.Include(a => a.CreatedBy)
+                   .AsNoTracking()
+                   .AsQueryable();
+
+            if (request.Empno != string.Empty)
+                montlyResults = montlyResults.Where(a => a.Empno == request.Empno).AsQueryable();
+            if (request.ResultYear != string.Empty)
+                montlyResults = montlyResults.Where(a => a.ResultYear == request.ResultYear).AsQueryable();
+            if (request.ResultMonth != string.Empty)
+                montlyResults = montlyResults.Where(a => a.ResultMonth.Contains(request.ResultMonth)).AsQueryable();
+
+            //applicants = applicants.OrderBy($"{request.CurrentSort} {request.SortDirection}");
+            montlyResults = montlyResults.OrderBy(a => new { a.Empno, a.ResultYear, a.ResultMonth });
+
+            var selectedmontlyResults = montlyResults.ProjectTo<MontlyResultViewModel>(MappingEngine);
+            var resultsToSkip = (request.PageIndex - 1) * request.PageSize;
+            var query = await selectedmontlyResults
+                //.Skip(() => resultsToSkip)
+                //.Take(() => request.PageSize)
+                .ToListAsync();
+
+            return new MontlyResultListViewModel { Request = request, MontlyResults = query };
         }
 
         #endregion

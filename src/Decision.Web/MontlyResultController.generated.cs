@@ -70,6 +70,13 @@ namespace Decision.Web.Controllers
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ListAjax);
             return System.Threading.Tasks.Task.FromResult(callInfo as ActionResult);
         }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> Details()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Details);
+            return System.Threading.Tasks.Task.FromResult(callInfo as ActionResult);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public MontlyResultController Actions { get { return MVC.MontlyResult; } }
@@ -88,6 +95,7 @@ namespace Decision.Web.Controllers
         {
             public readonly string List = ("List").ToLowerInvariant();
             public readonly string ListAjax = ("ListAjax").ToLowerInvariant();
+            public readonly string Details = ("Details").ToLowerInvariant();
         }
 
 
@@ -107,6 +115,16 @@ namespace Decision.Web.Controllers
         {
             public readonly string request = ("request").ToLowerInvariant();
         }
+        static readonly ActionParamsClass_Details s_params_Details = new ActionParamsClass_Details();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Details DetailsParams { get { return s_params_Details; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Details
+        {
+            public readonly string empno = ("empno").ToLowerInvariant();
+            public readonly string resultYear = ("resultYear").ToLowerInvariant();
+            public readonly string resultMonth = ("resultMonth").ToLowerInvariant();
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -117,10 +135,12 @@ namespace Decision.Web.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string _Details = "_Details";
                 public readonly string _ListAjax = "_ListAjax";
                 public readonly string _MontlyResultItem = "_MontlyResultItem";
                 public readonly string List = "List";
             }
+            public readonly string _Details = "~/Views/MontlyResult/_Details.cshtml";
             public readonly string _ListAjax = "~/Views/MontlyResult/_ListAjax.cshtml";
             public readonly string _MontlyResultItem = "~/Views/MontlyResult/_MontlyResultItem.cshtml";
             public readonly string List = "~/Views/MontlyResult/List.cshtml";
@@ -153,6 +173,20 @@ namespace Decision.Web.Controllers
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ListAjax);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "request", request);
             ListAjaxOverride(callInfo, request);
+            return System.Threading.Tasks.Task.FromResult(callInfo as ActionResult);
+        }
+
+        [NonAction]
+        partial void DetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string empno, string resultYear, string resultMonth);
+
+        [NonAction]
+        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> Details(string empno, string resultYear, string resultMonth)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Details);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "empno", empno);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "resultYear", resultYear);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "resultMonth", resultMonth);
+            DetailsOverride(callInfo, empno, resultYear, resultMonth);
             return System.Threading.Tasks.Task.FromResult(callInfo as ActionResult);
         }
 

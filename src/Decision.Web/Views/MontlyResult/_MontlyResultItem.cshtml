@@ -3,10 +3,8 @@
 <div class="col-md-2 data-item" id="MontlyResult-@Model.Empno">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <button type="button" class="btn btn-success col-md-12">@Model.ResultMonth.GetPersianMonth()<span class="badge pull-left">@Model.ResultMonth</span></button>
-
-            <a class="btn btn-default" data-ajax="true" data-ajax-mode="replace" data-ajax-success="onSuccessFormValidation(data, status, xhr,'createAddressForm','modal')"
-               data-ajax-update="#modal" href="@Url.Action(MVC.EmpRelative.List(Model.Empno))" role="button"><i class="fa fa-plus"></i>درج آدرس جدید</a>
+            <a class="btn btn-success col-md-12" data-ajax="true" data-ajax-mode="replace" data-ajax-success="onSuccessFormValidation(data, status, xhr,'createAddressForm','modal')"
+               data-ajax-update="#modal" href="@Url.Action(MVC.MontlyResult.Details(Model.Empno,Model.ResultYear,Model.ResultMonth))" role="button">@Model.ResultMonth.GetPersianMonth()<span class="badge pull-left">@Model.ResultMonth</span></a>
         </div>
         <div class="panel-body">
             <div class="col-md-12">

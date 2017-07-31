@@ -1,0 +1,92 @@
+﻿
+@using Decision.Common.HtmlHelpers
+@model Decision.ViewModel.MontlyResult.MontlyResultListViewModel
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header alert alert-success">
+            <h6 class="modal-title">حقوق و معوقه @Model.MontlyResults.FirstOrDefault().ResultMonth.GetPersianMonth() @Model.MontlyResults.FirstOrDefault().ResultYear</h6>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                @Html.HiddenFor(model => model.MontlyResults.FirstOrDefault().Empno)
+                @Html.HiddenFor(model => model.MontlyResults.FirstOrDefault().ResultYear)
+                @Html.HiddenFor(model => model.MontlyResults.FirstOrDefault().ResultMonth)
+                @foreach (var e in Model.MontlyResults)
+                {
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label class="text-muted">خالص دریافتی:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <small>@e.seq</small>
+                        </div>
+                    </div>
+                }
+                @*<div class="form-group">
+                    @Html.LabelFor(model => model.CellPhone, new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.NoAutoCompleteTextBoxForLtr(model => model.CellPhone)
+                        @Html.ValidationMessageFor(model => model.CellPhone, null, new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PhoneNumber, new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.NoAutoCompleteTextBoxForLtr(model => model.PhoneNumber)
+                        @Html.ValidationMessageFor(model => model.PhoneNumber, null, new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Type, new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.Type)
+                        @Html.ValidationMessageFor(model => model.Type, null, new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => Model.State, new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.DropDownListFor(model => model.State, Model.States, "انتخاب استان", new
+                   {
+                       data_url = Url.Action(MVC.City.GetCities()),
+                       data_tofill = "City",
+                       data_lable = "انتخاب شهر",
+                       data_selects = "City",
+                       @class = "form-control cascade",
+                   })
+                        @Html.ValidationMessageFor(model => model.State, null, new { @class = "text-danger" })
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => Model.City, new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.DropDownListFor(model => model.City, Model.Cities, "انتخاب شهر", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.City, null, new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            }*@
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-2">
+                        @*<button type="button" id="createAddressButton" autocomplete="off" onclick="AjaxForm.CustomSubmit(this, 'createAddressForm')" data-loading-text="در حال ارسال اطلاعات" class="btn btn-success btn-md">
+                        ثبت آدرس جدید
+                    </button>*@
+                        <button type="button" id="createAddressButton" autocomplete="off" onclick="AjaxForm.CustomSubmit(this, 'createAddressForm')" data-loading-text="در حال ارسال اطلاعات" class="btn btn-success btn-md">
+                            چاپ فیش حقوق
+                        </button>
+                        <button type="button" id="createAddressButton" autocomplete="off" onclick="AjaxForm.CustomSubmit(this, 'createAddressForm')" data-loading-text="در حال ارسال اطلاعات" class="btn btn-success btn-md">
+                            چاپ معوقه ماه
+                        </button>
+                        <button type="button" id="createAddressButton" autocomplete="off" onclick="AjaxForm.CustomSubmit(this, 'createAddressForm')" data-loading-text="در حال ارسال اطلاعات" class="btn btn-success btn-md">
+                            چاپ فیش معوقه
+                        </button>
+                        <button class="btn btn-default btn-md" data-dismiss="modal" aria-hidden="true">
+                            انصراف
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

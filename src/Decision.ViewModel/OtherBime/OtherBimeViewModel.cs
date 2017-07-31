@@ -18,7 +18,7 @@ namespace Decision.ViewModel.OtherBime
         public string BimeType { get { return BimeDsc.Contains("فرهنگی") ? "فرهنگی" : (BimeDsc.Contains("آتش نشانی") ? "آتش نشانی" : "شهرداری"); } }
         public string StartYear { get; set; }
         public string StartMonth { get; set; }
-        public Boolean IsEnable { get { return EndYear.Replace(" ","") == "" ? true : false; } }
+        public Boolean IsEnable { get { return EndYear==null?true:(EndYear.Replace(" ","") == "" ? true : false); } }
         public string EndYear { get; set; }
         public string EndMonth { get; set; }
         public string InsNo { get; set; }

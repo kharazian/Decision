@@ -45,7 +45,9 @@ namespace Decision.Web.Controllers
         {
             var viewModel = await _montlyResultService.GetMontlyResultAsync(new MontlyResultSearchRequest
             {
-                Empno = empno
+                Empno = empno,
+                ResultYear = "",
+                ResultMonth = ""
             });
             return View(viewModel);
         }
@@ -57,6 +59,19 @@ namespace Decision.Web.Controllers
             var viewModel = await _montlyResultService.GetMontlyResultAsync(request);
             if (viewModel.MontlyResults == null || !viewModel.MontlyResults.Any()) return Content("no-more-info");
             return PartialView(MVC.MontlyResult.Views._ListAjax, viewModel);
+        }
+        #endregion
+
+        #region Details
+        public virtual async Task<ActionResult> Details(string empno, string resultYear, string resultMonth)
+        {
+            var viewModel = await _montlyResultService.GetMontlyResultAsync(new MontlyResultSearchRequest
+            {
+                Empno = empno,
+                ResultYear = resultYear,
+                ResultMonth = resultMonth
+            });
+            return PartialView(MVC.MontlyResult.Views._Details, viewModel);
         }
         #endregion
     }
